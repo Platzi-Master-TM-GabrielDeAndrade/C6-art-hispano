@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { firestore } from '../utils/firebase.config';
+import { firestore } from '../firebase/firebase.config';
 
 const Index = () => {
   const [users, setUsers] = useState([]);
