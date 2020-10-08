@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
-import { firestore } from '../firebase/firebase.config';
+import { useState, useEffect } from "react";
+import { firestore } from "../firebase/firebase.config";
+import Navbar from "../components/Navbar/Navbar";
 
-const Index = () => {
+const Home = () => {
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
-    const query = await firestore.collection('users').get();
+    const query = await firestore.collection("users").get();
     const users = query.docs.map((user) => {
       return {
         id: user.id,
@@ -21,15 +22,16 @@ const Index = () => {
   }, []);
 
   return (
-    <div>
+    <>
+      <Navbar />
       <p>Bienvenidos a Art-Hixpano</p>
       {users.map((user) => (
         <p key={user.id}>
           {user.email} {user.password}
         </p>
       ))}
-    </div>
+    </>
   );
 };
 
-export default Index;
+export default Home;

@@ -1,5 +1,5 @@
-import * as Firebase from 'firebase/app';
-import 'firebase/firestore';
+import * as Firebase from "firebase/app";
+import "firebase/firestore";
 
 // console.log(process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
 
