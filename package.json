@@ -7,7 +7,8 @@
     "dev": "next dev",
     "lint": "eslint . --fix",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "now"
   },
   "repository": {
     "type": "git",
