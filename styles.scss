@@ -9,13 +9,19 @@
 }
 
 //Elementos Base
-@import "./base/botones";
-@import "./base/links";
-@import "./base/tipografia";
+@import "./lib/botones";
+@import "./lib/links";
+@import "./lib/tipografia";
 
 
 //Componentes
-@import "./components/grids";
+@import "./lib/grids";
 
 //Este siempre debe ir al final
-@import "./components/utilities";
+@import "./lib/utilities";
+
+// $backgroundColor: red;
+
+// .app {
+//   background-color: $backgroundColor;
+// }

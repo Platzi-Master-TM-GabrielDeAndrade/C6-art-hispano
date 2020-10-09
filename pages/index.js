@@ -1,4 +1,3 @@
-import "../styles/styles.scss";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
