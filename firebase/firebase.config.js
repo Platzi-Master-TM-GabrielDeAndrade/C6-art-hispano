@@ -6,6 +6,7 @@ import "firebase/firestore";
 const firebaseConfig = JSON.parse(process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
 
 // Initialize Firebase
+// Se valida si ya esta inicializada
 const firebase = Firebase.apps.length
   ? Firebase.app()
   : Firebase.initializeApp(firebaseConfig);
