@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "@components/Layout";
 import "../styles/styles.scss";
 import "../styles/globals.scss";
 import "../styles/components/Navbar.scss";

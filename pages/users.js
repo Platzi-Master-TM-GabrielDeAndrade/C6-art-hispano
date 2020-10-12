@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { firestore } from "../firebase/firebase.config";
-// import Navbar from "../components/Navbar";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
