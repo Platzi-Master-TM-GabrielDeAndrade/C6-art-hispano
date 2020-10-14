@@ -37,13 +37,14 @@ const Home = () => {
       
       const newUser = {
         email: user,
-        date: Date.now(),
-
+        date: Date.now()
       };
-       console.log(newUser);
-      firestore.collection('users').add(newUser)
+      
+      console.log(newUser);
 
-      setUsers([...users, { ...user, id: user.id }]);
+      const dato = await firestore.collection("users").add(newUser);
+
+      setUsers([...users, { ...user, id: dato.id }]);
       
       setUsers('')
     
