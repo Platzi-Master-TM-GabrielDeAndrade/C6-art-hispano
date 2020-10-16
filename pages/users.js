@@ -42,17 +42,28 @@ const Home = () => {
       
       console.log(newUser);
 
-      const dato = await firestore.collection("users").add(newUser);
+      await firestore.collection("users").add(newUser);
 
-      setUsers([...users, { ...user, id: dato.id }]);
+      setUsers([...users, { ...newUser }]);
       
       setUsers('')
     
-
     } catch (error) {
       console.log(error)
     }
   } 
+
+  // const eliminar = async (id) => {
+  //   try {
+  //     await firestore.collection("users").doc(id).delete();
+       
+  //     const arrayFiltrado = users.filter(item => item.id !== id )
+  //     setUser(arrayFiltrado);
+
+  //   } catch (error) {
+      
+  //   }
+  // }
 
 
   return (
