@@ -1,8 +1,11 @@
+import styles from "../styles/pages/Index.module.scss";
+
 const Home = () => {
-  
   return (
     <>
-      <p className="description">Bienvenidos a Art-Hixpano</p>      
+      <section>
+        <p className={styles.description}>Bienvenidos a Art-Hixpano</p>        
+      </section>
     </>
   );
 };

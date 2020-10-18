@@ -1,0 +1,19 @@
+// Librerias, Settings y Variables
+// @import "./globals.scss";
+@import "../styles/lib/variables.module"; 
+@import "../styles/lib/mixins.module";
+
+
+// //Elementos Base
+@import "../styles/lib/botones.module";
+@import "../styles/lib/links.module";
+@import "../styles/lib/tipografia.module";
+
+// //Componentes
+@import "../styles/lib/grids.module";
+
+// // //Layouts
+// @import "../styles/lib/grids.module";
+
+// //Este siempre debe ir al final
+@import "../styles/lib/utilities.module";

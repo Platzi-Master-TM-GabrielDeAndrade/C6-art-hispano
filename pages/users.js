@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { firestore } from "../firebase/firebase.config";
+import styles from "@styles/pages/Users.module.scss";
 
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState('');
+  // const inputElement = useRef(null);
 
   const getUsers = async () => {
     try {
@@ -34,20 +36,20 @@ const Home = () => {
     }
 
     try {
-      
       const newUser = {
         email: user,
-        date: Date.now()
+        date: Date.now(),
       };
-      
+
       console.log(newUser);
 
       await firestore.collection("users").add(newUser);
 
       setUsers([...users, { ...newUser }]);
-      
-      setUsers('')
-    
+
+      setUser('')
+      // ref.target.value = "";
+      // inputElement.current.value = "";
     } catch (error) {
       console.log(error)
     }
@@ -81,16 +83,19 @@ const Home = () => {
           id="email"
           placeholder="ingrese email"
           onChange={(e) => setUser(e.target.value)}
-          value={user.email}
+          value={user}
+          // ref={inputElement}
         />
-        {/* <input
+        <input
           type="text"
           id="password"
           placeholder="ingrese contraseña"
           onChange={(e) => setUser(e.target.value)}
-          value={user.password}
-        /> */}
-        <button type="submit ">Agregar</button>
+          value={user}
+        />
+        <button className={styles.btn} type="submit ">
+          Agregar
+        </button>
       </form>
     </>
   );

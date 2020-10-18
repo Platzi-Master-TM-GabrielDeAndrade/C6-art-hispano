@@ -1,0 +1,10 @@
+// Librerias, Settings y Variables
+// @import "@lib/variables.module.scss";
+@import "../styles.module";
+
+.description {
+  text-align: center;
+  line-height: 1.5;  
+  font-size: $base-fontsize * 1.5;
+  background-color: $color-brand;
+}

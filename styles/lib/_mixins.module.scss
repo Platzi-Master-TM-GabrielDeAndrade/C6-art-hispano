@@ -1,0 +1,8 @@
+/* ----------------------------- *\
+|             $MIXINS             |
+\* ----------------------------- */
+@import "./variables.module.scss";
+
+@mixin max-width {
+  max-width: 700px;
+}
