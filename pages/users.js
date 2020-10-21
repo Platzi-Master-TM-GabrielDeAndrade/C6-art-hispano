@@ -1,11 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import { firestore } from "../firebase/firebase.config";
 import styles from "@styles/pages/Users.module.scss";
 
-const Home = () => {
+export default function Home() {
   const [users, setUsers] = useState([]);
-  const [user, setUser] = useState('');
-  // const inputElement = useRef(null);
+  const [user, setUser] = useState("");
 
   const getUsers = async () => {
     try {
@@ -16,10 +15,10 @@ const Home = () => {
           ...user.data(),
         };
       });
-  
+
       setUsers(users);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -28,11 +27,11 @@ const Home = () => {
   }, []);
 
   const agregar = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if(!user.trim()){
-      console.log("escriba un email")
-      return
+    if (!user.trim()) {
+      console.log("escriba un email");
+      return;
     }
 
     try {
@@ -47,26 +46,11 @@ const Home = () => {
 
       setUsers([...users, { ...newUser }]);
 
-      setUser('')
-      // ref.target.value = "";
-      // inputElement.current.value = "";
+      setUser("");      
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  } 
-
-  // const eliminar = async (id) => {
-  //   try {
-  //     await firestore.collection("users").doc(id).delete();
-       
-  //     const arrayFiltrado = users.filter(item => item.id !== id )
-  //     setUser(arrayFiltrado);
-
-  //   } catch (error) {
-      
-  //   }
-  // }
-
+  };
 
   return (
     <>
@@ -83,8 +67,7 @@ const Home = () => {
           id="email"
           placeholder="ingrese email"
           onChange={(e) => setUser(e.target.value)}
-          value={user}
-          // ref={inputElement}
+          value={user}          
         />
         <input
           type="text"
@@ -100,5 +83,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;

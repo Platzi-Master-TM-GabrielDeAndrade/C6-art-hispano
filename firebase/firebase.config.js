@@ -1,5 +1,7 @@
 import * as Firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/auth";
+
 
 // console.log(process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
 
@@ -12,8 +14,10 @@ const firebase = Firebase.apps.length
   : Firebase.initializeApp(firebaseConfig);
 
 const firestore = Firebase.firestore();
+const auth = Firebase.auth();
 
 module.exports = {
   firebase,
   firestore,
+  auth,
 };
