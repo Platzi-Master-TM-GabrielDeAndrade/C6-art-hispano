@@ -16,9 +16,13 @@ export default function Navbar() {
           <Link href="/users">
             <a>Users</a>
           </Link>
-          
+
           <Link href="/login">
             <a>Login</a>
+          </Link>
+
+          <Link href="/login2">
+            <a>Login2</a>
           </Link>
         </menu>
       </nav>

@@ -26,6 +26,7 @@ const Login = () => {
     }
   };
 
+
   // if (esRegistro) {
   //   registrar();
   // } else {
@@ -77,7 +78,7 @@ const Login = () => {
         value={pass}
       />
       {/* <button type="submit">Registrar</button> */}
-      <input type="submit" value="Registrar" />
+      <input type="submit" value="Registrar" />      
     </form>
   );
 };

@@ -28,6 +28,11 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/login.js"
+    ],
+    "/login2": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/login2.js"
     ]
   },
   "ampFirstPages": []

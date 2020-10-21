@@ -15,9 +15,11 @@ const firebase = Firebase.apps.length
 
 const firestore = Firebase.firestore();
 const auth = Firebase.auth();
+const google = new Firebase.auth.GoogleAuthProvider();
 
 module.exports = {
   firebase,
   firestore,
   auth,
+  google,
 };
