@@ -20,9 +20,11 @@ const Login = () => {
       
     if (email.trim() || pass.trim()) {
       //  registrar();
-      auth
-      .createUserWithEmailAndPassword(email, pass)
-      .then((res) => alert("Usuario Registrado"));
+      auth.createUserWithEmailAndPassword(email, pass).then(
+        (res) => alert("Usuario Registrado")
+
+        // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
+      );
     }
   };
 
