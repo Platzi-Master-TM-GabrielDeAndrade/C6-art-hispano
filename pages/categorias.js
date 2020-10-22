@@ -5,9 +5,8 @@ export default function Home () {
     <>
         <div className = {styles.container}>
           <img src="" alt="logo" className = {styles.logo}/>
-          <h1 className = {styles.tittle}>Publica tu arte</h1>
-          <p>prueba</p>
+          <h1 className = {styles.tittle}>Publica tu arte</h1>  
         </div>
     </>
   );
-};
+}
