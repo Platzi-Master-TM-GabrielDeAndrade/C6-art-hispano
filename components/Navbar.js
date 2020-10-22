@@ -24,6 +24,9 @@ export default function Navbar() {
           <Link href="/login2">
             <a>Login2</a>
           </Link>
+          <Link href= "/categorias">
+          <a>Categorias</a>
+          </Link>
         </menu>
       </nav>
     </div>

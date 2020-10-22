@@ -24,20 +24,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/login": [
+    "/categorias": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/login.js"
+      "static/chunks/pages/categorias.js"
     ],
-    "/login2": [
+    "/users": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/login2.js"
-    ],
-    "/next/dist/pages/_error": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/next/dist/pages/_error.js"
+      "static/chunks/pages/users.js"
     ]
   },
   "ampFirstPages": []

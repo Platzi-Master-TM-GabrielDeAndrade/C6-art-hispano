@@ -4,5 +4,7 @@
 @import "./variables.module.scss";
 
 .btn {
-  color: red;
-}
+  background-color: $color-brand;
+  color: $color-tertiary;
+  border:none;
+} 
