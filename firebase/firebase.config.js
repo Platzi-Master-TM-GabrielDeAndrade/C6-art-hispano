@@ -13,15 +13,9 @@ const firebase = Firebase.apps.length
   ? Firebase.app()
   : Firebase.initializeApp(firebaseConfig);
 
-const firestore = Firebase.firestore();
+const db = Firebase.firestore();
 const auth = Firebase.auth();
 const googleProvider = new Firebase.auth.GoogleAuthProvider();
 const facebookProvider = new Firebase.auth.FacebookAuthProvider();
 
-module.exports = {
-  firebase,
-  firestore,
-  auth,
-  googleProvider,
-  facebookProvider,
-};
+export { firebase, db, auth, googleProvider, facebookProvider };

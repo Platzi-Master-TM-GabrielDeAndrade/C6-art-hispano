@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import { firestore } from "../firebase/firebase.config";
+import { db } from "../firebase/firebase.config";
 import styles from "@styles/pages/Users.module.scss";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
 
   const getUsers = async () => {
     try {
-      const query = await firestore.collection("users").get();
+      const query = await db.collection("users").get();
       const users = query.docs.map((user) => {
         return {
           id: user.id,
@@ -43,7 +43,7 @@ export default function Home() {
 
       console.log(newUser); 
 
-      const data = await firestore.collection("users").add(newUser);
+      const data = await db.collection("users").add(newUser);
 
       setUsers([
         ...users,
@@ -59,7 +59,7 @@ export default function Home() {
   // NO borrar
   // const eliminar = async (id) => {
   //   try {      
-  //     await firestore.collection('users').doc(id).delete()
+  //     await db.collection('users').doc(id).delete()
   //     const arrayFiltrado = users.filter(item => item.id !== id)
   //     setUsers(arrayFiltrado);
   //   } catch (error) {
@@ -79,7 +79,7 @@ export default function Home() {
       console.log('vacio')      
     }
     try {
-      await firestore.collection("users").doc(id).update({
+      await db.collection("users").doc(id).update({
         email: user.email
       }); 
       const arrayFiltrado = users.map(item => (
@@ -88,7 +88,7 @@ export default function Home() {
       setUsers(arrayFiltrado);
       setModoEdicion(false);
       setUser('');
-      setId('');
+      setId();
     } catch (error) {
        console.log(error);
     }
