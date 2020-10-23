@@ -1,1 +1,0 @@
-{"ast":null,"code":"export default function Home() {}\n_c = Home;\n\nvar _c;\n\n$RefreshReg$(_c, \"Home\");","map":{"version":3,"sources":["/mnt/c/Users/elvis/develop/projects/c6-art-hispano/pages/index.js"],"names":["Home"],"mappings":"AAAA,eAAe,SAASA,IAAT,GAAgB,CAE9B;KAFuBA,I","sourcesContent":["export default function Home() {\n  \n}\n"]},"metadata":{},"sourceType":"module"}
