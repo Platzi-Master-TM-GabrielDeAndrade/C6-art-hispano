@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { auth, google, facebook } from "../firebase/firebase.config";
+import {
+  auth,
+  googleProvider,
+  facebookProvider,
+} from "../firebase/firebase.config";
 
 const Login = () => {  
   const [setUser] = useState(null);
 
   const loginGoogle = () => {
     auth
-      .signInWithPopup(google)
-      .then(result => {
+      .signInWithPopup(googleProvider)
+      .then((result) => {
         console.log(result.user);
         setUser(result.user);
       })
@@ -18,7 +22,7 @@ const Login = () => {
 
     const loginFacebook = () => {
       auth
-        .signInWithPopup(facebook)
+        .signInWithPopup(facebookProvider)
         .then((result) => {
           console.log(result.user);
           setUser(result.user);
