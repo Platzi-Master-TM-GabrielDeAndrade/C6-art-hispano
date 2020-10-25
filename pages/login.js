@@ -115,20 +115,25 @@ const Login = () => {
             Empezar
           </Button> */}
 
-          <Button className={styles.Button} type="submit" onClick={() => login}>
+          <Button
+            param={true}
+            className={styles.Button}
+            type="submit"
+            onClick={() => login}
+          >
             {" "}
             Empezar
           </Button>
 
-          <Button
-            type="Facebook"
-            className={styles.Button}
-            onClick={loginFacebook}
-          >
+          <Button className={styles.ButtonFacebook} onClick={loginFacebook}>
             Facebook
           </Button>
 
-          <Button className={styles.Button} onClick={loginGoogle}>
+          <Button
+            param={false}
+            className={styles.ButtonGoogle}
+            onClick={loginGoogle}
+          >
             Google
           </Button>
 
