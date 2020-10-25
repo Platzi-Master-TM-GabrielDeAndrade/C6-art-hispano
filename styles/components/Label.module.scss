@@ -1,0 +1,9 @@
+@import "../styles.module.scss";
+@import "../lib/variables.module";
+
+.Label {
+  color: $color-black;
+  font-size: $base-fontsize ;  
+  text-align: center;  
+  font-weight: bold;
+}

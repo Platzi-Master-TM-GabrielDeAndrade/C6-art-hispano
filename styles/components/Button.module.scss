@@ -1,0 +1,17 @@
+@import "../styles.module.scss";
+@import "../lib/variables.module";
+
+.Button {
+  padding: 10px 30px;
+  margin-right: 2px;
+  min-width: 250px;  
+  height: 30px;
+  // color: $color-white;  
+  color: $color-black;
+  font-size: $base-fontsize ;  
+  font-weight: bold;
+  background-color: $color-brand;
+  border:none;
+  border-radius: $border-radius;  
+  cursor: pointer;
+}

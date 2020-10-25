@@ -1,8 +1,23 @@
 import Link from "next/link";
+import { auth } from "../firebase/firebase.config";
+import { useEffect, useState } from "react";
 
+const Navbar = () => {
+  
+  const [firebaseUser, setFirebaseUser] = useState(false);
 
-export default function Navbar() {
-  return (
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        setFirebaseUser(user);
+      } else {
+        setFirebaseUser(null);
+      }
+    });
+  }, []);
+
+  return firebaseUser !== false ? (
     <div>
       <nav>
         <menu>
@@ -14,8 +29,12 @@ export default function Navbar() {
             <a>Admin</a>
           </Link>
 
+          <Link href="/Register">
+            <a>Registrar</a>
+          </Link>
+
           <Link href="/login">
-            <a>Login</a>            
+            <a>Ingresar</a>
           </Link>
 
           <Link href="/about">
@@ -35,5 +54,9 @@ export default function Navbar() {
         </menu>
       </nav>
     </div>
+  ) : (
+    <p>Loading ..</p>
   );
 }
+
+export default Navbar;

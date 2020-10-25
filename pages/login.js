@@ -1,15 +1,23 @@
 import { useState } from "react";
-import { auth, db} from "../firebase/firebase.config";
+import { auth } from "../firebase/firebase.config";
+import { useRouter } from "next/router";
+import styles from "@styles/pages/SignInRegister.module.scss";
+import Input from "components/Input";
+import Button from "components/Button";
+import Title from "components/Title";
+import Label from "components/Label";
 
-
-export default function Login() {
+export default function Login() {  
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState(null);
-  const [esRegistro, setEsRegistro] = useState(true);
+
+  const router = useRouter();
 
   const procesarDatos = (e) => {
     e.preventDefault();
+    console.log(email);
+    console.log(pass);
     if (!email.trim() || !pass.trim()) {
       console.log("Datos vacíos email!");
       setError("Datos vacíos email!");
@@ -28,65 +36,64 @@ export default function Login() {
     console.log("correcto...");
     setError(null);
 
-    if (esRegistro) {
-      registrar();
-    }
-    // } else {
-    //   login();
-    // }
+    login();
   };
 
-    const registrar = async() => {
-      try {        
-        const res = await auth.createUserWithEmailAndPassword(email, pass)         
-        console.log(res)
-        await db.collection('users').doc(res.user.email).set({
-          email:res.user.email,
-          uid:res.user.uid
-        })
-        // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
-        setEmail('')
-        setPass("");
-        setError(null);
-        
-      } catch (error) {
-        console.log(error)
-        if(error.code === "auth/email-already-in-use"){
-          setError("El email ya está registrado")          
-        }
-        if (error.code === "auth/invalid-email") {
-          setError("El email no es valido")          
-        }
-      }      
+  const login = async () => {
+    try {
+      const res = await auth.signInWithEmailAndPassword(email, pass);
+      console.log(res);
+      setEmail("");
+      setPass("");
+      setError(null);
+      router.push("/admin");
+    } catch (error) {
+      console.log(error);
+      if (error.code === "auth/user-not-found") {
+        setError("Usuario no encontrado");
+      }
+      if (error.code === "auth/invalid-email") {
+        setError("Email no corresponde");
+      }
+      if (error.code === "auth/wrong-password") {
+        setError("Contraseña incorrecta");
+      }
     }
-        
+  };
+
   return (
     <>
-      <h3>{esRegistro ? "Registro" : "Login"}</h3>
-      <form onSubmit={procesarDatos}>
-        {error && error}
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          placeholder="Ingrese Email"
-          value={email}
-        />
-        <input
-          onChange={(e) => setPass(e.target.value)}
-          type="password"
-          placeholder="Ingrese un password"
-          value={pass}
-        />
-        <button
-          type="submit">
-          {esRegistro ? "Registrar" : "Acceder"}
-        </button>
-        <button type="button" onClick={() => setEsRegistro(!setEsRegistro)}>
-          {esRegistro ? "¿Ya tienes cuenta?" : "¿No tienes cuenta?"}
-        </button>
-      </form>
+      <h3>
+        <Title text="Login" />
+      </h3>
+      <div className={styles.loginContainer}>
+        <form onSubmit={procesarDatos}>
+          {error && error}
+          <Label text="Email" />
+          <Input
+            type="email"
+            placeholder="Ingrese su email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}            
+          />
+          <Label text="Contraseña" />
+          <Input
+            type="password"
+            placeholder="Ingrese un password"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}            
+          />
+          <Button className={styles.Button} 
+            type="submit">
+            Ingresar
+          </Button>
+
+          {/* <Button className={styles.Button} type="submit" onClick={() => login}>
+          {" "}
+          ¿No tienes cuenta?
+        </Button> */}
+        </form>
+      </div>
     </>
   );
-};
-
-
+}
