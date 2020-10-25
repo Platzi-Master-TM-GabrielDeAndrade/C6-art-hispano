@@ -1,10 +1,9 @@
 import styles from "../styles/components/Button.module.scss";
 
-const Button = ({ onClick }) => (
-  <button 
-    onClick={onClick}
-    className={styles.Button}
-  />
+const Button = ({ children, onClick }) => (
+  <button className={styles.Button} onClick={onClick}>
+    {children}
+  </button>
 );
 
 export default Button;

@@ -7,13 +7,15 @@
   margin-bottom: 10px;
   min-width: 250px;  
   height: 30px;  
-  color: $color-tertiary;
+  color:white;
   background-color: $color-brand;  
   font-size: $base-fontsize ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius *2 ;  
   cursor: pointer;  
+  text-align: center;
+  line-height: 10px;
 }
 
  

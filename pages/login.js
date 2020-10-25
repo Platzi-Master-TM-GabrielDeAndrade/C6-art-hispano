@@ -117,7 +117,7 @@ const Login = () => {
 
           <Button className={styles.Button} type="submit" onClick={() => login}>
             {" "}
-            ¿No tienes cuenta?
+            Empezar
           </Button>
 
           <Button

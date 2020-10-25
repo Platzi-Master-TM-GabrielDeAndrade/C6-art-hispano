@@ -68,7 +68,7 @@ export default function Register() {
         <Title text="Registro" />
       </h3>
 
-      <form className={styles.registerContainer} onSubmit={procesarDatos}>
+      <form className={styles.Container} onSubmit={procesarDatos}>
         {error && error}
         <Label text="Email" />
         <Input
