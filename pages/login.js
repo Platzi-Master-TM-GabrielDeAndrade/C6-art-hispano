@@ -1,19 +1,47 @@
 import { useState } from "react";
-import { auth } from "../firebase/firebase.config";
+import {
+  auth,
+  googleProvider,
+  facebookProvider,
+} from "../firebase/firebase.config";
 import { useRouter } from "next/router";
-import styles from "@styles/pages/SignInRegister.module.scss";
+import styles from "@styles/pages/Login.module.scss";
 import Input from "components/Input";
 import Button from "components/Button";
 import Title from "components/Title";
 import Label from "components/Label";
 
-export default function Login() {  
+const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [setUser] = useState(null);
   const [error, setError] = useState(null);
 
   const router = useRouter();
 
+  const loginGoogle = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const loginFacebook = () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const procesarDatos = (e) => {
     e.preventDefault();
     console.log(email);
@@ -64,36 +92,51 @@ export default function Login() {
   return (
     <>
       <h3>
-        <Title text="Login" />
+        <Title text="Iniciar Sesión" />
       </h3>
-      <div className={styles.loginContainer}>
-        <form onSubmit={procesarDatos}>
+      <div>
+        <form className={styles.Container} onSubmit={procesarDatos}>
           {error && error}
-          <Label text="Email" />
+          <Label text="Correo" />
           <Input
             type="email"
             placeholder="Ingrese su email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}            
+            onChange={(e) => setEmail(e.target.value)}
           />
           <Label text="Contraseña" />
           <Input
             type="password"
             placeholder="Ingrese un password"
             value={pass}
-            onChange={(e) => setPass(e.target.value)}            
+            onChange={(e) => setPass(e.target.value)}
           />
-          <Button className={styles.Button} 
-            type="submit">
-            Ingresar
+          {/* <Button className={styles} type="submit">
+            Empezar
+          </Button> */}
+
+          <Button className={styles.Button} type="submit" onClick={() => login}>
+            {" "}
+            ¿No tienes cuenta?
           </Button>
 
-          {/* <Button className={styles.Button} type="submit" onClick={() => login}>
-          {" "}
-          ¿No tienes cuenta?
-        </Button> */}
+          <Button
+            type="Facebook"
+            className={styles.Button}
+            onClick={loginFacebook}
+          >
+            Facebook
+          </Button>
+
+          <Button className={styles.Button} onClick={loginGoogle}>
+            Google
+          </Button>
+
+          <Label text="Recuperar contraseña" />
         </form>
       </div>
     </>
   );
-}
+};
+
+export default Login;

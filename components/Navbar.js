@@ -37,17 +37,17 @@ const Navbar = () => {
             <a>Ingresar</a>
           </Link>
 
-          <Link href="/about">
+          {/* <Link href="/about">
             <a>About</a>
-          </Link>
+          </Link> */}
 
           <Link href="/users">
             <a>Users</a>
           </Link>
 
-          <Link href="/login2">
+          {/* <Link href="/login2">
             <a>Login2</a>
-          </Link>
+          </Link> */}
           <Link href="/categorias">
             <a>Categorias</a>
           </Link>

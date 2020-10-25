@@ -4,14 +4,19 @@
 .Button {
   padding: 10px 30px;
   margin-right: 2px;
+  margin-bottom: 10px;
   min-width: 250px;  
-  height: 30px;
-  // color: $color-white;  
-  color: $color-black;
+  height: 30px;  
+  color: $color-tertiary;
+  background-color: $color-brand;  
   font-size: $base-fontsize ;  
-  font-weight: bold;
-  background-color: $color-brand;
+  font-weight: bold;  
   border:none;
-  border-radius: $border-radius;  
-  cursor: pointer;
+  border-radius: $border-radius *2 ;  
+  cursor: pointer;  
 }
+
+ 
+  
+  
+  
