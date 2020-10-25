@@ -2,6 +2,7 @@
 @import "../lib/variables.module";
 
 .Button {
+  width: 100%;
   padding: 10px 30px;
   margin-right: 2px;
   margin-bottom: 10px;
@@ -10,7 +11,7 @@
   color:white;
   background-color: $color-brand;
   
-  font-size: $base-fontsize ;  
+  font-size: $button-small ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  
@@ -20,15 +21,16 @@
 }
 
 .ButtonGoogle{
+  width: 100%;
   padding: 10px 30px;
   margin-right: 2px;
   margin-bottom: 10px;
   min-width: 250px;  
   height: 30px;  
   color:white;
-  background-color: red;
+  background-color:$color-google;
   
-  font-size: $base-fontsize ;  
+  font-size: $button-small;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  
@@ -38,15 +40,16 @@
 }
 
 .ButtonFacebook{
+  width: 100%;
   padding: 10px 30px;
   margin-right: 2px;
   margin-bottom: 10px;
   min-width: 250px;  
   height: 30px;  
   color:white;
-  background-color: blue;
+  background-color: $color-facebook;
   
-  font-size: $base-fontsize ;  
+  font-size: $button-small ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  

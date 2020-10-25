@@ -89,56 +89,64 @@ const Login = () => {
     }
   };
 
+  const signup = () => {
+    router.push("/signup");
+  } 
   return (
     <>
-      <h3>
-        <Title text="Iniciar Sesión" />
-      </h3>
-      <div>
-        <form className={styles.Container} onSubmit={procesarDatos}>
-          {error && error}
-          <Label text="Correo" />
-          <Input
-            type="email"
-            placeholder="Ingrese su email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <Label text="Contraseña" />
-          <Input
-            type="password"
-            placeholder="Ingrese un password"
-            value={pass}
-            onChange={(e) => setPass(e.target.value)}
-          />
-          {/* <Button className={styles} type="submit">
-            Empezar
-          </Button> */}
+      <div className={styles.Main}>
+        <div className={styles.ContainerBody}>
+          <form className={styles.Container} onSubmit={procesarDatos}>
+            <h3>
+              <Title text="Iniciar Sesión" />
+            </h3>
+            {error && error}
+            <Label text="Correo" />
+            <Input
+              type="email"
+              placeholder="Ingrese su email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Label text="Contraseña" />
+            <Input
+              type="password"
+              placeholder="Ingrese un password"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
+            {/* <Button className={styles} type="submit">
+              Empezar
+            </Button> */}
 
-          <Button
-            param={true}
-            className={styles.Button}
-            type="submit"
-            onClick={() => login}
-          >
-            {" "}
-            Empezar
-          </Button>
+            <Button
+              param={true}
+              className={styles.Button}
+              type="submit"
+              onClick={() => login}
+            >
+              {" "}
+              Empezar
+            </Button>
 
-          <Button className={styles.ButtonFacebook} onClick={loginFacebook}>
-            Facebook
-          </Button>
+            <Button className={styles.ButtonFacebook} onClick={loginFacebook}>
+              Facebook
+            </Button>
 
-          <Button
-            param={false}
-            className={styles.ButtonGoogle}
-            onClick={loginGoogle}
-          >
-            Google
-          </Button>
-
-          <Label text="Recuperar contraseña" />
-        </form>
+            <Button
+              param={false}
+              className={styles.ButtonGoogle}
+              onClick={loginGoogle}
+            >
+              Google
+            </Button>
+            <Label text="Recuperar contraseña" />
+          </form>
+        </div>
+        <div className={styles.ContainerFooter}>
+          <Label text="¿No tienes cuenta en Art-Hispano" />
+          <Button onClick={signup}>Registrate</Button>
+        </div>
       </div>
     </>
   );

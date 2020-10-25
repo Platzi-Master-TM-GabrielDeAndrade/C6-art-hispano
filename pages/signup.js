@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { auth, db} from "../firebase/firebase.config";
+import { auth, db } from "../firebase/firebase.config";
 import { useRouter } from "next/router";
-import styles from "@styles/pages/SignInRegister.module.scss";
+import styles from "@styles/pages/Signup.module.scss";
 import Input from "components/Input";
 import Button from "components/Button";
 import Title from "components/Title";
 import Label from "components/Label";
 
-export default function Register() {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState(null);
@@ -35,33 +35,32 @@ export default function Register() {
     setError(null);
 
     registrar();
-    
   };
 
-    const registrar = async() => {
-      try {        
-        const res = await auth.createUserWithEmailAndPassword(email, pass)         
-        console.log(res)
-        await db.collection('users').doc(res.user.email).set({
-          email:res.user.email,
-          uid:res.user.uid
-        })
-        // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
-        setEmail('')
-        setPass("");
-        setError(null);
-        router.push("/admin");
-      } catch (error) {
-        console.log(error)
-        if(error.code === "auth/email-already-in-use"){
-          setError("El email ya está registrado")          
-        }
-        if (error.code === "auth/invalid-email") {
-          setError("El email no es valido")          
-        }
-      }      
+  const registrar = async () => {
+    try {
+      const res = await auth.createUserWithEmailAndPassword(email, pass);
+      console.log(res);
+      await db.collection("users").doc(res.user.email).set({
+        email: res.user.email,
+        uid: res.user.uid,
+      });
+      // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
+      setEmail("");
+      setPass("");
+      setError(null);
+      router.push("/admin");
+    } catch (error) {
+      console.log(error);
+      if (error.code === "auth/email-already-in-use") {
+        setError("El email ya está registrado");
+      }
+      if (error.code === "auth/invalid-email") {
+        setError("El email no es valido");
+      }
     }
-        
+  };
+
   return (
     <>
       <h3>
@@ -99,4 +98,4 @@ export default function Register() {
       </form>
     </>
   );
-};
+}

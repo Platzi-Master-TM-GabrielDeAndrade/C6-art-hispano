@@ -1,12 +1,23 @@
 @import "../styles.module.scss";
 
-.Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid blue;
+.Main{
+  grid-template-columns: minmax(auto, 300px);
+  display: grid;
+  justify-content: center;    
+}
+.ContainerBody {
+  border: 1px solid #ccd5e0;
   width: 300px;
   border-radius: $border-radius;
   padding: 10px;
 }
+.ContainerFooter {   
+  border: 1px solid #ccd5e0;
+  margin-top: 2px;
+  width: 300px;
+  border-radius: $border-radius;
+  padding: 10px;
+  
+}
+
+  

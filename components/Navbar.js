@@ -29,7 +29,7 @@ const Navbar = () => {
             <a>Admin</a>
           </Link>
 
-          <Link href="/Register">
+          <Link href="/signup">
             <a>Registrar</a>
           </Link>
 

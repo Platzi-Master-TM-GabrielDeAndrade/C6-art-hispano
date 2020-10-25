@@ -2,9 +2,8 @@
 @import "../lib/variables.module";
 
 .Label {
-  color: $color-grey;
-  font-size: $base-fontsize ;  
+  font-family: $base-font;  
+  font-size: $base-fontSizeSmall;  
   text-align: center;  
-  font-family: $base-font;
-
+  color: #6d5e52;
 }
