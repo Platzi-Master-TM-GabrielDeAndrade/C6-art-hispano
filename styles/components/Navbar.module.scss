@@ -1,1 +1,70 @@
 @import "../styles.module.scss";
+
+//NAV LEFT
+.nav_container{
+    display:grid;
+    background-color: white;
+    height: 100px;
+    grid-template-columns: .5fr 1.5fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_containerLogo{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.nav_logo {
+    width: 70px;
+    height: 80px;
+}
+//NAV CENTRAL
+.nav_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-end;
+    justify-content: center;
+   
+}
+.nav_inputs input{
+    height: 35px;
+    width: 500px;
+    border-radius:5px 0 0 5px; 
+    border-right: none;
+    border: 0.5px solid $color-secondary;
+    opacity: .5;
+    background-color: $color-tertiary;
+}
+.nav_inputs button{
+    border-radius:0 5px 5px 0; 
+    border: 0.5px solid $color-secondary; 
+    height: 35px;
+    border-left: none;
+    opacity: .5;
+    margin-top: 30px;
+}
+.nav_inputs p {
+    color:$color-secondary;
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-style: none;
+}
+
+//NAV RIGHT
+.nav_icons   {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    margin-left: 0;
+}
+.nav_icons button  {
+    height: 25px;
+    width: 60px;
+    border-radius: 5px;
+    border: none;
+    background-color: $color-brand;
+    color: $color-white; 
+}

@@ -4,15 +4,15 @@ import styles from "../styles/pages/Index.module.scss";
 export default function Home () {
   return (
     <>
-      <section>
-        <p className={styles.description}>Bienvenidos a Art-Hixpano</p>     
-        {/* <button>
-          Ingresar con email
-          
-          </button>    */}
- 
+    <div className = {styles.slider}>
+        <ul>
+          <li><img src="arte.jpg "alt="arte"  /></li>
+          <li><img src="" alt=""/></li>
+          <li><img src="" alt=""/></li>
+          <li><img src="" alt=""/></li>
+        </ul>
+      </div>
           <authMethods/>
-      </section>
     </>
   );
 };
