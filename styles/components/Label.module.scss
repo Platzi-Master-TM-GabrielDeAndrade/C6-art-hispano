@@ -1,0 +1,9 @@
+@import "../styles.module.scss";
+@import "../lib/variables.module";
+
+.Label {
+  font-family: $base-font;  
+  font-size: $base-fontSizeSmall;  
+  color: #6d5e52;
+  
+}

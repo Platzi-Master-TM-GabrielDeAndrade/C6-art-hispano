@@ -1,0 +1,14 @@
+@import "../styles.module.scss";
+@import "../lib/variables.module";
+
+.TitleContainer {  
+   color: #6d5e52;
+  font-size: $base-fontsize * 1.25;  
+  text-align: center;  
+  // font-weight: bold;
+}
+
+.TitleLabel {
+  color: #6d5e52;
+  font-size: $base-fontsize;
+}

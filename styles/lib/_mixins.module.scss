@@ -6,3 +6,27 @@
 @mixin max-width {
   max-width: 700px;
 }
+
+@mixin button-color ($fondo) {
+  background-color: $fondo;  
+}
+
+.google {
+  @include button-color($color-buttonGoogle)
+}
+.facebook {
+  @include button-color($color-buttonFacebook)
+}
+.brand {
+  @include button-color($color-buttonBrand)
+}
+// @mixin button-colors($provider) {
+//   @if ($provider == "Google") {
+//       background-color: $color-buttonGoogle;
+//   } @if ($provider == "Facebook") {
+//       background-color: $color-buttonFacebook;
+//   } @else {
+//     background-color: $color-buttonBrand;
+//   }
+// }
+

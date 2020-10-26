@@ -1,14 +1,16 @@
 import { useState, useEffect} from "react";
-import { firestore } from "../firebase/firebase.config";
+import { db } from "../firebase/firebase.config";
 import styles from "@styles/pages/Users.module.scss";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState("");
+  const [modoEdicion, setModoEdicion] = useState(false);
+  const [id, setId] = useState('');
 
   const getUsers = async () => {
     try {
-      const query = await firestore.collection("users").get();
+      const query = await db.collection("users").get();
       const users = query.docs.map((user) => {
         return {
           id: user.id,
@@ -27,7 +29,7 @@ export default function Home() {
   }, []);
 
   const agregar = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     if (!user.trim()) {
       console.log("escriba un email");
@@ -36,38 +38,77 @@ export default function Home() {
 
     try {
       const newUser = {
-        email: user,
-        date: Date.now(),
+        email: user        
       };
 
-      console.log(newUser);
+      console.log(newUser); 
 
-      await firestore.collection("users").add(newUser);
+      const data = await db.collection("users").add(newUser);
 
-      setUsers([...users, { ...newUser }]);
+      setUsers([
+        ...users,
+        { ...newUser, id: data.id }
+      ]);
 
-      setUser("");      
+      setUser('');      
     } catch (error) {
       console.log(error);
     }
   };
+  
+  // NO borrar
+  // const eliminar = async (id) => {
+  //   try {      
+  //     await db.collection('users').doc(id).delete()
+  //     const arrayFiltrado = users.filter(item => item.id !== id)
+  //     setUsers(arrayFiltrado);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
+  const activarEdicion = (item) => {
+    setModoEdicion(true)
+    setUser(item.email)
+    setId(item.id);
+  }
+
+  const editar = async(e) => {
+    e.preventDefault()    
+    if (!user.trim()) {
+      console.log('vacio')      
+    }
+    try {
+      await db.collection("users").doc(id).update({
+        email: user.email
+      }); 
+      const arrayFiltrado = users.map(item => (
+        item.id !== id ? {id: item.id, email: user} : item
+      ))
+      setUsers(arrayFiltrado);
+      setModoEdicion(false);
+      setUser('');
+      setId();
+    } catch (error) {
+       console.log(error);
+    }
+  }
   return (
     <>
       <p>Bienvenidos a Usuarios</p>
-      {users.map((user) => (
-        <p key={user.id}>
-          {user.email} {user.password}
+      {users.map((item) => (
+        <p key={item.id}>
+          {item.email} {item.password}
         </p>
       ))}
-      <h3>Formulario</h3>
-      <form onSubmit={agregar}>
+      <h3>{modoEdicion ? "Editar Usuario" : "Agregar Usuario"}</h3>
+      <form onSubmit={ modoEdicion ? editar : agregar }>
         <input
           type="text"
           id="email"
           placeholder="ingrese email"
           onChange={(e) => setUser(e.target.value)}
-          value={user}          
+          value={user}
         />
         <input
           type="text"
@@ -77,7 +118,7 @@ export default function Home() {
           value={user}
         />
         <button className={styles.btn} type="submit ">
-          Agregar
+          {modoEdicion ? "Editar" : "Agregar"}
         </button>
       </form>
     </>
