@@ -1,87 +1,162 @@
 import { useState } from "react";
-import { auth } from "../firebase/firebase.config";
+import {
+  auth,
+  googleProvider,
+  facebookProvider,
+} from "../firebase/firebase.config";
+import { useRouter } from "next/router";
+import styles from "@styles/pages/Login.module.scss";
+import Input from "components/Input";
+import Button from "components/Button";
+import Title from "components/Title";
+import Label from "components/Label";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [setUser] = useState(null);
+  const [error, setError] = useState(null);
 
-  const registrarUsuario = (e) => {
+  const router = useRouter();
+
+  const loginGoogle = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const loginFacebook = () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const procesarDatos = (e) => {
     e.preventDefault();
-    if (!email.trim()) {
-      alert("escriba un email");
-      return
+    console.log(email);
+    console.log(pass);
+    if (!email.trim() || !pass.trim()) {
+      console.log("Datos vacíos email!");
+      setError("Datos vacíos email!");
+      return;
     }
-  
     if (!pass.trim()) {
-      alert("escriba un password");
-      return
+      console.log("Datos vacíos pass!");
+      setError("Datos vacíos pass!");
+      return;
     }
+    if (pass.length < 6) {
+      console.log("6 o más carácteres");
+      setError("6 o más carácteres en pass");
+      return;
+    }
+    console.log("correcto...");
+    setError(null);
 
-      
-    if (email.trim() || pass.trim()) {
-      //  registrar();
-      auth.createUserWithEmailAndPassword(email, pass).then(
-        (res) => alert("Usuario Registrado")
+    login();
+  };
 
-        // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
-      );
+  const login = async () => {
+    try {
+      const res = await auth.signInWithEmailAndPassword(email, pass);
+      console.log(res);
+      setEmail("");
+      setPass("");
+      setError(null);
+      router.push("/admin");
+    } catch (error) {
+      console.log(error);
+      if (error.code === "auth/user-not-found") {
+        setError("Usuario no encontrado");
+      }
+      if (error.code === "auth/invalid-email") {
+        setError("Email no corresponde");
+      }
+      if (error.code === "auth/wrong-password") {
+        setError("Contraseña incorrecta");
+      }
     }
   };
 
-
-  // if (esRegistro) {
-  //   registrar();
-  // } else {
-  //   login();
-  // }
-
-  // const login = React.useCallback(async () => {
-  //   try {
-  //     const res = await auth.signInWithEmailAndPassword(email, pass);
-  //     console.log(res.user);
-  //     setEmail("");
-  //     setPass("");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, [email, pass]);
-
-  // const registrar = React.useCallback(async () => {
-  //   try {
-  //     const res = await auth.createUserWithEmailAndPassword(email, pass);
-  //     console.log(res.user);
-  //     await firestore.collection("users").doc(res.user.email).set({
-  //       email: res.user.email,
-  //       uid: res.user.uid,
-  //     });
-  //     await firestore.collection(res.user.uid).add({
-  //       name: "Tarea de ejemplo",
-  //       fecha: Date.now(),
-  //     });
-  //     setEmail("");
-  //     setPass("");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, [email, pass]);
-
+  const signup = () => {
+    router.push("/signup");
+  } 
   return (
-    <form onSubmit={registrarUsuario}>
-      <input
-        onChange={(e) => setEmail(e.target.value)}
-        type="email"
-        placeholder="Ingrese Email"
-        value={email}
-      />
-      <input
-        onChange={(e) => setPass(e.target.value)}
-        type="password"
-        placeholder="Ingrese un password"
-        value={pass}
-      />
-      {/* <button type="submit">Registrar</button> */}
-      <input type="submit" value="Registrar" />      
-    </form>
+    <>
+      <div className={styles.Main}>
+        <div className={styles.ContainerBody}>
+          <form className={styles.Container} onSubmit={procesarDatos}>
+            <h3>
+              <Title text="Iniciar Sesión" />
+            </h3>
+            {error && error}
+            <Label text="Correo" />
+            <Input
+              type="email"
+              placeholder="Ingrese su email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <Label text="Contraseña" />
+            <Input
+              type="password"
+              placeholder="Ingrese un password"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
+            {/* <Button className={styles} type="submit">
+              Empezar
+            </Button> */}
+
+            <Button
+              param={true}
+              // className={styles.Button}
+              style="Brand"
+              type="submit"
+              onClick={() => login}
+            >
+              {" "}
+              Empezar
+            </Button>
+
+            <Button
+              // className={styles.Button}
+              style="Facebook"
+              onClick={loginFacebook}
+            >
+              {" "}
+              Facebook
+            </Button>
+
+            <Button
+              // className={styles.Button}
+              style="Google"
+              onClick={loginGoogle}
+            >
+              Google
+            </Button>
+            <Label text="Recuperar contraseña" />
+          </form>
+        </div>
+        <div className={styles.ContainerFooter}>
+          <Label text="¿No tienes cuenta en Art-Hispano" />
+          <Button style="Brand" onClick={signup}>
+            Registrate
+          </Button>
+        </div>
+      </div>
+    </>
   );
 };
 

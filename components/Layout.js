@@ -1,11 +1,24 @@
 import Navbar from "@components/Navbar";
+// import Head from 'next/head';
+import Footer from "@components/Footer";
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
-    <div>
+    <>
+      {/* <Head>
+        <link 
+          rel="icon" 
+          type="image/ico"
+          // href="public"
+          
+        />
+      </Head> */}
+      
       <Navbar />
-      { children }
-      <footer>Este es el footer</footer>
-    </div>
+      {children}
+      <Footer />
+    </>
   );
 }
+
+export default  Layout

@@ -1,0 +1,12 @@
+@import "../styles.module.scss";
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  width: 300px;
+  border-radius: $border-radius;
+  padding: 10px;
+}

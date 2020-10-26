@@ -8,11 +8,16 @@ $color-secondary:#6d5e52;
 $color-tertiary:#e2e8f0;
 
 $color-black:#000000;
+$color-purple: purple;  
 $color-darkGrey:#4d4d4d;
 $color-grey:#737373;
 $color-lightGrey:#bfbfbf;
 $color-darkWhite:#f1f1f1;
 $color-white:#ffffff;
+$color-buttonFacebook:#3456f3;
+$color-buttonGoogle:#dd4B39;
+$color-buttonBrand:#ff9f1c;
+
 
 /*-------Alerts Colors */
 $color-alert: #ffa500;
@@ -22,11 +27,18 @@ $color-success: #30e92c;
 
 /*-------Fonts Styles */
 $base-font:Roboto, sans-serif;
+$base-fontSizeSmall: 14px;
 $base-fontsize: 16px;
+$base-fontSizeMedium: 18px;
+$base-fontSizeLarge: 20px;
+
+$button-medium: 30px;
+$button-small: 20px;
 
 // $button-color: $color-white;
 $button-color: red;
 $button-backgroundColor: $color-brand;
+
 
 //Constantes
 $border-radius: 3px;

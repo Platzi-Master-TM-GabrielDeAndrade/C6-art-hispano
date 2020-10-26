@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nexport default function Home() {\n  return __jsx(\"div\", null, __jsx(\"h1\", null, \"Art-Hispano\"));\n}","map":null,"metadata":{},"sourceType":"module"}
