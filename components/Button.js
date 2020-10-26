@@ -1,16 +1,8 @@
 import styles from "../styles/components/Button.module.scss";
 
-const Button = ({ children, onClick, param }) => (
+const Button = ({ children, onClick, style }) => (
   <button
-    // if (onClick === "Google") {
-
-    // } elseif (onClick === "Google") {
-
-    // } else {
-
-    // }
-
-    className={param ? styles.Button : styles.ButtonGoogle}
+    className={styles[`Button${style}`]}
     onClick={onClick}
   >
     {children}

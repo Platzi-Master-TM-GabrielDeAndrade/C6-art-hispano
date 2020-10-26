@@ -2,15 +2,13 @@
 @import "../lib/variables.module";
 
 .TitleContainer {  
-  color: $color-black;
+   color: #6d5e52;
   font-size: $base-fontsize * 1.25;  
   text-align: center;  
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 .TitleLabel {
-  color: $color-black;
-  font-size: $base-fontsize ;  
-  text-align: center;  
-  font-weight: bold;
+  color: #6d5e52;
+  font-size: $base-fontsize;
 }

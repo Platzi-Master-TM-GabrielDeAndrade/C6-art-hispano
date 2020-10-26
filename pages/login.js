@@ -121,7 +121,8 @@ const Login = () => {
 
             <Button
               param={true}
-              className={styles.Button}
+              // className={styles.Button}
+              style="Brand"
               type="submit"
               onClick={() => login}
             >
@@ -129,13 +130,18 @@ const Login = () => {
               Empezar
             </Button>
 
-            <Button className={styles.ButtonFacebook} onClick={loginFacebook}>
+            <Button
+              // className={styles.Button}
+              style="Facebook"
+              onClick={loginFacebook}
+            >
+              {" "}
               Facebook
             </Button>
 
             <Button
-              param={false}
-              className={styles.ButtonGoogle}
+              // className={styles.Button}
+              style="Google"
               onClick={loginGoogle}
             >
               Google
@@ -145,7 +151,9 @@ const Login = () => {
         </div>
         <div className={styles.ContainerFooter}>
           <Label text="¿No tienes cuenta en Art-Hispano" />
-          <Button onClick={signup}>Registrate</Button>
+          <Button style="Brand" onClick={signup}>
+            Registrate
+          </Button>
         </div>
       </div>
     </>
