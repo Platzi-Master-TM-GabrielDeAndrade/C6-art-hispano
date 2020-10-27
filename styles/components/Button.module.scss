@@ -4,6 +4,7 @@
 // background-color: = @include button-colors(onClick)
 
 // @include button-colors(Google);
+<<<<<<< HEAD
 
 // .ButtonBrand {
 //   width: 100%;
@@ -13,6 +14,20 @@
 //   min-width: 250px;  
 //   height: 30px;  
 //   color:white;  
+=======
+.ButtonSell {
+  background: red;
+  color: green;
+}
+.ButtonBrand {
+  width: 100%;
+  padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  min-width: 250px;  
+  height: 30px;  
+  color:white;  
+>>>>>>> 38c82cfc1be2985573b110b6d7a8e7e68e3dc8a3
   
 //   font-size: $button-small ;  
 //   font-weight: bold;  
