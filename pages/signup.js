@@ -37,6 +37,9 @@ export default function Signup() {
     registrar();
   };
 
+  const Login =  () => {    
+      router.push("/admin");    
+  };
   const registrar = async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, pass);
@@ -63,6 +66,9 @@ export default function Signup() {
 
   return (
     <>
+      <div className={styles.Main}>
+        <div className={styles.ContainerBody}>
+
       <h3>
         <Title text="Registro" />
       </h3>
@@ -83,19 +89,24 @@ export default function Signup() {
           value={pass}
           onChange={(e) => setPass(e.target.value)}
         />
-        <Button className={styles.Button} type="submit">
+        <Button 
+          style="Registrate" 
+          type="submit">
           Registrar
         </Button>
 
         <Button
-          className={styles.Button}
+          style="Brand"
           type="button"
           // onClick={() => setEsRegistro(!setEsRegistro)}
-          onClick={registrar}
+          onClick={Login}
+          // router.push("/admin");
         >
           ¿Ya tienes cuenta?
         </Button>
       </form>
+        </div>
+      </div>
     </>
   );
 }

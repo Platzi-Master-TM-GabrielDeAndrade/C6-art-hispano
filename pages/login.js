@@ -122,7 +122,7 @@ const Login = () => {
             <Button
               param={true}
               // className={styles.Button}
-              style="Button--Brand"
+              style="Brand"
               type="submit"
               onClick={() => login}
             >
@@ -138,15 +138,8 @@ const Login = () => {
               {" "}
               Facebook
             </Button>
-                  <Button 
-                  style="Sell"
-                  >
-                    Vender
-                  </Button>
-                  <Input
-                  type="email"
-                  >
-                  </Input>
+            {/* <Button style="Sell">Vender</Button> */}
+            {/* <Input type="email"></Input> */}
             <Button
               // className={styles.Button}
               style="Google"
@@ -160,7 +153,7 @@ const Login = () => {
         <div className={styles.ContainerFooter}>
           <Label text="¿No tienes cuenta en Art-Hispano" />
           <Button
-            style="Oro"
+            style="Registrate"
             // className={styles.Button}
             onClick={signup}
           >

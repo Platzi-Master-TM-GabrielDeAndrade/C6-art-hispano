@@ -4,7 +4,6 @@
 // background-color: = @include button-colors(onClick)
 
 // @include button-colors(Google);
-<<<<<<< HEAD
 
 // .ButtonBrand {
 //   width: 100%;
@@ -14,20 +13,6 @@
 //   min-width: 250px;  
 //   height: 30px;  
 //   color:white;  
-=======
-.ButtonSell {
-  background: red;
-  color: green;
-}
-.ButtonBrand {
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;  
->>>>>>> 38c82cfc1be2985573b110b6d7a8e7e68e3dc8a3
   
 //   font-size: $button-small ;  
 //   font-weight: bold;  
@@ -39,26 +24,6 @@
 //   background-color:$color-buttonBrand;
 // }
 
-// .Button{
-//   width: 100%;
-//   padding: 10px 30px;
-//   margin-right: 2px;
-//   margin-bottom: 10px;
-//   min-width: 250px;  
-//   height: 30px;  
-   
-  
-//   font-size: $button-small ;  
-//   font-weight: bold;  
-//   border:none;
-//   border-radius: $border-radius * 2 ;  
-//   cursor: pointer;  
-//   text-align: center;
-//   line-height: 10px;
-//   &.Google{
-//     color:white; 
-//     background-color:$color-buttonGoogle;
-//   }
 
 // .ButtonGoogle {
 //   width: 100%;
@@ -98,35 +63,57 @@
 //   line-height: 10px;
 // }
 
+// .ButtonRegistrate{
+//   width: 100%;
+//   padding: 10px 30px;
+//   margin-right: 2px;
+//   margin-bottom: 10px;
+//   min-width: 250px;  
+//   height: 30px;  
+//   color:white;
+//   background-color: #056a48;
+  
+//   font-size: $button-small ;  
+//   font-weight: bold;  
+//   border:none;
+//   border-radius: $border-radius * 2 ;  
+//   cursor: pointer;  
+//   text-align: center;
+//   line-height: 10px;
+// }
 
-.Button {
+
+.Button{
+  width: 100%;
   padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
   min-width: 250px;  
-  color:white;  
+  height: 30px;    
+  
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  
-  cursor: pointer;    
-  width: 100%;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  height: 30px;  
+  cursor: pointer;  
   text-align: center;
   line-height: 10px;
-  &.Button--Oro {
-    color:white; 
-    background-color:green;
-  }  
-  &.Button--Facebook {
-    color:white; 
+
+  &--Facebook {
+    color:white;
     background-color: $color-buttonFacebook;
   }
-  &.Button--Google {
-    color:white; 
+  &--Google {
+    color:white;
     background-color: $color-buttonGoogle;
   }
+  &--Registrate {
+    color:white;
+    background-color: #056a48;
+  }
+  &--Brand {
+    color:white;
+    background-color: $color-buttonBrand;
+  }
+  
 }
-
-// .Button_ButtonBrand {
-  // background-color:green
