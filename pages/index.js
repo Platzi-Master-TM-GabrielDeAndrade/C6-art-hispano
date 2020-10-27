@@ -10,7 +10,6 @@ export default function Home () {
           <li><img src="" alt=""/></li>
         </ul>
       </div>
-          <authMethods/>
     </>
   );
 };
