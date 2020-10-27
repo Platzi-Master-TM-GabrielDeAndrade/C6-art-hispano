@@ -5,60 +5,113 @@
 
 // @include button-colors(Google);
 
-.ButtonBrand {
-  width: 100%;
+// .ButtonBrand {
+//   width: 100%;
+//   padding: 10px 30px;
+//   margin-right: 2px;
+//   margin-bottom: 10px;
+//   min-width: 250px;  
+//   height: 30px;  
+//   color:white;  
+  
+//   font-size: $button-small ;  
+//   font-weight: bold;  
+//   border:none;
+//   border-radius: $border-radius * 2 ;  
+//   cursor: pointer;  
+//   text-align: center;
+//   line-height: 10px;
+//   background-color:$color-buttonBrand;
+// }
+
+// .Button{
+//   width: 100%;
+//   padding: 10px 30px;
+//   margin-right: 2px;
+//   margin-bottom: 10px;
+//   min-width: 250px;  
+//   height: 30px;  
+   
+  
+//   font-size: $button-small ;  
+//   font-weight: bold;  
+//   border:none;
+//   border-radius: $border-radius * 2 ;  
+//   cursor: pointer;  
+//   text-align: center;
+//   line-height: 10px;
+//   &.Google{
+//     color:white; 
+//     background-color:$color-buttonGoogle;
+//   }
+
+// .ButtonGoogle {
+//   width: 100%;
+//   padding: 10px 30px;
+//   margin-right: 2px;
+//   margin-bottom: 10px;
+//   min-width: 250px;  
+//   height: 30px;  
+//   color:white;  
+  
+//   font-size: $button-small ;  
+//   font-weight: bold;  
+//   border:none;
+//   border-radius: $border-radius * 2 ;  
+//   cursor: pointer;  
+//   text-align: center;
+//   line-height: 10px;
+//   background-color:$color-buttonGoogle;
+// }
+
+// .ButtonFacebook{
+//   width: 100%;
+//   padding: 10px 30px;
+//   margin-right: 2px;
+//   margin-bottom: 10px;
+//   min-width: 250px;  
+//   height: 30px;  
+//   color:white;
+//   background-color: $color-buttonFacebook;
+  
+//   font-size: $button-small ;  
+//   font-weight: bold;  
+//   border:none;
+//   border-radius: $border-radius * 2 ;  
+//   cursor: pointer;  
+//   text-align: center;
+//   line-height: 10px;
+// }
+
+
+.Button {
   padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
   min-width: 250px;  
-  height: 30px;  
   color:white;  
-  
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-  background-color:$color-buttonBrand;
-}
-
-
-.ButtonGoogle {
+  cursor: pointer;    
   width: 100%;
-  padding: 10px 30px;
   margin-right: 2px;
   margin-bottom: 10px;
-  min-width: 250px;  
   height: 30px;  
-  color:white;  
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
   text-align: center;
   line-height: 10px;
-  background-color:$color-buttonGoogle;
+  &.Button--Oro {
+    color:white; 
+    background-color:green;
+  }  
+  &.Button--Facebook {
+    color:white; 
+    background-color: $color-buttonFacebook;
+  }
+  &.Button--Google {
+    color:white; 
+    background-color: $color-buttonGoogle;
+  }
 }
 
-.ButtonFacebook{
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;
-  background-color: $color-buttonFacebook;
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-}
+// .Button_ButtonBrand {
+  // background-color:green
