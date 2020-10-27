@@ -138,7 +138,15 @@ const Login = () => {
               {" "}
               Facebook
             </Button>
-
+                  <Button 
+                  style="Sell"
+                  >
+                    Vender
+                  </Button>
+                  <Input
+                  type="email"
+                  >
+                  </Input>
             <Button
               // className={styles.Button}
               style="Google"
