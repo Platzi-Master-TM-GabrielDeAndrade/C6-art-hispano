@@ -83,3 +83,16 @@
   text-align: center;
   line-height: 10px;
 }
+
+.ButtonBuy {
+  background-color: $color-buttonBrand;
+  color: $color-white;
+  padding: 2.5px 40px;
+  margin: 0 18px 0 0;
+}
+
+.ButtonAddToCart {
+  background-color: $color-white;
+  color: $color-buttonBrand;
+  padding: 2.5px 5px;
+}

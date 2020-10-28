@@ -1,0 +1,186 @@
+@import "../styles.module.scss";
+
+
+.Main {
+    /////// AUTO ///////
+    height: auto;
+    background-color: #ffffff;
+    font-family: $base-font;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+//-------- MAIN GRID ------//
+
+.MainContainer {
+    height: 100%;
+    display: grid;
+    // Modificar altura del espacio
+    /////// AUTO ///////
+    grid-template: 600px / 120px 550px 1fr;
+    grid-template-areas: "imgs main-img description";
+}
+
+//-------- END MAIN GRID ------//
+
+//-------- LEFTSIDE GRID ------//
+
+.Leftside {
+    grid-area: imgs;
+    display: grid;
+    grid-template: repeat(5, 100px) / 1fr;
+    gap: 10px;
+}
+
+.LeftsideImages {
+    margin: 1rem;
+    padding: 0.25rem;
+    display: flex;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.LeftsideImages img {
+    width: 80%;
+    /* height: 100%; */
+    /* No es sostenible lo que viene aqui dentro */
+}
+
+//-------- END LEFTSIDE GRID ------//
+
+//-------- MAIN IMAGE -------//
+
+.MainImage {
+    grid-area: main-img;
+    display: flex;
+    border: 1px solid $color-secondary;
+    border-radius: $border-radius;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.MainImage img {
+    width: 100%;
+    align-self: center;
+}
+
+//-------- END MAIN IMAGE -------//
+
+//-------- DESCRIPTION GRID -------//
+
+.MainDescriptionContainer {
+    grid-area: description;
+    display: grid;
+    grid-template: 1fr minmax(350px, auto) 1fr / 1fr 8fr 1fr;
+    grid-template-areas: ". . ."
+                         ". container ."
+                         ". . .";
+}
+
+.DescriptionContainer {
+    grid-area: container;
+    display: grid;
+    grid-template: 1fr repeat(4, 30px)  / 1fr;
+    grid-template-areas: "content"
+                         "free-shipping"
+                         "rating"
+                         "quantity"
+                         "buttons";
+    gap: 5px;
+}
+
+.DescriptionContent {
+    grid-area: content;
+}
+
+.DescriptionContent h1 {
+    font-size: $medium-text;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-bottom: 20px;
+}
+
+.DescriptionContent p {
+    font-size: $light-small-text;
+    font-weight: 400;
+    color: $color-secondary;
+    margin-bottom: 2.5px;
+}
+
+.DescriptionContent h2 {
+    font-size: $text-titles;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-bottom: 5px;
+}
+
+.FreeShipping {
+    grid-area: free-shipping;
+    display: flex;
+    align-items: center;
+}
+
+.FreeShipping img {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.FreeShipping span {
+    font-size: $light-small-text;
+    font-weight: 400;
+    color: #52C236;
+}
+
+.Rating {
+    grid-area: rating;
+}
+.Rating img {
+    height: 25px;
+}
+
+.Quantity {
+    grid-area: quantity;
+    display: flex;
+    align-items: center;
+}
+
+.Quantity span {
+    color: $color-secondary;
+    font-size: $light-small-text;
+    font-weight: 400;
+    margin: 0 12.5px 0 0;
+}
+
+.Quantity button {
+    font-size: $light-small-text;
+    font-weight: 400;
+    color: $color-secondary;
+    background-color: $color-white;
+    border: 0.5px solid $color-secondary;
+    border-radius: 2rem;
+}
+
+.QuantityButtonMore {
+    padding: 2.5px 7.5px;
+}
+
+.QuantityButtonLess {
+    padding: 2.5px 10px;
+}
+
+.DescriptionButtons {
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+}
+
+.DescriptionButtons button {
+    font-size: $light-small-text;
+    font-weight: 400;
+    border: 1px solid $color-buttonBrand;
+    border-radius: $border-radius;
+}
+
+
+//-------- END DESCRIPTION GRID -------//
