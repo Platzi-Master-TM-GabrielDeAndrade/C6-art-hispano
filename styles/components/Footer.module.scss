@@ -2,9 +2,37 @@
 @import "../lib/variables.module";
 
 .Footer {
-  margin-top: 50px;
-  padding: 15px 0;
-  font-size: 14px;
-  color: #727272;
-  border-top: 1px solid rgba(0,0,0,.1);
+  // margin-top: 50px;
+  // padding: 15px 0;
+  // font-size: 14px;
+  // color: #727272;
+  // border-top: 1px solid rgba(0,0,0,.1); 
+  // background-color: yellow;  
+  display: grid;
+  grid-template-columns:repeat(5, 1fr);   
+  column-gap: 5px;
+  
+  }
+
+.AboutUsOportunidades{    
+  grid-column: 1/1;      
+}
+
+.AboutUsHaz{    
+  grid-column: 2/2;      
+}
+
+.AboutUsInformacion{    
+  grid-column: 3/3;      
+}
+
+.AboutUsAyuda{    
+    grid-column: 4/4;      
+}
+.Social{
+    grid-column: 5/5;    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 20px;    
 }
