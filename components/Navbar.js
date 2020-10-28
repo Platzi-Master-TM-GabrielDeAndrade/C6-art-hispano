@@ -36,9 +36,13 @@ export default function Navbar() {
         </div>
 
         <div className={styles.nav_icons}>
-          <button type="text" value="hola">
+          <button type="text" value="">
             {" "}
+            <Link href= '/sell'>
             Vender
+
+            
+            </Link>
           </button>
           <img src="carrito.svg" alt="Carrito" width="30" height="30" />
           <img src="favorito.svg" alt="Favorito" width="30" height="30" />
