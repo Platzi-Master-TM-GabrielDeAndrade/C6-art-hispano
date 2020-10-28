@@ -1,30 +1,32 @@
-import styles from "../styles/pages/Index.module.scss";
-/* import Label from "../components/Label"; */
+/* import styles from "../styles/pages/Index.module.scss"; */
+import styles from "@styles/pages/Sell.module.scss";
+import Button from "../components/Button";
 
-export default function Home () {
+export default function sell () {
   return (
     <>
-      <div className = {styles.container}>          
-          <h1 className = {styles.tittle}>Publica tu arte</h1>
+      <div className={styles.cont_title}>        
+          <h1 className={styles.tittle}>Publica tu arte</h1>
       </div>
-      <div>
-         <button className>
+   <div className={styles.container}> 
+      <div className={styles.images}>
+         <button>
             <img src="kiosko.svg" alt=""></img>
          </button>
-         <button className>
+         <button>
             <img src="Arete.svg" alt=""></img>
          </button>
-         <button className>
+         <button>
             <img src="Flauta.svg" alt=""></img>
          </button>
-         <button className>
+         <button>
             <img src="Saco.svg" alt=""></img>
          </button>
-         <button className>
+         <button>
             <img src="Zapato.svg" alt=""></img>
          </button>
       </div>
-      <div className>
+      <div className={styles.search_one}>
          <select name="sell" class="sell-select">
             <option value="/">Hogar</option>
             <option value="">Cocina</option>
@@ -55,7 +57,9 @@ export default function Home () {
          <select name="sell" class="sell-select">
             <option value="/">Calzado</option>
          </select>
-         <select name="sell" class="sell-select">
+      </div>
+      <div className={styles.search_two}>
+       <select name="sell" class="sell-select">
             <option value="/">Decoración</option>
             <option value="">Ceramica</option>
             <option value="">Madera</option>
@@ -67,7 +71,8 @@ export default function Home () {
          </select>
          <select name="" class="sell-select">
             <option value="/">Jardines</option>
-         </select>
+         </select> 
+       </div>
       </div>
     </>
   );
