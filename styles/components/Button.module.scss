@@ -65,3 +65,21 @@
   text-align: center;
   line-height: 10px;
 }
+.ButtonRegistro{
+  width: 100%;
+  padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  min-width: 250px;  
+  height: 30px;  
+  color:white;
+  background-color: #056e4a;
+  
+  font-size: $button-small ;  
+  font-weight: bold;  
+  border:none;
+  border-radius: $border-radius * 2 ;  
+  cursor: pointer;  
+  text-align: center;
+  line-height: 10px;
+}
