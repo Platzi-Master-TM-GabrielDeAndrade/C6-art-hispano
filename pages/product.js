@@ -41,16 +41,16 @@ export default function Product () {
                             <span>Env&iacute;o Gratis</span>
                         </section>
                         <section className={styles.Rating}>
-                            <img src="https://lh3.googleusercontent.com/proxy/4kJ93uf62sSVeDJuoysoRtTrchfAmWCPwprj_RDu0367lNgrzON59ET1OvWNe6bN-jeG509udFTDqelDGcpt52Py8O7VVh5rLFEWgyHREenyUM3J5hFiZGJ-8bFOxmax" alt="Rating" />
+                            <img src="https://entrecajasycafe.es/wp-content/uploads/2019/02/five-stars-5-gold-stars-png.png" alt="Rating" />
                         </section>
                         <section className={styles.Quantity}>
                             <span>Cantidad</span>
                             <span>
-                                <button className={styles.QuantityButtonMore}>+</button>
+                                <Button children="+" style="OneMore"></Button>
                             </span>
                             <span>1</span>
                             <span>
-                                <button className={styles.QuantityButtonLess}>-</button>
+                                <Button children="-" style="OneLess"></Button>
                             </span>
                         </section>
                         <section className={styles.DescriptionButtons}>

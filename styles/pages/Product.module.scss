@@ -136,7 +136,7 @@
     grid-area: rating;
 }
 .Rating img {
-    height: 25px;
+    height: 30px;
 }
 
 .Quantity {
@@ -152,34 +152,11 @@
     margin: 0 12.5px 0 0;
 }
 
-.Quantity button {
-    font-size: $light-small-text;
-    font-weight: 400;
-    color: $color-secondary;
-    background-color: $color-white;
-    border: 0.5px solid $color-secondary;
-    border-radius: 2rem;
-}
-
-.QuantityButtonMore {
-    padding: 2.5px 7.5px;
-}
-
-.QuantityButtonLess {
-    padding: 2.5px 10px;
-}
 
 .DescriptionButtons {
     grid-area: buttons;
     display: flex;
     align-items: center;
-}
-
-.DescriptionButtons button {
-    font-size: $light-small-text;
-    font-weight: 400;
-    border: 1px solid $color-buttonBrand;
-    border-radius: $border-radius;
 }
 
 
