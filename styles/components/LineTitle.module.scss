@@ -1,0 +1,10 @@
+@import "../styles/lib/_variables.module.scss";
+
+.products_title{
+    color: $color-secondary;
+    font-size: $medium-text;
+}
+
+.products_Line{
+    border-bottom: 1px solid $color-secondary;
+}

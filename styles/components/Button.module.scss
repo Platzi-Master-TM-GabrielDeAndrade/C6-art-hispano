@@ -7,7 +7,12 @@
   margin-right: 2px;
   margin-bottom: 10px;
   min-width: 250px;  
+<<<<<<< HEAD
   height: 30px;    
+=======
+  height: 30px;  
+  color: $color-white;  
+>>>>>>> 067592e23f7a5410375385099e15fbc6114fe948
   
   font-size: $button-small ;  
   font-weight: bold;  
@@ -18,6 +23,7 @@
   text-align: center;
   line-height: 10px;
 
+<<<<<<< HEAD
   &:disabled {
     opacity: .25;
     pointer-events: none;
@@ -38,4 +44,104 @@
     color:white;
     background-color: $color-buttonBrand;
   }  
+=======
+.ButtonGoogle {
+  width: 100%;
+  padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  min-width: 250px;  
+  height: 30px;  
+  color:white;  
+  
+  font-size: $button-small ;  
+  font-weight: bold;  
+  border:none;
+  border-radius: $border-radius * 2 ;  
+  cursor: pointer;  
+  text-align: center;
+  line-height: 10px;
+  background-color:$color-buttonGoogle;
+}
+
+.ButtonFacebook{
+  width: 100%;
+  padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  min-width: 250px;  
+  height: 30px;  
+  color:white;
+  background-color: $color-buttonFacebook;
+  
+  font-size: $button-small ;  
+  font-weight: bold;  
+  border:none;
+  border-radius: $border-radius * 2 ;  
+  cursor: pointer;  
+  text-align: center;
+  line-height: 10px;
+}
+.ButtonRegistro{
+  width: 100%;
+  padding: 10px 30px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  min-width: 250px;  
+  height: 30px;  
+  color:white;
+  background-color: #056e4a;
+  
+  font-size: $button-small ;  
+  font-weight: bold;  
+  border:none;
+  border-radius: $border-radius * 2 ;  
+  cursor: pointer;  
+  text-align: center;
+  line-height: 10px;
+}
+
+.ButtonBuy {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+  padding: 2.5px 40px;
+  margin: 0 18px 0 0;
+}
+
+.ButtonAddToCart {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  color: $color-buttonBrand;
+  padding: 2.5px 5px;
+}
+
+
+// Used in the Product Page
+.ButtonOneMore {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 7.5px;
+}
+
+// Used in the Product Page
+.ButtonOneLess {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 10px;
+>>>>>>> 067592e23f7a5410375385099e15fbc6114fe948
 }
