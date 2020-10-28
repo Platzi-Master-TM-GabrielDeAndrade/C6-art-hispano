@@ -15,7 +15,7 @@
   margin-bottom: 10px;
   min-width: 250px;  
   height: 30px;  
-  color:white;  
+  color: $color-white;  
   
   font-size: $button-small ;  
   font-weight: bold;  
@@ -82,4 +82,48 @@
   cursor: pointer;  
   text-align: center;
   line-height: 10px;
+}
+
+.ButtonBuy {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+  padding: 2.5px 40px;
+  margin: 0 18px 0 0;
+}
+
+.ButtonAddToCart {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  color: $color-buttonBrand;
+  padding: 2.5px 5px;
+}
+
+
+// Used in the Product Page
+.ButtonOneMore {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 7.5px;
+}
+
+// Used in the Product Page
+.ButtonOneLess {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 10px;
 }
