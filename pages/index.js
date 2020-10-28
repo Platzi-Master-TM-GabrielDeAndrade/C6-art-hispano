@@ -5,11 +5,11 @@ export default function Home () {
     <>
     <div className = {styles.slider}>
         <ul>
-          <li><img src="arte.jpg "alt="arte"  /></li>
-          <li><img src="barro.jpg" alt=""/></li>
-          <li><img src="" alt=""/></li>
+          <li><img src="home.jpg "alt="arte" width= "100%"/></li>
         </ul>
-      </div>
+      <hr/>
+        
+    </div>
     </>
   );
 };

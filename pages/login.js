@@ -138,15 +138,7 @@ const Login = () => {
               {" "}
               Facebook
             </Button>
-                  <Button 
-                  style="Sell"
-                  >
-                    Vender
-                  </Button>
-                  <Input
-                  type="email"
-                  >
-                  </Input>
+                       
             <Button
               // className={styles.Button}
               style="Google"
@@ -159,7 +151,7 @@ const Login = () => {
         </div>
         <div className={styles.ContainerFooter}>
           <Label text="¿No tienes cuenta en Art-Hispano" />
-          <Button style="Brand" onClick={signup}>
+          <Button style="Registro" onClick={signup}>
             Registrate
           </Button>
         </div>
