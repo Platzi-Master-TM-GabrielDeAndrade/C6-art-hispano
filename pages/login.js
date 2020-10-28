@@ -47,8 +47,8 @@ const Login = () => {
     console.log(email);
     console.log(pass);
     if (!email.trim() || !pass.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      console.log("Datos vacíos email y/o password!");
+      setError("Datos vacíos email y/o password!");
       return;
     }
     if (!pass.trim()) {
