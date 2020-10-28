@@ -1,2 +1,10 @@
 @import "../styles.module.scss";
 @import "../lib/variables.module";
+
+.Footer {
+  margin-top: 50px;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #727272;
+  border-top: 1px solid rgba(0,0,0,.1);
+}

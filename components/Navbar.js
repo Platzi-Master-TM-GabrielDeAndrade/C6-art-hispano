@@ -30,7 +30,7 @@ export default function Navbar() {
           <button>
             <img src="search.svg" alt="" width="15" height="15" />
           </button>
-          <p>Categotira</p>
+          <p>Categoria</p>
           <p>Ofertas de la semana</p>
           <p>Filtrar</p>
         </div>

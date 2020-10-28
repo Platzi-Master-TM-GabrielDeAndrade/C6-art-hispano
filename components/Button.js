@@ -1,12 +1,11 @@
 import styles from "../styles/components/Button.module.scss";
-// console.log(`${styles.Button} ${style && styles[`Button--${style}`]}`);
-const Button = ({ children, onClick, style }) => (
+
+const Button = ({ children, onClick, style, disabled = false }) => (
   <button
-    // className={styles.ButtonBrand}
     // className={styles[`Button${style}`]}
-    className={`${styles.Button} ${style && styles[`Button--${style}`]}`}
-    // className={styles["ButtonBrand"]}
+    className={`${styles.Button} ${style && styles[`Button${style}`]}`}
     onClick={onClick}
+    disabled={disabled}
   >
     {children}
   </button>
