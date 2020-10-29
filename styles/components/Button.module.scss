@@ -93,6 +93,8 @@
   color: $color-white;
   padding: 2.5px 40px;
   margin: 0 18px 0 0;
+  outline: none;
+  cursor: pointer;
 }
 
 .ButtonAddToCart {
@@ -103,6 +105,8 @@
   background-color: $color-white;
   color: $color-buttonBrand;
   padding: 2.5px 5px;
+  outline: none;
+  cursor: pointer;
 }
 
 
@@ -115,6 +119,8 @@
   border: 0.5px solid $color-secondary;
   border-radius: 2rem;
   padding: 2.5px 7.5px;
+  outline: none;
+  cursor: pointer;
 }
 
 // Used in the Product Page
@@ -126,4 +132,7 @@
   border: 0.5px solid $color-secondary;
   border-radius: 2rem;
   padding: 2.5px 10px;
+  outline: none;
+  cursor: pointer;
 }
+
