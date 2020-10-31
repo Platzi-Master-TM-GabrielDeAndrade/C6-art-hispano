@@ -1,60 +1,260 @@
+// Librerias, Settings y Variables
+// @import "@lib/variables.module.scss";
 @import "../styles.module";
+@import "../lib/variables.module";
 
-.sell-title {
-   text-align: center;
-   width: 1152px;
-   height: 60px;
-   width: 100vw;
-   background: orange;
-}
+//sell
 
-.sell-title h1 {
-   align-items: center;
-   color: #6D5E52;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.container {
-   display: grid;
-   grid-template-columns: 1fr 10fr 10fr;
-   grid-template-rows: 1f repeat(5);
-   align-items: center;
-   width: 1152px;
-   height: 60px;
-   width: 100vw;
-}
-.sell-icon {
-   cursor: pointer;
-   width: 71px;
-   height: 50px;
-   margin: 10px;
-   box-sizing: border-box;
-   background: #E2E8F0;
-   border-radius: 10px;
-   border: 1px solid #6D5E52;
+.cont_title {
+  display: grid;
+  background-color: $color-brand;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100px;
+  text-align: center;
 }
 
-.sell-select {
-   margin: 15px;
-   display: flex;
-   width: 50%;
-   height: 50%;
-   border-radius: 10px;
-   font-weight: bold;
-   color:#6d5e52;
-   display: flex;
-   font-size: 25px;
-   line-height: 29px;
+.tittle {
+  color: $color-secondary;
+  justify-content: center;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+.container{
+  display:grid;
+  grid-template-columns: .2fr 1.5fr 2fr;
+  background-color: white;
+  height: 350px;
+  align-items: center;
+  align-content: center;
 }
 
-select:hover{
-   background-color: #FF9F1C;
-   opacity: 40%;
-   cursor: pointer;
+.container select:hover{
+  background-color: #FF9F1C;
+  opacity: 40%;
+  cursor: pointer;
 }
 
-button:hover{
-   background-color: #FF9F1C;
-   opacity: 40%;
-   cursor: pointer;
+.container button:hover{
+  background-color: #FF9F1C;
+  opacity: 40%;
+  cursor: pointer;
 }
+
+.images button{
+  align-items: center;
+  background: #E2E8F0;
+  border: 1px solid #6D5E52;
+  box-sizing: border-box;
+  width: 70px;
+  height: 50px;
+  padding: 10px 15px;
+  margin: 5px;    
+  font-size: $base-fontSizeMedium;
+  background-color: #e2e8f0;
+  border: 1px solid #6D5E52;
+  box-sizing: border-box;
+  border-radius: $border-radius * 2;
+}
+
+.search_one select{
+  padding: 10px 15px;
+  margin: 5px;
+  width: 495px;
+  height: 50px;
+  font-size: $base-fontSizeMedium;
+  background-color: #e2e8f0;
+  border: 1px solid #6D5E52;
+  color: #6D5E52;
+  box-sizing: border-box;
+  border-radius: $border-radius * 2;
+}
+.search_two select{
+  padding: 10px 15px;
+  margin: 10px;
+  width: 495px;
+  height: 50px;
+  font-size: $base-fontSizeMedium;
+  background-color: #e2e8f0;
+  border: 1px solid #6D5E52;
+  color: #6D5E52;
+  box-sizing: border-box;
+  border-radius: $border-radius * 2;
+}
+
+.search_one{
+  margin: 15px;
+  padding: 15px;
+  align-items: center;
+}
+
+.search_two{
+  align-items: flex-start;
+  margin: 15px;
+}
+
+.option{
+  margin:15px;
+}
+
+
+
+// Details
+
+.container_details{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  justify-content: center;
+  background-color: white;
+ }
+
+.cont_title_details {
+  display: grid;
+  background-color: $color-brand;
+  grid-column: 1 / san 2;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  height: 60px;
+  text-align: center;
+  $base-font:Roboto, sans-serif;
+  color: $color-secondary;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.details_title{
+  align-content: center;
+  display: grid;
+  grid-column: 1 / san 2;
+}
+
+.details_title  label{
+  height: 35px;
+  min-width: 250px; 
+  padding: 15px 22px;
+  margin-bottom: 20px;  
+  color: #FFFFFF;  
+  font-size: $base-fontSizeMedium;
+  font-weight: 400;
+  background-color: #6D5E52;
+  border: 1px solid #6D5E52;
+  box-sizing: border-box;
+  border-radius: $border-radius * 2;
+}
+
+
+.container_details Button:hover{
+    background-color: #FF9F1C;
+    opacity: 40%;
+    cursor: pointer;
+}
+
+
+.sell_client{
+    margin: 15px;
+    align-items: center;
+  }
+
+
+.title_images{
+    display: grid;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+.takeFoto{
+    row-gap: 2px;
+    column-gap: 50px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: strech;
+    display: grid;
+    width: 300px;
+    height: 150px;
+  }
+
+  .title_images button{
+    background: #E2E8F0;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    text-align: left;
+    width: 472px;
+    height: 35px;
+    padding: 10px 15px;
+    margin-bottom: 10px;    
+    font-size: $base-fontSizeMedium;
+    background-color: #e2e8f0;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    border-radius: $border-radius * 2;
+  }
+.register{
+  margin: 15px;
+
+}
+
+.register button{
+    color: #FFFFFF;
+    font-size: 25px;
+    background: #FF9F1C;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .texTarea {
+    width: 100%;
+    height: 109px;
+    min-width: 300px; 
+    padding: 10px 15px;
+    margin-bottom: 10px;    
+    font-size: $base-fontSizeMedium;
+    font-weight: 400;
+    background-color: #e2e8f0;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    border-radius: $border-radius * 2;
+ }
+
+
+//Publication
+
+.cont_title{
+  display: grid;
+  background-color: $color-brand;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.title_publication{
+  width: 506px;
+  height: 80px;
+  display: grid;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px dashed #FFFFFF;
+  transform: rotate(0.11deg);
+}
+

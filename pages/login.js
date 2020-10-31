@@ -47,8 +47,8 @@ const Login = () => {
     console.log(email);
     console.log(pass);
     if (!email.trim() || !pass.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      console.log("Datos vacíos email y/o password!");
+      setError("Datos vacíos email y/o password!");
       return;
     }
     if (!pass.trim()) {
@@ -122,7 +122,7 @@ const Login = () => {
             <Button
               param={true}
               // className={styles.Button}
-              style="Brand"
+              style="--Brand"
               type="submit"
               onClick={() => login}
             >
@@ -132,16 +132,17 @@ const Login = () => {
 
             <Button
               // className={styles.Button}
-              style="Facebook"
+              style="--Facebook"
               onClick={loginFacebook}
             >
               {" "}
               Facebook
             </Button>
-                       
+            {/* <Button style="Sell">Vender</Button> */}
+            {/* <Input type="email"></Input> */}
             <Button
               // className={styles.Button}
-              style="Google"
+              style="--Google"
               onClick={loginGoogle}
             >
               Google
@@ -151,7 +152,10 @@ const Login = () => {
         </div>
         <div className={styles.ContainerFooter}>
           <Label text="¿No tienes cuenta en Art-Hispano" />
-          <Button style="Registro" onClick={signup}>
+          <Button
+            style="--Registrate"            
+            onClick={signup}
+          >
             Registrate
           </Button>
         </div>

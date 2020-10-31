@@ -1,88 +1,47 @@
 @import "../styles.module.scss";
 @import "../lib/variables.module";
 
-// background-color: = @include button-colors(onClick)
-
-// @include button-colors(Google);
-.ButtonSell {
-  background: red;
-  color: green;
-}
-.ButtonBrand {
+.Button{
   width: 100%;
   padding: 10px 30px;
   margin-right: 2px;
   margin-bottom: 10px;
   min-width: 250px;  
-  height: 30px;  
-  color: $color-white;  
+  height: 30px;    
   
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
   border-radius: $border-radius * 2 ;  
   cursor: pointer;  
+  transition: .5s;
   text-align: center;
   line-height: 10px;
-  background-color:$color-buttonBrand;
+
+  &:disabled {
+    opacity: .25;
+    pointer-events: none;
+  }
+  &--Facebook {
+    color:white;
+    background-color: $color-buttonFacebook;
+  }
+  &--Google {
+    color:white;
+    background-color: $color-buttonGoogle;
+  }
+  &--Registrate {
+    color:white;
+    background-color: #056a48;
+  }
+  &--Brand {
+    color:white;
+    background-color: $color-buttonBrand;
+  }
 }
 
 
-.ButtonGoogle {
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;  
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-  background-color:$color-buttonGoogle;
-}
-
-.ButtonFacebook{
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;
-  background-color: $color-buttonFacebook;
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-}
-.ButtonRegistro{
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;
-  background-color: #056e4a;
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-}
+// USED IN PRODUCT PAGE
 
 .ButtonBuy {
   font-size: $light-small-text;
@@ -135,4 +94,6 @@
   outline: none;
   cursor: pointer;
 }
+
+
 

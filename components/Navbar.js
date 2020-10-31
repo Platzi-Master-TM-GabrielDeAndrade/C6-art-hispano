@@ -30,7 +30,7 @@ export default function Navbar() {
           <button>
             <img src="search.svg" alt="" width="15" height="15" />
           </button>
-          <p>Categotira</p>
+          <p>Categoria</p>
           <p>Ofertas de la semana</p>
           <p>Filtrar</p>
         </div>
@@ -44,8 +44,8 @@ export default function Navbar() {
             
             </Link>
           </button>
-          <img src="carrito.svg" alt="Carrito" width="30" height="30" />
-          <img src="favorito.svg" alt="Favorito" width="30" height="30" />
+          <img src="car.svg" alt="Carrito" width="30" height="30" />
+          <img src="favourite.svg" alt="Favorito" width="30" height="30" />
           <img
             src="notificaciones.svg"
             alt="Notificaciones"

@@ -50,3 +50,26 @@
 .slider li{
   list-style: none;
 }
+
+
+//Estilos del Header Carusel
+
+.carusel img{
+  width: 100%;
+}
+
+
+.products_container{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+}
+
+.products_container_info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
