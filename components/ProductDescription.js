@@ -12,25 +12,25 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => (
             <h2 className={styles.Price}>${price}</h2>
         </section>
         <section className={styles.FreeShipping}>
-            <img src="https://www.batidos.cl/wp-content/uploads/2015/12/despacho-gratis.png" alt="Free Shipping" />
+            <img src="car.png" alt="Free Shipping" />
             <span>Env&iacute;o Gratis</span>
         </section>
         <section className={styles.Rating}>
-            <StarRating></StarRating>
+            <StarRating />
         </section>
         <section className={styles.Quantity}>
             <span>Cantidad</span>
             <span>
-                <Button children="+" style="OneMore"></Button>
+                <Button children="+" style="OneMore" />
             </span>
                 <span>1</span>
                 <span>
-                    <Button children="-" style="OneLess"></Button>
+                    <Button children="-" style="OneLess" />
                 </span>
         </section>
         <section className={styles.Buttons}>
-            <Button children="Comprar" style="Buy"></Button>
-            <Button children="Agregar al Carrito" style="AddToCart"></Button>
+            <Button children="Comprar" style="Buy" />
+            <Button children="Agregar al Carrito" style="AddToCart" />
         </section>
             
     </div>

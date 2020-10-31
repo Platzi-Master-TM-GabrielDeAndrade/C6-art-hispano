@@ -2,13 +2,8 @@
 @import "../lib/variables.module";
 
 .Button{
-  width: 100%;
   padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;    
-  
+  height: 30px;
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
@@ -21,22 +16,42 @@
   &:disabled {
     opacity: .25;
     pointer-events: none;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Facebook {
     color:white;
     background-color: $color-buttonFacebook;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Google {
     color:white;
     background-color: $color-buttonGoogle;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Registrate {
     color:white;
     background-color: #056a48;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Brand {
     color:white;
     background-color: $color-buttonBrand;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
 }
 
@@ -54,6 +69,7 @@
   margin: 0 18px 0 0;
   outline: none;
   cursor: pointer;
+  // width: 20px;
 }
 
 .ButtonAddToCart {
@@ -80,6 +96,7 @@
   padding: 2.5px 7.5px;
   outline: none;
   cursor: pointer;
+  // width: 10px;
 }
 
 // Used in the Product Page

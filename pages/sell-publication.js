@@ -7,7 +7,7 @@ export default function Home () {
     <>
         <div className = {styles.cont_title}>
           <img src="logo.svg" alt="logo" className = {styles.logo}/>
-          <h3 className = {styles.title_publication}>¡Felicitaciones tu producto se publico satisfactoriamente, ahora eres artesano</h3>
+          <h3 className = {styles.title_publication}>¡Felicitaciones! Tu producto se public&oacute; satisfactoriamente. ¡Ahora eres artesano!</h3>
         </div>
     </>
   );

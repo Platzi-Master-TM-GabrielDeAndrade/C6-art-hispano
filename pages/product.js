@@ -2,6 +2,7 @@
 import styles from "../styles/pages/Product.module.scss";
 import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
+// import juejue from "public/bolsos.jpg";
 
 
 export default function Product () {
@@ -12,10 +13,10 @@ export default function Product () {
             <section className = {styles.MainContainer}>
                 <section className={styles.Leftside}>
                     <ProductImage type="Leftside" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="/public/search.svg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="/public/search.svg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="/public/search.svg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="/public/search.svg"></ProductImage>
+                    <ProductImage type="Leftside" imgUrl='' />
+                    <ProductImage type="Leftside" imgUrl="search.svg"></ProductImage>
+                    <ProductImage type="Leftside" imgUrl="car.svg"></ProductImage>
+                    <ProductImage type="Leftside" imgUrl="https://i.pinimg.com/originals/ce/16/bd/ce16bd6d2bdb6d59773a51ec8bade190.png" />
                 </section>
                 <section className={styles.MainImageContainer}>
                     <ProductImage type="Main" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg"></ProductImage>

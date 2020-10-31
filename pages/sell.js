@@ -30,12 +30,12 @@ export default function sell () {
          <select name="sell" className="sell-select">
             <option value="/">Hogar</option>
             <option value="">Cocina</option>
-            <option value="">Lenceria</option>
-            <option value="">Decoración</option>
+            <option value="">Lencer&iacute;a</option>
+            <option value="">Decoraci&oacute;n</option>
             <option value="">Accesorio para baño</option>
          </select>
          <select name="sell" className="sell-select">
-            <option value="/">Bisuteria</option>
+            <option value="/">Bisuter&iacute;a</option>
             <option value="">Collares</option>
             <option value="">Pulceras</option>
             <option value="">Manillas</option>
@@ -60,8 +60,8 @@ export default function sell () {
       </div>
       <div className={styles.search_two}>
        <select name="sell" className="sell-select">
-            <option value="/">Decoración</option>
-            <option value="">Ceramica</option>
+            <option value="/">Decoraci&oacute;n</option>
+            <option value="">Cer&aacute;mica</option>
             <option value="">Madera</option>
             <option value="">Metal</option>
             <option value="">Otros</option>

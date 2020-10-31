@@ -4,17 +4,18 @@ const Footer = () => (
     
       <div className={styles.AboutUsOportunidades}>
         <h3>Oportunidades</h3>
-        <p>Trabaja con nosotros Informacion Corportiva</p>
+        <p>¡Trabaja con nosotros!</p>
+        <p>Informaci&oacute;n Corportiva</p>
       </div>
       <div className={styles.AboutUsHaz}>
         <h3>Haz Negocio</h3>
-        <p>Vende en Art-Hispano </p>
+        <p>Vende con Art-Hispano</p>
       </div>
       <div className={styles.AboutUsInformacion}>
-        <h3>Informacion</h3>
+        <h3>Informaci&oacute;n</h3>
         <p>Contacto: 0000000</p>
         <p>Carrera 12 # 45 -5333</p>
-        <p>www.art-hispano.com</p>
+        <p>www.arthispano.com</p>
       </div>
       <div>
         <h3 className={styles.AboutUsAyuda}>Ayuda</h3>
