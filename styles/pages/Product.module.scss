@@ -8,6 +8,9 @@
     font-family: $base-font;
     max-width: 1500px;
     margin: 0 auto;
+
+    // Maybe not that necessary
+    margin-bottom: 50px;
 }
 
 //-------- MAIN GRID ------//
@@ -17,7 +20,7 @@
     display: grid;
     // Modificar altura del espacio
     /////// AUTO ///////
-    grid-template: 600px / 120px 550px 1fr;
+    grid-template: minmax(500px, auto) / 120px 550px 1fr;
     grid-template-areas: "imgs main-img description";
 }
 
@@ -32,37 +35,13 @@
     gap: 10px;
 }
 
-.LeftsideImages {
-    margin: 1rem;
-    padding: 0.25rem;
-    display: flex;
-    border: 1px solid $color-secondary;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.LeftsideImages img {
-    width: 80%;
-    /* height: 100%; */
-    /* No es sostenible lo que viene aqui dentro */
-}
-
 //-------- END LEFTSIDE GRID ------//
 
 //-------- MAIN IMAGE -------//
 
-.MainImage {
+.MainImageContainer {
     grid-area: main-img;
     display: flex;
-    border: 1px solid $color-secondary;
-    border-radius: $border-radius;
-    margin: 1rem;
-    padding: 1rem;
-}
-
-.MainImage img {
-    width: 100%;
-    align-self: center;
 }
 
 //-------- END MAIN IMAGE -------//
@@ -80,84 +59,6 @@
 
 .DescriptionContainer {
     grid-area: container;
-    display: grid;
-    grid-template: 1fr repeat(4, 30px)  / 1fr;
-    grid-template-areas: "content"
-                         "free-shipping"
-                         "rating"
-                         "quantity"
-                         "buttons";
-    gap: 5px;
 }
-
-.DescriptionContent {
-    grid-area: content;
-}
-
-.DescriptionContent h1 {
-    font-size: $medium-text;
-    font-weight: 700;
-    color: $color-secondary;
-    margin-bottom: 20px;
-}
-
-.DescriptionContent p {
-    font-size: $light-small-text;
-    font-weight: 400;
-    color: $color-secondary;
-    margin-bottom: 2.5px;
-}
-
-.DescriptionContent h2 {
-    font-size: $text-titles;
-    font-weight: 700;
-    color: $color-secondary;
-    margin-bottom: 5px;
-}
-
-.FreeShipping {
-    grid-area: free-shipping;
-    display: flex;
-    align-items: center;
-}
-
-.FreeShipping img {
-    height: 25px;
-    margin-right: 5px;
-}
-
-.FreeShipping span {
-    font-size: $light-small-text;
-    font-weight: 400;
-    color: #52C236;
-}
-
-.Rating {
-    grid-area: rating;
-}
-.Rating img {
-    height: 30px;
-}
-
-.Quantity {
-    grid-area: quantity;
-    display: flex;
-    align-items: center;
-}
-
-.Quantity span {
-    color: $color-secondary;
-    font-size: $light-small-text;
-    font-weight: 400;
-    margin: 0 12.5px 0 0;
-}
-
-
-.DescriptionButtons {
-    grid-area: buttons;
-    display: flex;
-    align-items: center;
-}
-
 
 //-------- END DESCRIPTION GRID -------//
