@@ -10,7 +10,7 @@
     margin: 0 auto;
 
     // Maybe not that necessary
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 //-------- MAIN GRID ------//
@@ -21,7 +21,7 @@
     // Modificar altura del espacio
     /////// AUTO ///////
     grid-template: minmax(500px, auto) / 120px 550px 1fr;
-    grid-template-areas: "imgs main-img description";
+    grid-template-areas: "imgs main-img description"
 }
 
 //-------- END MAIN GRID ------//

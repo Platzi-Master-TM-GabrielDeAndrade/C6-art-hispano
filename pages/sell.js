@@ -37,7 +37,7 @@ export default function sell () {
          <select name="sell" className="sell-select">
             <option value="/">Bisuter&iacute;a</option>
             <option value="">Collares</option>
-            <option value="">Pulceras</option>
+            <option value="">Pulseras</option>
             <option value="">Manillas</option>
          </select>
          <select name="sell" className="sell-select">
