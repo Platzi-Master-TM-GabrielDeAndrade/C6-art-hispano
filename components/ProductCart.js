@@ -1,42 +1,33 @@
 import styles from "../styles/components/ProductCart.module.scss";
 import Button from "components/Button";
-import StarRating from "components/StarRating";
 
 
-const ProductDescription = ( { title, description, price, starsQuantity } ) => (    
+const ProductCart = ( { title, description, price, imgUrl, quantity } ) => (    
 
     <div>
-        <section className={styles.DescriptionContent}>
-            <h1 className={styles.Title}>{title}</h1>
-            <p className={styles.Description}>{description}</p>
-            <h2 className={styles.Price}>${price}</h2>
-        </section>
-        <section className={styles.FreeShipping}>
-            <img src="car.png" alt="Free Shipping" />
-            <span>Env&iacute;o Gratis</span>
-        </section>
-        <section className={styles.Rating}>
-            <StarRating />
-        </section>
-        <section className={styles.Quantity}>
-            <span>Cantidad</span>
-            <span>
-                <Button children="+" style="OneMore" />
-            </span>
-                <span>1</span>
-                <span>
-                    <Button children="-" style="OneLess" />
-                </span>
-        </section>
-        <section className={styles.Buttons}>
-            <Button children="Comprar" style="Buy" />
-            <Button children="Agregar al Carrito" style="AddToCart" />
+        <section className={styles.MainContainer}>
+            <section className={styles.ImageContainer}>
+                <img src={imgUrl} alt="Product Image"></img>
+            </section>
+            <section className={styles.DescriptionContainer}>
+                <h3 className={styles.Name}>{title}</h3>
+                <p className={styles.Description}>{description}</p>
+                <section className={styles.ButtonsGrid}>
+                    <Button children="Comprar ahora" style="BuyNow" />
+                    <Button children="Eliminar" style="Remove" />
+                </section>
+            </section>
+            <section className={styles.QuantityContainer}>
+                <div className={styles.QuantityButtonsContainer}>
+                    <Button children="+" style="OneMoreCart" />
+                    <span className={styles.Quantity}>{quantity}</span>
+                    <Button children="-" style="OneLessCart" />
+                </div>
+            </section>
+            <p className={styles.Total}>${price*quantity}</p>
         </section>
             
     </div>
-
-    
-
 );
 
-export default ProductDescription;
+export default ProductCart;
