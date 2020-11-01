@@ -1,1 +1,24 @@
 @import "../styles.module.scss";
+
+.Main {
+    display: grid;
+    grid-template: 1fr / 4fr minmax(225px, 1fr);
+    grid-template-areas: "main-content right-bar";
+}
+
+.Container {
+    grid-area: main-content;
+}
+
+.RightBar {
+    grid-area: right-bar;
+    display: grid;
+    height: calc(100% + 50px);
+    background-color: $color-shipping;
+}
+
+.SummaryContainer {
+    padding: 0;
+    margin: 70px 0 0 0; // Top Right Bottom Left
+    justify-self: center;
+}

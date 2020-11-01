@@ -1,0 +1,32 @@
+@import "../styles.module.scss";
+
+.Title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: $small-text;
+    color: $color-secondary;
+}
+
+.Text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+.Text p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    margin-left: 25px;
+}
+
+.TotalGrid {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 9fr 11fr;
+}
+

@@ -192,3 +192,20 @@
 .ButtonOneLessCart:hover {
   font-weight: 700;
 }
+
+// USED IN SHIPPING PAGE
+
+.ButtonRemoveShipping {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-buttonBrand;
+}
+
+.ButtonRemoveShipping:hover {
+  font-weight: 700;
+}

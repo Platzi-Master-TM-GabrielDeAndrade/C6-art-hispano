@@ -1,8 +1,7 @@
 // import styles from "../styles/pages/Index.module.scss";
-import styles from "../styles/pages/Product.module.scss";
-import ProductImage from "components/ProductImage";
-import ProductDescription from "components/ProductDescription";
-// import juejue from "public/bolsos.jpg";
+import styles from "../styles/pages/Shipping.module.scss";
+import ProductShipping from "components/ProductShipping";
+import ShippingSummary from "components/ShippingSummary";
 
 
 export default function Shipping () {
@@ -10,22 +9,14 @@ export default function Shipping () {
     <>
         
         <main className={styles.Main}>
-            <section className = {styles.MainContainer}>
-                <section className={styles.Leftside}>
-                    <ProductImage type="Leftside" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl='' />
-                    <ProductImage type="Leftside" imgUrl="search.svg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="car.svg"></ProductImage>
-                    <ProductImage type="Leftside" imgUrl="https://i.pinimg.com/originals/ce/16/bd/ce16bd6d2bdb6d59773a51ec8bade190.png" />
+            <section className={styles.Container}>
+                <ProductShipping title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price={19999.97} imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" quantity={3} />
+            </section>
+            <section className={styles.RightBar}>
+                <section className={styles.SummaryContainer}>
+                    <ShippingSummary totalQuantity={2} totalPrice={19999.97*2} shippingCost={5000} totalCost={19999.97*2+5000} />
                 </section>
-                <section className={styles.MainImageContainer}>
-                    <ProductImage type="Main" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg"></ProductImage>
-                </section>
-                <section className={styles.MainDescriptionContainer}>
-                    <section className={styles.DescriptionContainer}>
-                        <ProductDescription starsQuantity='3' title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price='19.999,97'></ProductDescription>
-                    </section>
-                </section>
+                
             </section>
         </main>
 
