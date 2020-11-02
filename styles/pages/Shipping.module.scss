@@ -6,9 +6,22 @@
     grid-template-areas: "main-content right-bar";
 }
 
+//------- MAIN CONTAINER -------//
+
 .Container {
     grid-area: main-content;
+    display: inline-block;
 }
+
+.ButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+//------- END MAIN CONTAINER -------//
+
+//------- RIGHT BAR -------//
 
 .RightBar {
     grid-area: right-bar;
@@ -19,6 +32,8 @@
 
 .SummaryContainer {
     padding: 0;
-    margin: 70px 0 0 0; // Top Right Bottom Left
+    margin: 100px 0 0 0; // Top Right Bottom Left
     justify-self: center;
 }
+
+//------- END RIGHT BAR -------//
