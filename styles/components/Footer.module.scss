@@ -11,6 +11,10 @@
   display: grid;
   grid-template-columns:repeat(5, 1fr);   
   column-gap: 5px;
+  background-color: $color-brand;
+  opacity: 0.2;
+  color: $color-secondary;
+  
   
   }
 

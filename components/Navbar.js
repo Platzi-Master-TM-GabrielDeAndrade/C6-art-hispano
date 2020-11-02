@@ -40,9 +40,8 @@ export default function Navbar() {
             {" "}
             <Link href= '/sell'>
             Vender
-
             
-            </Link>
+        </Link>
           </button>
           <img src="car.svg" alt="Carrito" width="30" height="30" />
           <img src="favourite.svg" alt="Favorito" width="30" height="30" />
@@ -52,7 +51,7 @@ export default function Navbar() {
             width="30"
             height="30"
           />
-          <Link href="/login">
+        <Link href="/login">
             <img src="user.svg" alt="user" width="70" height="80" />
           </Link>
         </div>
