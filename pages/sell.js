@@ -5,75 +5,63 @@ import styles from "@styles/pages/Sell.module.scss";
 export default function sell () {
   return (
     <>
-      <div className={styles.cont_title}>        
-          <h1 className={styles.tittle}>Publica tu arte</h1>
+      <div className={styles.cont_titleSell}>        
+          <h1>Publica tu arte</h1>
       </div>
-   <div className={styles.container}> 
+   <  div className={styles.container}> 
       <div className={styles.images}>
-         <button>
+         <figure>
             <img src="kiosko.svg" alt=""></img>
-         </button>
-         <button>
+         </figure>
+         <figure>
             <img src="Arete.svg" alt=""></img>
-         </button>
-         <button>
+         </figure>
+         <figure>
             <img src="Flauta.svg" alt=""></img>
-         </button>
-         <button>
+         </figure>
+         <figure>
             <img src="Saco.svg" alt=""></img>
-         </button>
-         <button>
+         </figure>
+         <figure>
             <img src="Zapato.svg" alt=""></img>
-         </button>
+         </figure>
       </div>
-      <div className={styles.search_one}>
-         <select name="sell" className="sell-select">
+      <div className={styles.search}>
+         <select>
             <option value="/">Hogar</option>
             <option value="">Cocina</option>
             <option value="">Lenceria</option>
             <option value="">Decoración</option>
             <option value="">Accesorio para baño</option>
          </select>
-         <select name="sell" className="sell-select">
+         <select>
             <option value="/">Bisuteria</option>
             <option value="">Collares</option>
             <option value="">Pulceras</option>
             <option value="">Manillas</option>
          </select>
-         <select name="sell" className="sell-select">
+         <select>
             <option value="/">Instrumentos Musicales</option>
             <option value="">Guitarras</option>
             <option value="">Bongos</option>
             <option value="">Panderetas</option>
             <option value="">Flautas</option>
          </select>
-         <select name="sell" className="sell-select">
+         <select>
             <option value="/">Ropa</option>
             <option value="">Blusas</option>
             <option value="">Sacos</option>
             <option value="">Pantalones</option>
             <option value="">Bufandas</option>
          </select>
-         <select name="sell" className="sell-select">
-            <option value="/">Calzado</option>
-         </select>
+         <select> 
+            <option value="1">Calzado</option>
+            <option value="2">Medias</option>
+            <option selected value="3">Zapatillas</option>
+          </select>
+         {/* <input type="submit" value="Submit" />  */}
       </div>
-      <div className={styles.search_two}>
-       <select name="sell" className="sell-select">
-            <option value="/">Decoración</option>
-            <option value="">Ceramica</option>
-            <option value="">Madera</option>
-            <option value="">Metal</option>
-            <option value="">Otros</option>
-         </select>
-         <select name="sell" className="sell-select">
-            <option value="/">Bricolaje</option>
-         </select>
-         <select name="" className="sell-select">
-            <option value="/">Jardines</option>
-         </select> 
-       </div>
-      </div>
+     </div>
     </>
   );
 }

@@ -1,58 +1,60 @@
+import Link from "next/link";
 import styles from "@styles/pages/Sell.module.scss";
-import Label from "../components/Label";
-import Input from "../components/Input";
-import Button from "../components/Button";
+import Input from "@components/Input"
+
 
 export default function details () {
   return (
     <>
-    <main className={styles.container_details}>
+    <main className = {styles.container_details}>
+         
          <div className = {styles.cont_title_details}>          
            <h1>Publica tu arte</h1>
          </div>
-   
-         <div class={styles.details_title}>
+     
+         <div className={styles.details_title}>
             <label>Agrega los detalles de producto</label>
          </div>
 
-         <div className={styles.sell_client}>
+         <div className={styles.form_client}>
           <Input type="text" placeholder="Nombre" />
           <Input type="text" placeholder="Contacto" />
           <Input type="text" placeholder="$ Precio" />
-          <textarea className={styles.texTarea}type="text" placeholder="Descripción"  ></textarea>
+          <textarea className={styles.texTank}type="text" placeholder="Descripción" cols="60" rows="8"  ></textarea>
          </div>
-        
-        <div>
-        <div className={styles.title_images}>
-           <button>Sube tus fotos</button>
-         </div>  
-
-         <div class={styles.takeFoto}>
-           <Button>
-             <img src="Camara.svg" alt=""></img>
-           </Button>
-           <Button>
-             <img src="Camara.svg" alt=""></img>
-           </Button>
-           <Button>
-            <img src="Camara.svg" alt=""></img>
-           </Button>
-           <Button className>
-            <img src="Camara.svg" alt=""></img>
-           </Button>
-           <Button className>
-            <img src="Camara.svg" alt=""></img>
-           </Button>
-           <Button className>
-             <img src="Camara.svg" alt=""></img>
-           </Button>
+    
+         <div className={styles.takeFoto}>
+           <h2>Sube tus fotos</h2>
           </div>
 
-           <div className={styles.register}>
-             <button>Publicar ahora</button>
+          <div className={styles.foto}>
+          <button>
+             <img src="Camara.svg" alt=""></img>
+           </button>
+           <button>
+             <img src="Camara.svg" alt=""></img>
+           </button>
+           <button>
+            <img src="Camara.svg" alt=""></img>
+           </button>
+           <button>
+            <img src="Camara.svg" alt=""></img>
+           </button>
+           <button>
+            <img src="Camara.svg" alt=""></img>
+           </button>
+           <button>
+             <img src="Camara.svg" alt=""></img>
+           </button>
            </div>
-                   </div>                   
-     </main>          
+           
+           <div className={styles.register}>
+             <Link href="/sell-publication">
+              <button>Publicar ahora</button>
+             </Link>
+           </div>  
+                                                  
+       </main>          
   </>
   );
 }
