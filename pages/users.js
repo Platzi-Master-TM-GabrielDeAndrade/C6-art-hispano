@@ -106,14 +106,14 @@ export default function Home() {
         <input
           type="text"
           id="email"
-          placeholder="ingrese email"
+          placeholder="Ingrese email"
           onChange={(e) => setUser(e.target.value)}
           value={user}
         />
         <input
           type="text"
           id="password"
-          placeholder="ingrese contraseña"
+          placeholder="Ingrese contraseña"
           onChange={(e) => setUser(e.target.value)}
           value={user}
         />

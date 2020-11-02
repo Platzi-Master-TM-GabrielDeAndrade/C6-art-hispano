@@ -1,0 +1,76 @@
+@import "../styles.module.scss";
+
+
+
+.DescriptionContent {
+    height: auto;
+}
+
+.Title {
+    font-size: $medium-text;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-bottom: 20px;
+}
+
+.Description {
+    font-size: $light-small-text;
+    font-weight: 400;
+    color: $color-secondary;
+    margin-bottom: 2.5px;
+}
+
+.Price {
+    font-size: $text-titles;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.FreeShipping {
+    height: 35px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.FreeShipping img {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.FreeShipping span {
+    font-size: $light-small-text;
+    font-weight: 400;
+    color: $color-freeShipping;
+}
+
+.Rating {
+    height: 35px;
+    margin-bottom: 5px;
+}
+.Rating img {
+    height: 30px;
+}
+
+.Quantity {
+    height: 35px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.Quantity span {
+    color: $color-secondary;
+    font-size: $light-small-text;
+    font-weight: 400;
+    margin: 0 12.5px 0 0;
+}
+
+
+.Buttons {
+    height: 35px;
+    display: flex;
+    align-items: center;
+}

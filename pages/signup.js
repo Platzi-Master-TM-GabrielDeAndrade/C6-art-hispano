@@ -59,7 +59,7 @@ export default function Signup() {
         setError("El email ya está registrado");
       }
       if (error.code === "auth/invalid-email") {
-        setError("El email no es valido");
+        setError("El email no es válido");
       }
     }
   };
@@ -85,7 +85,7 @@ export default function Signup() {
         <Label text="Contraseña" />
         <Input
           type="password"
-          placeholder="Ingrese un password"
+          placeholder="Ingrese una contraseña"
           value={pass}
           onChange={(e) => setPass(e.target.value)}
         />

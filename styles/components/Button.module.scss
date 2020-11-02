@@ -2,13 +2,8 @@
 @import "../lib/variables.module";
 
 .Button{
-  width: 100%;
   padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;    
-  
+  height: 30px;
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
@@ -21,21 +16,212 @@
   &:disabled {
     opacity: .25;
     pointer-events: none;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Facebook {
     color:white;
     background-color: $color-buttonFacebook;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Google {
     color:white;
     background-color: $color-buttonGoogle;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Registrate {
     color:white;
     background-color: #056a48;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
   }
   &--Brand {
     color:white;
     background-color: $color-buttonBrand;
-  }  
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
+  }
 }
+
+
+// USED IN PRODUCT PAGE
+
+.ButtonBuy {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+  padding: 2.5px 40px;
+  margin: 0 18px 0 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.ButtonAddToCart {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  color: $color-buttonBrand;
+  padding: 2.5px 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+// Used in the Product Page
+.ButtonOneMore {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 7.5px;
+  outline: none;
+  cursor: pointer;
+  // width: 10px;
+}
+
+// Used in the Product Page
+.ButtonOneLess {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonBuyNow {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonBuyNow:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonRemove {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonRemove:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonContinue {
+  cursor: pointer;
+  outline: none;
+  padding: 15px 10px 25px 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: $medium-text;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonOneMoreCart {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 7.5px;
+  font-weight: 400;  
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonOneMoreCart:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+.ButtonOneLessCart {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonOneLessCart:hover {
+  font-weight: 700;
+}
+
+// USED IN SHIPPING PAGE
+
+.ButtonRemoveShipping {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-buttonBrand;
+}
+
+.ButtonRemoveShipping:hover {
+  font-weight: 700;
+}
+
+
+// USED IN SHIPPING PAGE
+
+.ButtonShippingBall {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: $color-secondary;
+}
+

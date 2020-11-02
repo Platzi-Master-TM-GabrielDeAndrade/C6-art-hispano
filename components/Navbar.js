@@ -30,7 +30,7 @@ export default function Navbar() {
           <button>
             <img src="search.svg" alt="" width="15" height="15" />
           </button>
-          <p>Categoria</p>
+          <p>Categor&iacute;a</p>
           <p>Ofertas de la semana</p>
           <p>Filtrar</p>
         </div>
@@ -58,6 +58,6 @@ export default function Navbar() {
       </nav>
     </header>
   ) : (
-    <p>Loading ..</p>
+    <p>Cargando tus productos favoritos...</p>
   );
 }

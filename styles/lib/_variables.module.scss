@@ -5,7 +5,7 @@
 /*-------Branding Colors */
 $color-brand:#ff9f1c;
 $color-secondary:#6d5e52;
-$color-tertiary:#e2e8f0;
+$color-tertiary: #e2e8f0;
 
 $color-black:#000000;
 $color-purple: purple;  
@@ -17,6 +17,9 @@ $color-white:#ffffff;
 $color-buttonFacebook:#3456f3;
 $color-buttonGoogle:#dd4B39;
 $color-buttonBrand:#ff9f1c;
+$color-freeShipping: #52C236;
+$color-footer: rgba($color: #FF9F1C, $alpha: 0.2);
+$color-shipping: rgba($color: #e2e8f0, $alpha: 0.5);
 
 /*-------Alerts Colors */
 $color-alert: #ffa500;
@@ -47,4 +50,4 @@ $button-color: red;
 $button-backgroundColor: $color-brand;
 
 //Constantes
-$border-radius: 3px;
+$border-radius: 5px;

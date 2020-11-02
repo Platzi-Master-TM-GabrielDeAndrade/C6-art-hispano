@@ -1,6 +1,8 @@
 // import styles from "../styles/pages/Index.module.scss";
 import styles from "../styles/pages/Product.module.scss";
-import Button from "components/Button";
+import ProductImage from "components/ProductImage";
+import ProductDescription from "components/ProductDescription";
+// import juejue from "public/bolsos.jpg";
 
 
 export default function Product () {
@@ -10,53 +12,18 @@ export default function Product () {
         <main className={styles.Main}>
             <section className = {styles.MainContainer}>
                 <section className={styles.Leftside}>
-                    <section className={styles.LeftsideImages}>
-                        <img src="../public/Logo.svg" alt="Product Picture" />
-                    </section>
-                    <section className={styles.LeftsideImages}>
-                        <img src="../public/flauta.svg" alt="Product Picture" />
-                    </section>
-                    <section className={styles.LeftsideImages}>
-                        <img src="../public/flauta.svg" alt="Product Picture" />
-                    </section>
-                    <section className={styles.LeftsideImages}>
-                        <img src="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" alt="Product Picture" />
-                    </section>
-                    <section className={styles.LeftsideImages}>
-                        <img src="../public/flauta.svg" alt="Product Picture" />
-                    </section>
+                    <ProductImage type="Leftside" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" />
+                    <ProductImage type="Leftside" imgUrl='' />
+                    <ProductImage type="Leftside" imgUrl="search.svg" />
+                    <ProductImage type="Leftside" imgUrl="car.svg" />
+                    <ProductImage type="Leftside" imgUrl="https://i.pinimg.com/originals/ce/16/bd/ce16bd6d2bdb6d59773a51ec8bade190.png" />
                 </section>
-                <section className={styles.MainImage}>
-                    <img src="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" alt="Product Name" />
+                <section className={styles.MainImageContainer}>
+                    <ProductImage type="Main" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" />
                 </section>
                 <section className={styles.MainDescriptionContainer}>
                     <section className={styles.DescriptionContainer}>
-                        <section className={styles.DescriptionContent}>
-                            <h1>Cráneo Decorativo Azteca Dorado Artesanía Mexicana</h1>
-                            <p>Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México.</p>
-                            <h2>$19.999,97</h2>
-                        </section>
-                        <section className={styles.FreeShipping}>
-                            <img src="https://www.batidos.cl/wp-content/uploads/2015/12/despacho-gratis.png" alt="Free Shipping" />
-                            <span>Env&iacute;o Gratis</span>
-                        </section>
-                        <section className={styles.Rating}>
-                            <img src="https://entrecajasycafe.es/wp-content/uploads/2019/02/five-stars-5-gold-stars-png.png" alt="Rating" />
-                        </section>
-                        <section className={styles.Quantity}>
-                            <span>Cantidad</span>
-                            <span>
-                                <Button children="+" style="OneMore"></Button>
-                            </span>
-                            <span>1</span>
-                            <span>
-                                <Button children="-" style="OneLess"></Button>
-                            </span>
-                        </section>
-                        <section className={styles.DescriptionButtons}>
-                            <Button children="Comprar" style="Buy"></Button>
-                            <Button children="Agregar al Carrito" style="AddToCart"></Button>
-                        </section>
+                        <ProductDescription starsQuantity='3' title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price='19.999,97' />
                     </section>
                 </section>
             </section>

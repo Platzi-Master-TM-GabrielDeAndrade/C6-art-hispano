@@ -1,8 +1,10 @@
 @import "../styles.module.scss";
 @import "../lib/variables.module";
 
+
 .Footer {
   // margin-top: 50px;
+<<<<<<< HEAD
   // padding: 15px 0;
   // font-size: 14px;
   // color: #727272;
@@ -17,26 +19,47 @@
   
   
   }
+=======
+  width: 100%;
+  margin-top: 50px;
+  max-height: 25vh;
+  min-height: 20vh;
+  height: auto;
+  color: $color-secondary;
+  background-color: $color-footer;
+}
+>>>>>>> 9ba64c6692770e12e1ffef5de4a859d7dbd5b30a
 
-.AboutUsOportunidades{    
-  grid-column: 1/1;      
+.Container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 35px 30px 0 30px; // top right bottom left
+  display: grid;
+  grid-template: 1fr / repeat(4, 1fr) 1fr;
+  column-gap: 20px;
+  justify-items: center;
 }
 
-.AboutUsHaz{    
-  grid-column: 2/2;      
+.Subtitle {
+  margin: 0;
+  font-size: $medium-text;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.AboutUsInformacion{    
-  grid-column: 3/3;      
+.Text {
+  margin: 0;
+  font-size: $footer-text;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
-.AboutUsAyuda{    
-    grid-column: 4/4;      
+.SocialMedia {
+  align-self: center;
+  min-width: 200px;
 }
-.Social{
-    grid-column: 5/5;    
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding-bottom: 20px;    
+
+.Icon {
+  margin: 0;
+  margin-right: 30px;
 }
