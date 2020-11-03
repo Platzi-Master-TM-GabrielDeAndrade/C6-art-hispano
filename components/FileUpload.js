@@ -1,5 +1,5 @@
 import { Component, useState } from "react";
-import firebase from 'firebase';
+import { firebase } from "../firebase/firebase.config";
 
 class FileUpload extends Component {
    constructor () {
@@ -14,6 +14,7 @@ class FileUpload extends Component {
    handleUpload (event) {
       const file = event.target.files[0];
       const storageRef = firebase.storage().ref(`/photosPublication/${file.name}`);
+      console.log(file.name)
       const task = storageRef.put(file);
 
       task.on('state-changed', snapshot => {

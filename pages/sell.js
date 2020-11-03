@@ -58,22 +58,6 @@ export default function sell () {
             <option value="/">Calzado</option>
          </select>
       </div>
-      <div className={styles.search_two}>
-       <select name="sell" className="sell-select">
-            <option value="/">Decoraci&oacute;n</option>
-            <option value="">Cer&aacute;mica</option>
-            <option value="">Madera</option>
-            <option value="">Metal</option>
-            <option value="">Otros</option>
-         </select>
-         <select name="sell" className="sell-select">
-            <option value="/">Bricolaje</option>
-         </select>
-         <select name="" className="sell-select">
-            <option value="/">Jardines</option>
-         </select> 
-       </div>
-      </div>
      </div>
     </>
   );
