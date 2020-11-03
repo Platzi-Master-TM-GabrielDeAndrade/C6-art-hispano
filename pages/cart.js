@@ -1,6 +1,7 @@
 import styles from "../styles/pages/Cart.module.scss";
 import ProductCart from "../components/ProductCart";
 import Button from "../components/Button";
+import Link from "next/link";
 
 
 export default function Cart () {
@@ -12,7 +13,9 @@ export default function Cart () {
               <section className = {styles.GridContainer}>
                 <section className={styles.Container}>
                     <p className={styles.Total}>Total: ${40000}</p>
-                    <Button style="Continue" children="Continuar Comprar" />
+                    <Link href= '/shipping'>
+                      <Button style="Continue" children="Continuar Comprar" />
+                    </Link>
                 </section>
               </section>
           </main>

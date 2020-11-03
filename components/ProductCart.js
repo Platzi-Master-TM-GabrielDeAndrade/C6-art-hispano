@@ -13,7 +13,7 @@ const ProductCart = ( { title, description, price, imgUrl, quantity } ) => (
                 <h3 className={styles.Name}>{title}</h3>
                 <p className={styles.Description}>{description}</p>
                 <section className={styles.ButtonsGrid}>
-                    <Button children="Comprar ahora" style="BuyNow" />
+                    {/* <Button children="Comprar ahora" style="BuyNow" /> */}
                     <Button children="Eliminar" style="Remove" />
                 </section>
             </section>

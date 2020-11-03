@@ -2,6 +2,7 @@ import Link from "next/link";
 import { auth } from "../firebase/firebase.config";
 import { useEffect, useState } from "react";
 import styles from "../styles/components/Navbar.module.scss";
+import Button from "components/Button"
 
 export default function Navbar() {
   const [firebaseUser, setFirebaseUser] = useState(false);
@@ -19,45 +20,53 @@ export default function Navbar() {
   return firebaseUser !== false ? (
     <header>
       <nav className={styles.nav_container}>
-        <div className={styles.nav_containerLogo}>
+        <section className={styles.nav_containerLogo}>
           <Link href="/">
             <img src="logo.svg" alt="logo" className={styles.nav_logo} />
           </Link>
-        </div>
+        </section>
 
-        <div className={styles.nav_inputs}>
-          <input type="text" />
-          <button>
-            <img src="search.svg" alt="" width="15" height="15" />
-          </button>
-          <p>Categor&iacute;a</p>
-          <p>Ofertas de la semana</p>
-          <p>Filtrar</p>
-        </div>
-
-        <div className={styles.nav_icons}>
-          <button type="text" value="">
-            {" "}
-            <Link href= '/sell'>
-            Vender
+        <section className={styles.nav_mainContainerInputs}>
+          <section className={styles.nav_containerInput}>
+            <input type="text" />
+            <button>
+              <img src="search.svg" alt="" width="15" height="15" />
+            </button>
+          </section>
             
-        </Link>
-          </button>
-          <img src="car.svg" alt="Carrito" width="30" height="30" />
-          <img src="favourite.svg" alt="Favorito" width="30" height="30" />
+          <section className={styles.nav_containerTexts}>
+            <p>Categor&iacute;a</p>
+            <p>Ofertas de la semana</p>
+            <p>Filtrar</p>
+          </section>
+        </section>
+
+        <section className={styles.nav_containerButton}>
+          <Link href= '/sell'>
+            <Button children="Vender" style="Sell" />            
+          </Link>
+        </section>
+
+        <section className={styles.nav_icons}>
+
+          <Link href="/cart">
+            <img className={styles.nav_iconsImgs} src="car.svg" alt="Carrito" />
+          </Link>
+          <img className={styles.nav_iconsImgs} src="favourite.svg" alt="Favorito" />
           <img
+            className={styles.nav_iconsImgs}
             src="notificaciones.svg"
             alt="Notificaciones"
-            width="30"
-            height="30"
           />
-        <Link href="/login">
-            <img src="user.svg" alt="user" width="70" height="80" />
+          <Link href="/login">
+            <img className={styles.nav_userImg} src="user.svg" alt="user" />
           </Link>
-        </div>
+        </section>
+
       </nav>
     </header>
+
   ) : (
-    <p>Cargando tus productos favoritos...</p>
+    <p className={styles.when_loading}>Cargando tus productos favoritos...</p>
   );
 }

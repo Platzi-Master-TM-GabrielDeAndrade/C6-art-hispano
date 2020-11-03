@@ -1,13 +1,13 @@
 @import "../styles.module.scss";
 
-//NAV LEFT
+//--------- NAV LEFT ---------//
 .nav_container{
-    display:grid;
-    background-color: white;
     height: 100px;
-    grid-template-columns: .5fr 1.5fr 1fr;
-    justify-content: space-evenly;
+    display:grid;
+    grid-template-columns: 1fr 6fr 1fr 3fr;
+    justify-content: center;
     align-items: center;
+    background-color: $color-white;
 }
 
 .nav_containerLogo{
@@ -17,56 +17,130 @@
 }
 
 .nav_logo {
-    width: 70px;
-    height: 80px;
-}
-//NAV CENTRAL
-.nav_inputs {
-    display: flex;
-    flex-wrap: wrap;
-    align-items:flex-end;
-    justify-content: center;
-    
-}
-.nav_inputs input{
-    height: 35px;
-    width: 80%;
-    border-radius:5px 0 0 5px; 
-    border-right: none;
-    border: 0.5px solid $color-secondary;
-    opacity: .5;
-    background-color: $color-tertiary;
-}
-.nav_inputs button{
-    border-radius:0 5px 5px 0; 
-    border: 0.5px solid $color-secondary; 
-    height: 35px;
-    width: 7%;
-    border-left: none;
-    opacity: .5;
-    margin-top: 30px;
-}
-.nav_inputs p {
-    color:$color-secondary;
-    margin-top: 5px;
-    margin-left: 50px;
-    font-size: 18px;
-    font-style: none;
+    height: 70px;
 }
 
-//NAV RIGHT
-.nav_icons   {
-    display: flex;
+//--------- END NAV LEFT ---------//
+
+//------- NAV CENTRAL --------//
+
+.nav_mainContainerInputs {
+    display: grid;
+    grid-template: 6fr 3fr / 1fr;
+    grid-template-areas: "input"
+                         "texts";
+    justify-items: center;
     align-items: center;
-    justify-content: space-evenly; 
-    margin-left: 0;
 }
-.nav_icons button  {
-    height: 25px;
-    width: 90px;
-    border-radius: 5px;
-    border: none;
-    background-color: $color-brand;
-    color: $color-white; 
-    
+
+.nav_containerInput {
+    grid-area: input;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_containerInput input{
+    // border-right: none;
+    // opacity: .5;
+    outline: none;
+    height: 40px;
+    width: 80%;
+    max-width: 650px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+    border: 1px solid $color-input-border;
+    border-radius: $border-radius * 2; 
+    background-color: $color-input;
+}
+
+.nav_containerInput input:hover{
+    box-shadow: 0 1px 5px $color-shadow;
+}
+
+.nav_containerInput button {
+    // opacity: .5;
+    // padding: 0;
+    outline: none;
+    margin: 0 0 0 2.5px;
+    padding: 0 20px;
+    height: 40px;
+    border-left: none;
+    border-radius: $border-radius * 2; 
+    border: 1px solid $color-input-border; 
+    background-color: $color-input;
+}
+.nav_containerInput button:hover {
+    box-shadow: 0 1px 2.5px $color-shadow;
+    cursor: pointer;
+}
+
+.nav_containerTexts {
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    grid-area: texts;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav_containerTexts p {
+    margin: 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color:$color-secondary;
+}
+
+//-------- END NAV CENTRAL --------//
+
+
+
+.nav_containerButton {
+    display: grid;
+    justify-items: center;
+}
+
+
+
+//------- NAV RIGHT --------//
+
+.nav_icons {
+    display: grid;
+    grid-template-columns: 6fr 3fr 3fr 4fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+
+.nav_iconsImgs {
+    width: 45px;
+}
+
+.nav_userImg {
+    width: 70px;
+}
+
+//------- END NAV RIGHT --------//
+
+// .nav_icons button  {
+//     height: 25px;
+//     width: 60px;
+//     border-radius: 5px;
+//     border: none;
+//     background-color: $color-brand;
+//     color: $color-white; 
+// }
+
+
+// THIS HAPPENS WHEN THE NAVBAR HAS NOT LOADED AT ALL YET
+
+.when_loading {
+    margin: 15px 25px;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
 }
