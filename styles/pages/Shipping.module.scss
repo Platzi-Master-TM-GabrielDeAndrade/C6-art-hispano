@@ -6,9 +6,22 @@
     grid-template-areas: "main-content right-bar";
 }
 
+//------- MAIN CONTAINER -------//
+
 .Container {
     grid-area: main-content;
+    display: inline-block;
 }
+
+.ButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+//------- END MAIN CONTAINER -------//
+
+//------- RIGHT BAR -------//
 
 .RightBar {
     grid-area: right-bar;
@@ -19,6 +32,14 @@
 
 .SummaryContainer {
     padding: 0;
+<<<<<<< HEAD
     margin: 70px 0 0 0; // Top Right Bottom Left
     justify-self: center;
 }
+=======
+    margin: 100px 0 0 0; // Top Right Bottom Left
+    justify-self: center;
+}
+
+//------- END RIGHT BAR -------//
+>>>>>>> 9ba64c6692770e12e1ffef5de4a859d7dbd5b30a

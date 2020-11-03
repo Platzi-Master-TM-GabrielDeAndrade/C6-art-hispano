@@ -10,10 +10,12 @@
     justify-items: center;
     align-items: center;
     border-radius: $border-radius * 2;
-    // background-color: $color-shipping;
-    background-color: $color-white;
+
+
+    background-color: $color-shipping;
+    // background-color: $color-white;
     border: 1px solid $color-secondary;
-    // In case we choose the other background color the background of many images,
+    // In case we choose the other background color, the background of many images,
     // because it's usually white, we might have some problems
 }
 
@@ -29,6 +31,8 @@
     width: 100%;
     max-width: 220px;
     background: none;
+    border: 2px solid $color-secondary;
+    border-radius: $border-radius;
 }
 
 //-------- END IMAGE ---------//

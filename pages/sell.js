@@ -30,14 +30,14 @@ export default function sell () {
          <select>
             <option value="/">Hogar</option>
             <option value="">Cocina</option>
-            <option value="">Lenceria</option>
-            <option value="">Decoración</option>
+            <option value="">Lencer&iacute;a</option>
+            <option value="">Decoraci&oacute;n</option>
             <option value="">Accesorio para baño</option>
          </select>
          <select>
             <option value="/">Bisuteria</option>
             <option value="">Collares</option>
-            <option value="">Pulceras</option>
+            <option value="">Pulseras</option>
             <option value="">Manillas</option>
          </select>
          <select>
@@ -54,12 +54,25 @@ export default function sell () {
             <option value="">Pantalones</option>
             <option value="">Bufandas</option>
          </select>
-         <select> 
-            <option value="1">Calzado</option>
-            <option value="2">Medias</option>
-            <option selected value="3">Zapatillas</option>
-          </select>
-         {/* <input type="submit" value="Submit" />  */}
+         <select name="sell" className="sell-select">
+            <option value="/">Calzado</option>
+         </select>
+      </div>
+      <div className={styles.search_two}>
+       <select name="sell" className="sell-select">
+            <option value="/">Decoraci&oacute;n</option>
+            <option value="">Cer&aacute;mica</option>
+            <option value="">Madera</option>
+            <option value="">Metal</option>
+            <option value="">Otros</option>
+         </select>
+         <select name="sell" className="sell-select">
+            <option value="/">Bricolaje</option>
+         </select>
+         <select name="" className="sell-select">
+            <option value="/">Jardines</option>
+         </select> 
+       </div>
       </div>
      </div>
     </>
