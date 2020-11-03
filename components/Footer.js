@@ -1,30 +1,38 @@
 import styles from "../styles/components/Footer.module.scss";
 const Footer = () => (
+
   <footer className={styles.Footer}>
     
-      <div className={styles.AboutUsOportunidades}>
-        <h3>Oportunidades</h3>
-        <p>Trabaja con nosotros Informacion Corportiva</p>
-      </div>
-      <div className={styles.AboutUsHaz}>
-        <h3>Haz Negocio</h3>
-        <p>Vende en Art-Hispano </p>
-      </div>
-      <div className={styles.AboutUsInformacion}>
-        <h3>Informacion</h3>
-        <p>Contacto: 0000000</p>
-        <p>Carrera 12 # 45 -5333</p>
-        <p>www.art-hispano.com</p>
-      </div>
-      <div>
-        <h3 className={styles.AboutUsAyuda}>Ayuda</h3>
-      </div>
+    <section className={styles.Container}>
+      <section className={styles.Oportunidades}>
+        <h3 className={styles.Subtitle}>Oportunidades</h3>
+        <p className={styles.Text}>¡Trabaja con nosotros!</p>
+        <p className={styles.Text}>Informaci&oacute;n Corportiva</p>
+      </section>
+      <section className={styles.AboutUsHaz}>
+        <h3 className={styles.Subtitle}>Haz Negocio</h3>
+        <p className={styles.Text}>Vende con Art-Hispano</p>
+      </section>
+      <section className={styles.AboutUsInformacion}>
+        <h3 className={styles.Subtitle}>Informaci&oacute;n</h3>
+        <p className={styles.Text}>Contacto: 0000000</p>
+        <p className={styles.Text}>Carrera 12 # 45 -5333</p>
+        <a className={styles.Text} href="/pages/index.js">www.arthispano.com</a>
+      </section>
+      <section className={styles.AboutUsAyuda}>
+        <h3 className={styles.Subtitle}>Ayuda</h3>
+        <p className={styles.Text}>Contacto: 0000000</p>
+        <p className={styles.Text}>Carrera 12 # 45 -5333</p>
+        <a className={styles.Text} href="/pages/index.js">www.arthispano.com</a>
+      </section>
+
+      <section className={styles.SocialMedia}>
+        <img className={styles.Icon} src="instagram.svg" alt="logo IG" />
+        <img className={styles.Icon} src="facebook.svg" alt="logo FB" />
+        <img src="twitter.svg" alt="logo TW" />
+      </section>
+    </section>
     
-    <div className={styles.Social}>
-      <img src="instagram.svg" alt="logo" />
-      <img src="facebook.svg" alt="logo" />
-      <img src="twitter.svg" alt="logo" />
-    </div>
   </footer>
 );
 

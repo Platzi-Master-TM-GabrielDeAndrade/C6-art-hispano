@@ -47,8 +47,8 @@ const Login = () => {
     console.log(email);
     console.log(pass);
     if (!email.trim() || !pass.trim()) {
-      console.log("Datos vacíos email y/o password!");
-      setError("Datos vacíos email y/o password!");
+      console.log("Datos vacíos email y/o contraseña!");
+      setError("Datos vacíos email y/o contraseña!");
       return;
     }
     if (!pass.trim()) {
@@ -61,7 +61,7 @@ const Login = () => {
       setError("6 o más carácteres en pass");
       return;
     }
-    console.log("correcto...");
+    console.log("Correcto...");
     setError(null);
 
     login();
@@ -111,7 +111,7 @@ const Login = () => {
             <Label text="Contraseña" />
             <Input
               type="password"
-              placeholder="Ingrese un password"
+              placeholder="Ingrese una constraseña"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
@@ -151,12 +151,12 @@ const Login = () => {
           </form>
         </div>
         <div className={styles.ContainerFooter}>
-          <Label text="¿No tienes cuenta en Art-Hispano" />
+          <Label text="¿No tienes cuenta en Art-Hispano?" />
           <Button
             style="--Registrate"            
             onClick={signup}
           >
-            Registrate
+            Reg&iacute;strate
           </Button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@styles/pages/Sell.module.scss";
 import Input from "@components/Input"
+import FileUpload from '../components/FileUpload'
 
 
 export default function details () {
@@ -43,9 +44,11 @@ export default function details () {
            <button>
             <img src="Camara.svg" alt=""></img>
            </button>
-           <button>
-             <img src="Camara.svg" alt=""></img>
-           </button>
+           <div>
+           <FileUpload/>
+            {/*  <img src="Camara.svg" alt=""></img>
+           </button> */}
+           </div>
            </div>
            
            <div className={styles.register}>

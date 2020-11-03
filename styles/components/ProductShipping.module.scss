@@ -1,0 +1,87 @@
+@import "../styles.module.scss";
+
+.MainContainer {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr;
+    grid-template-areas: "img description quantity";
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    border-radius: $border-radius * 2;
+    // background-color: $color-shipping;
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
+    // In case we choose the other background color the background of many images,
+    // because it's usually white, we might have some problems
+}
+
+//-------- IMAGE --------//
+
+.ImageContainer {
+    grid-area: img;
+    width: 75%;
+}
+
+.ImageContainer img {
+    min-width: 100px;
+    width: 100%;
+    max-width: 220px;
+    background: none;
+}
+
+//-------- END IMAGE ---------//
+
+//-------- DESCRIPTION --------//
+
+.DescriptionContainer {
+    grid-area: description;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.Name {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
+.Description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+//-------- END DESCRIPTION --------//
+
+//-------- QUANTITY-PRICE --------//
+
+.QuantityPriceContainer {
+    grid-area: quantity;
+}
+
+.Quantity {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+.Total {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
+//-------- END QUANTITY-PRICE --------//

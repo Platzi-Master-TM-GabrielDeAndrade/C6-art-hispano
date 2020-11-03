@@ -11,7 +11,7 @@ export default function Admin() {
       console.log("Existe un usuario")
       setUser(auth.currentUser); 
     }else {
-      console.log("NO existe un usuario");
+      console.log("No existe un usuario");
       router.push("/login");
     }
   }, []);
@@ -33,7 +33,7 @@ export default function Admin() {
           cerrarSesion();
         }}
       >
-        Cerrar Sesion
+        Cerrar Sesión
       </button>
     </div>
   );

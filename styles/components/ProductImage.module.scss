@@ -1,0 +1,28 @@
+@import "../styles.module.scss";
+
+.LeftsideImage {
+    margin: 1rem;
+    padding: 0.25rem;
+    display: flex;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.LeftsideImage img {
+    width: 80%;
+    /* height: 100%; */
+    /* No es sostenible lo que viene aqui dentro */
+}
+
+.MainImage {
+    border: 1px solid $color-secondary;
+    border-radius: $border-radius;
+    margin: 10px;
+    padding: 10px;
+}
+
+.MainImage img {
+    width: 100%;
+    align-self: center;
+}
