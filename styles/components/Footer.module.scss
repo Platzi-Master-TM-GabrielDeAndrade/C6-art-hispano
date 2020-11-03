@@ -4,22 +4,6 @@
 
 .Footer {
   // margin-top: 50px;
-<<<<<<< HEAD
-  // padding: 15px 0;
-  // font-size: 14px;
-  // color: #727272;
-  // border-top: 1px solid rgba(0,0,0,.1); 
-  // background-color: yellow;  
-  display: grid;
-  grid-template-columns:repeat(5, 1fr);   
-  column-gap: 5px;
-  background-color: $color-brand;
-  opacity: 0.2;
-  color: $color-secondary;
-  
-  
-  }
-=======
   width: 100%;
   margin-top: 50px;
   max-height: 25vh;
@@ -27,8 +11,7 @@
   height: auto;
   color: $color-secondary;
   background-color: $color-footer;
-}
->>>>>>> 9ba64c6692770e12e1ffef5de4a859d7dbd5b30a
+  }
 
 .Container {
   max-width: 1350px;
