@@ -225,3 +225,17 @@
   background-color: $color-secondary;
 }
 
+
+.ButtonSell {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 15px;
+  margin: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  border-radius: $border-radius;
+  border: 1px solid $color-buttonBrand;
+  color: $color-white;
+  background-color: $color-buttonBrand;
+}
+

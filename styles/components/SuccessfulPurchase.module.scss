@@ -1,0 +1,55 @@
+@import "../styles.module.scss";
+
+.Main {
+    height: 70vh;
+    display: grid;
+    grid-template: 3fr 1fr 1fr / repeat(2, 1fr) ;
+    grid-template-areas: "title title"
+                        "date seller"
+                        "button button";
+    align-items: center;
+    justify-items: center;
+    min-width: 500px;
+    background-color: $color-white;
+}
+
+.TitleContainer {
+    grid-area: title;
+    margin-top: 50px;
+    display: grid;
+    justify-items: center;
+}
+
+.Title {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: $text-titles;
+    color: $color-brand;
+}
+
+.TextContainer {
+    margin: 0;
+    padding: 0;
+    align-self: baseline;
+}
+
+.TextContainer h4 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
+.TextContainer p {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+.Button {
+    grid-area: button;
+}
