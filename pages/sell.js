@@ -2,7 +2,7 @@
 import styles from "@styles/pages/Sell.module.scss";
 // import Button from "../components/Button";
 
-export default function sell () {
+export default function Sell () {
   return (
     <>
       <div className={styles.cont_titleSell}>        
@@ -35,7 +35,7 @@ export default function sell () {
             <option value="">Accesorio para baño</option>
          </select>
          <select>
-            <option value="/">Bisuteria</option>
+            <option value="/">Bisuter&iacute;a</option>
             <option value="">Collares</option>
             <option value="">Pulseras</option>
             <option value="">Manillas</option>

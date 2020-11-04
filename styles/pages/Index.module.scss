@@ -56,12 +56,13 @@
 
 .carusel img{
   width: 100%;
+  height: 400px;
 }
 
 
 .products_container{
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
 
 }
 
@@ -73,3 +74,25 @@
 
 }
 
+.products_container_oferta {
+  display: flex;
+  flex-direction: column;
+  padding-top: 38px;
+  justify-content: center;
+  align-items: center;
+  h2 {
+  color: $color-secondary;
+  }
+  button {
+      border-radius:5px; 
+      background-color: $color-brand;
+      border: none;
+      height: 35px;
+      width: 50%;
+      color: white;
+      font-size: 25px;
+      padding: 0;
+  }
+}
+
+// Estilos botton oferta 

@@ -1,6 +1,7 @@
 import styles from "../styles/components/ProductDescription.module.scss";
 import Button from "components/Button";
 import StarRating from "components/StarRating";
+import Link from "next/link";
 
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => (    
@@ -19,24 +20,23 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => (
             <StarRating />
         </section>
         <section className={styles.Quantity}>
-            <span>Cantidad</span>
-            <span>
-                <Button children="+" style="OneMore" />
-            </span>
+                <span>Cantidad</span>
+                <span>
+                    <Button children="+" style="OneMore" />
+                </span>
                 <span>1</span>
                 <span>
                     <Button children="-" style="OneLess" />
                 </span>
         </section>
         <section className={styles.Buttons}>
-            <Button children="Comprar" style="Buy" />
+            <Link href= '/cart'>
+                <Button children="Comprar" style="Buy" />
+            </Link>
             <Button children="Agregar al Carrito" style="AddToCart" />
         </section>
             
     </div>
-
-    
-
 );
 
 export default ProductDescription;
