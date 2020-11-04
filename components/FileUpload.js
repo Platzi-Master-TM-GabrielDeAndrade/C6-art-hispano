@@ -1,5 +1,5 @@
-import { Component, useState } from "react";
-import { firebase } from "../firebase/firebase.config";
+import { Component,} from "react";
+import firebase from "firebase";
 
 class FileUpload extends Component {
    constructor () {
@@ -18,7 +18,7 @@ class FileUpload extends Component {
       const task = storageRef.put(file);
 
       task.on('state-changed', snapshot => {
-         let percentage = (snapshot.bytesTransferred / napshot.totalBytes) * 100;
+         let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
          this.setState({
             uploadValue: percentage
          })
