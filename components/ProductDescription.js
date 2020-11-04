@@ -4,10 +4,17 @@ import StarRating from "components/StarRating";
 import Link from "next/link";
 
 
-const ProductDescription = ( { title, description, price, starsQuantity } ) => (    
+const ProductDescription = ( { title, description, price, quantity=1, starsQuantity } ) => {
 
-    <div>
-        <section className={styles.DescriptionContent}>
+    
+
+    const addOne = () => {
+        document.writeln(2);
+    }
+
+    return (
+        <div>
+            <section className={styles.DescriptionContent}>
             <h1 className={styles.Title}>{title}</h1>
             <p className={styles.Description}>{description}</p>
             <h2 className={styles.Price}>${price}</h2>
@@ -22,21 +29,22 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => (
         <section className={styles.Quantity}>
                 <span>Cantidad</span>
                 <span>
-                    <Button children="+" style="OneMore" />
+                    <Button onClick={addOne} children="+" style="OneMore" />
                 </span>
-                <span>1</span>
+                    <span>{quantity}</span>
                 <span>
                     <Button children="-" style="OneLess" />
                 </span>
         </section>
         <section className={styles.Buttons}>
-            <Link href= '/cart'>
+            <Link href= '/shipping'>
                 <Button children="Comprar" style="Buy" />
             </Link>
             <Button children="Agregar al Carrito" style="AddToCart" />
         </section>
             
     </div>
-);
+); 
+}
 
 export default ProductDescription;

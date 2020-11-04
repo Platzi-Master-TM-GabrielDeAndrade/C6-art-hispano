@@ -50,7 +50,7 @@ export default function Navbar() {
         <section className={styles.nav_icons}>
 
           <Link href="/cart">
-            <img className={styles.nav_iconsImgs} src="car.svg" alt="Carrito" />
+            <img className={styles.nav_iconsImgsCart} src="car.svg" alt="Carrito" />
           </Link>
           <img className={styles.nav_iconsImgs} src="favourite.svg" alt="Favorito" />
           <img

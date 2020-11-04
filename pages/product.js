@@ -23,7 +23,7 @@ export default function Product () {
                 </section>
                 <section className={styles.MainDescriptionContainer}>
                     <section className={styles.DescriptionContainer}>
-                        <ProductDescription starsQuantity='3' title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price='19.999,97' />
+                        <ProductDescription starsQuantity='3' title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price={19999.97} />
                     </section>
                 </section>
             </section>

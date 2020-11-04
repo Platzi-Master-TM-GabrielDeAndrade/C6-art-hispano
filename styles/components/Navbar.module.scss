@@ -116,12 +116,24 @@
     margin: 0;
 }
 
+.nav_icons img {
+    cursor: pointer;
+    min-width: 30px;
+}
+
+.nav_iconsImgsCart {
+    max-width: 45px;
+    width: 35%;
+}
+
 .nav_iconsImgs {
-    width: 45px;
+    max-width: 45px;
+    width: 70%;
 }
 
 .nav_userImg {
-    width: 70px;
+    max-width: 70px;
+    width: 70%;
 }
 
 //------- END NAV RIGHT --------//
