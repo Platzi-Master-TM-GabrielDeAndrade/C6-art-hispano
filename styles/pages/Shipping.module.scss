@@ -1,6 +1,8 @@
 @import "../styles.module.scss";
 
+
 .Main {
+    min-height: calc(100vh - 100px - 175px);  // 100vh Navbar Footer
     display: grid;
     grid-template: 1fr / 4fr minmax(225px, 1fr);
     grid-template-areas: "main-content right-bar";
@@ -26,7 +28,7 @@
 .RightBar {
     grid-area: right-bar;
     display: grid;
-    height: calc(100% + 50px);
+    height: 100%;
     background-color: $color-input;
 }
 
@@ -35,5 +37,6 @@
     margin: 100px 0 0 0; // Top Right Bottom Left
     justify-self: center;
 }
+    
 
 //------- END RIGHT BAR -------//
