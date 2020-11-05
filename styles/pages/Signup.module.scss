@@ -1,12 +1,75 @@
 @import "../styles.module.scss";
 
-.Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.MainContainer {
+  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
+  display: grid;
   align-items: center;
-  border: 1px solid blue;
-  width: 300px;
-  border-radius: $border-radius;
+  justify-items: center;
+}
+
+.Main {
+  width: 50%;
+  max-width: 420px;
+  display: grid;
+  grid-template: 1fr / 1fr ;
+  gap: 2.5px; 
+}
+
+.FormContainer {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
   padding: 10px;
+  border: 1px solid $color-login-border;
+  border-radius: $border-radius;
+}
+
+.Title {
+  text-align: center;
+  margin: 20px 0;
+  padding: 0;
+  font-weight: 300;
+  color: $color-secondary;
+  font-size: $light-medium-text;
+}
+
+.FormContainerLabel {
+  font-weight: 400;
+  font-family: $base-font;
+  font-size: $light-small-text;
+  color: $color-secondary;
+}
+
+.FormContainer input {
+  // border-right: none;
+  align-self: center;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  margin: 5px 0 15px 0; //Top Right Bottom Left
+  padding: 0 15px;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  border: 1px solid $color-input-border;
+  border-radius: $border-radius * 2; 
+  background-color: $color-input;
+}
+
+.FormContainer input::placeholder {
+  opacity: .65;
+}
+
+.AlreadyAnAccount {
+  font-weight: 300;
+  font-size: $base-fontsize;
+  color: $color-secondary;
+}
+
+.AlreadyAnAccount:hover {
+  cursor: pointer;
+  font-weight: 700;
 }

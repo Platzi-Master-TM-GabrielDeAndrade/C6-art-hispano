@@ -21,7 +21,7 @@ const SuccessfulPurchase = ( { deliveryDate, phone, email } ) => (
         </section>
         <section className={styles.Button}>
             <Link href="/">
-                <Button style="Buy">Seguir comprando</Button>
+                <Button style="Buy" title="Ir a inicio">Seguir comprando</Button>
             </Link>
         </section>
     </div>

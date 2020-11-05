@@ -40,9 +40,9 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
             </section>
             <section className={styles.Buttons}>
                 <Link href= '/shipping'>
-                    <Button style="Buy">Comprar</Button>
+                    <Button style="Buy" title="Comprar">Comprar</Button>
                 </Link>
-                <Button style="AddToCart">Agregar al Carrito</Button>
+                <Button style="AddToCart" title="Agregar al carrito">Agregar al Carrito</Button>
             </section>
 
         </div>

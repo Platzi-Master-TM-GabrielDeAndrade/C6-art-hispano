@@ -9,7 +9,7 @@ const ProductCart = ( { title, description, price, imgUrl, quantity } ) => {
         <div>
             <section className={styles.MainContainer}>
                 <section className={styles.ImageContainer}>
-                    <img src={imgUrl} alt="Product Image"></img>
+                    <img src={imgUrl} alt="Product Image" title={title}></img>
                 </section>
                 <section className={styles.DescriptionContainer}>
                     <h3 className={styles.Name}>{title}</h3>

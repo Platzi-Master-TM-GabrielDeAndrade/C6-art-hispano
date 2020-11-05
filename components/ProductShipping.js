@@ -14,7 +14,7 @@ const ProductShipping = ( { title, description, price, imgUrl, quantity } ) => {
                 <section className={styles.DescriptionContainer}>
                     <h3 className={styles.Name}>{title}</h3>
                     <p className={styles.Description}>{description}</p>
-                    <Button style="RemoveShipping">Eliminar</Button>
+                    <Button style="RemoveShipping" title="Eliminar art&iacute;culo">Eliminar</Button>
                 </section>
                 <section className={styles.QuantityPriceContainer}>
                     <p className={styles.Quantity}>Cantidad: {quantity}</p>

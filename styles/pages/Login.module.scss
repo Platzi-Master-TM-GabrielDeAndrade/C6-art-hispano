@@ -1,7 +1,7 @@
 @import "../styles.module.scss";
 
 .MainContainer {
-  min-height: calc(100vh - 100px - 175px);  // 100vh Navbar Footer
+  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
   display: grid;
   align-items: center;
   justify-items: center;
@@ -28,7 +28,7 @@
 
 .Title {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0 10px 0;
   padding: 0;
   font-weight: 300;
   color: $color-secondary;

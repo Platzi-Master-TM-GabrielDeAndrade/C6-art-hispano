@@ -27,13 +27,13 @@ const Footer = () => (
       </section>
 
       <section className={styles.SocialMedia}>
-        <img className={styles.Icon} src="instagram.svg" alt="logo IG" />
-        <img className={styles.Icon} src="facebook.svg" alt="logo FB" />
-        <img src="twitter.svg" alt="logo TW" />
+        <img className={styles.Icon} src="instagram.svg" alt="logo IG" title="Instagram" />
+        <img className={styles.Icon} src="facebook.svg" alt="logo FB" title="Facebook" />
+        <img src="twitter.svg" alt="logo TW" title="Twitter" />
       </section>
     </section>
     
   </footer>
 );
 
-export default Footer
+export default Footer;
