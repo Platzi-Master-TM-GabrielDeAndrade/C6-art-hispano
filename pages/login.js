@@ -42,7 +42,7 @@ const Login = () => {
         console.log(err);
       });
   };
-  const procesarDatos = (e) => {
+  const processData = (e) => {
     e.preventDefault();
     console.log(email);
     console.log(pass);
@@ -91,33 +91,33 @@ const Login = () => {
 
   const signup = () => {
     router.push("/signup");
-  } 
+  };
   return (
     <>
+    <div className={styles.MainContainer}>
       <div className={styles.Main}>
-        <div className={styles.ContainerBody}>
-          <form className={styles.Container} onSubmit={procesarDatos}>
-            <h3>
-              <Title text="Iniciar Sesión" />
-            </h3>
+        <section className={styles.ContainerLogin}>
+          <form className={styles.Container} onSubmit={processData}>
+            <h2 className={styles.Title}>
+              Iniciar Sesi&oacute;n
+            </h2>
             {error && error}
-            <Label text="Correo" />
-            <Input
+            <label className={styles.ContainerLoginLabel} for="email">Correo</label>
+            <input
+              id="email"
               type="email"
               placeholder="Ingrese su email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Label text="Contraseña" />
-            <Input
+            <label className={styles.ContainerLoginLabel} for="password">Contraseña</label>
+            <input
+              id="password"
               type="password"
-              placeholder="Ingrese una constraseña"
+              placeholder="Ingrese su contrase&ntilde;a"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
-            {/* <Button className={styles} type="submit">
-              Empezar
-            </Button> */}
 
             <Button
               param={true}
@@ -136,30 +136,35 @@ const Login = () => {
               onClick={loginFacebook}
             >
               {" "}
-              Facebook
+              Continuar con Facebook
             </Button>
-            {/* <Button style="Sell">Vender</Button> */}
-            {/* <Input type="email"></Input> */}
+            
             <Button
               // className={styles.Button}
               style="--Google"
               onClick={loginGoogle}
             >
-              Google
+              Continuar con Google
             </Button>
-            <Label text="Recuperar contraseña" />
+            <label className={styles.RecoverPassword}>
+              Recuperar contrase&ntilde;a
+            </label>
           </form>
-        </div>
-        <div className={styles.ContainerFooter}>
-          <Label text="¿No tienes cuenta en Art-Hispano?" />
+        </section>
+        <section className={styles.ContainerSignup}>
+          <label>
+            ¿No tienes cuenta en Art-Hispano?
+          </label>
           <Button
             style="--Registrate"            
             onClick={signup}
           >
             Reg&iacute;strate
           </Button>
-        </div>
+        </section>
       </div>
+    </div>
+      
     </>
   );
 };

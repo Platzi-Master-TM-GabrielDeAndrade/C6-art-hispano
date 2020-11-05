@@ -3,15 +3,27 @@
 
 
 .Footer {
-  // margin-top: 50px;
+  
+  // clear: both;
+  // position: relative;
+  // min-height: calc(100vh - 250px);
+  // height: calc();
+  // margin-top: 300px;
+  
+  
+  // max-height: 25vh;
+  
+  // height: auto;
+
+
+  // position: absolute;
+  // bottom: 0;
+  // margin-top: 20px;
+  min-height: 175px;
   width: 100%;
-  margin-top: 50px;
-  max-height: 25vh;
-  min-height: 20vh;
-  height: auto;
   color: $color-secondary;
   background-color: $color-footer;
-  }
+}
 
 .Container {
   max-width: 1350px;
