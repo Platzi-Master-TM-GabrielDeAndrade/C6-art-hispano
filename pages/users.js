@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import { db, firebase } from "../firebase/firebase.config";
+import { db } from "../firebase/firebase.config";
 import styles from "@styles/pages/Users.module.scss";
 
 export default function Home() {

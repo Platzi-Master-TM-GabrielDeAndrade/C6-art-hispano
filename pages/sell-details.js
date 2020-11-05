@@ -52,6 +52,7 @@ export default function details () {
           />
         </form>
 
+<<<<<<< HEAD
         <div className={styles.takeFoto}>
           <h2>Sube tus fotos</h2>
         </div>
@@ -60,6 +61,9 @@ export default function details () {
           <button>
             <img src="Camara.svg" alt=""></img>
           </button>
+=======
+          <div className={styles.Photo}>
+>>>>>>> 3d72e94cf656d558801bfc5f2defd192cda26ace
           <button>
             <img src="Camara.svg" alt=""></img>
           </button>
@@ -71,6 +75,7 @@ export default function details () {
           </button>
           <button>
             <img src="Camara.svg" alt=""></img>
+<<<<<<< HEAD
           </button>
           <div>
             <FileUpload />
@@ -86,5 +91,23 @@ export default function details () {
         </div>
       </main>
     </>
+=======
+           </button>
+           <div>
+           <button> 
+             <img src="Camara.svg" alt=""></img>
+           </button>
+           </div>
+          </div>
+           
+           <div className={styles.register}>
+             <Link href="/sell-publication">
+              <button>Publicar ahora</button>
+             </Link>
+           </div>  
+                                                  
+       </main>          
+  </>
+>>>>>>> 3d72e94cf656d558801bfc5f2defd192cda26ace
   );
 }

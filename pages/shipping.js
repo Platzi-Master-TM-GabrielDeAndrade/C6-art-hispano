@@ -10,14 +10,12 @@ import Link from "next/link";
 export default function Shipping () {
   return (
     <>
-<<<<<<< HEAD
       <main className={styles.Main}>
         <section className={styles.Container}>
           <ShippingOptions
             customerName="Kevin J. Zea"
             address="Jardines de Galicia 7243, Col. Jardines de Babilonia, C. P. 68420, Abasolo, Nuevo León, México"
           />
-=======
         
         <div className={styles.Main}>
             <section className={styles.Container}>
@@ -39,7 +37,6 @@ export default function Shipping () {
             </div>
         
         
->>>>>>> 112624a1c214e333829d238c076064b32cc1f701
 
           <ProductShipping
             title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana"

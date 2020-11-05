@@ -82,6 +82,7 @@ display: grid;
 
 .container_details{
   display:grid;
+  width: 100vw;
   grid-template-columns: 5% 45% 15% 15% 15% 5%;
   grid-template-rows: 100px 50px 50px 200px 50px;
   grid-template-areas: "title title title title title tittle"
@@ -149,6 +150,21 @@ display: grid;
     align-items: center;
   }
 
+.form_client select{
+  width: 100%;
+    color: gray;
+    height: 35px;
+    min-width: 250px; 
+    padding: 1px 15px;
+    margin-bottom: 10px;    
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #e2e8f0;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
 
   .texTank {
     width: 100%;
@@ -196,7 +212,7 @@ display: grid;
 
   }
 
-  .foto{
+  .Photo{
     display: grid;
     grid-area: foto;
     grid-template: 1fr 1fr / 1fr 1fr 1fr;

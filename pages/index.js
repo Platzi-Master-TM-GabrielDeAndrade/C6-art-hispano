@@ -1,6 +1,6 @@
 import styles from "../styles/pages/Index.module.scss";
 import ProductCard from "../components/ProductCard";
-import LineTitle from "@components/Linetitle";
+import LineTitle from "@components/LineTitle";
 
 export default function Home () {
   return (
