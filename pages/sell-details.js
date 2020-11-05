@@ -22,7 +22,7 @@ export default function details () {
           <label>Agrega los detalles de producto</label>
         </div>
 
-        <div className={styles.form_client}>
+        <form className={styles.form_client}>
           <Input
             type="text"
             placeholder="Nombre"
@@ -50,7 +50,7 @@ export default function details () {
             // rows={80}
             // cols={60}
           />
-        </div>
+        </form>
 
         <div className={styles.takeFoto}>
           <h2>Sube tus fotos</h2>

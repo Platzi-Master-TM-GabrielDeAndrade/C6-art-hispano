@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import { db } from "../firebase/firebase.config";
+import { db, firebase } from "../firebase/firebase.config";
 import styles from "@styles/pages/Users.module.scss";
 
 export default function Home() {
@@ -8,9 +8,20 @@ export default function Home() {
   const [modoEdicion, setModoEdicion] = useState(false);
   const [id, setId] = useState('');
 
+  // const productos = async () => {
+  //   try {
+  //     const data = await firebase.database.ref("products")
+  //     ref.orderByChild("categories").equalTo(25).on("child_added", function(snapshot) {
+  //     console.log(snapshot.key);
+  //   } catch (error) {
+      
+  //   }
+  
+  // }; 
+
   const getUsers = async () => {
     try {
-      const query = await db.collection("users").get();
+      const query = await db.collection("users").get()
       const users = query.docs.map((user) => {
         return {
           id: user.id,
