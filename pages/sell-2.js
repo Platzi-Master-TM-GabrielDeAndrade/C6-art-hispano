@@ -21,6 +21,25 @@ export default function details () {
           <Input type="text" placeholder="Nombre" />
           <Input type="text" placeholder="Contacto" />
           <Input type="text" placeholder="$ Precio" />
+          <select>
+            <option value="/">--Elige una Categoria</option>
+            <option value="">Lencer&iacute;a</option>
+            <option value="">Decoraci&oacute;n</option>
+            <option value="">Accesorio para baño</option>
+            <option value="">Collares</option>
+            <option value="">Pulseras</option>
+            <option value="">Manillas</option>
+            <option value="">Guitarras</option>
+            <option value="">Bongos</option>
+            <option value="">Panderetas</option>
+            <option value="">Flautas</option>
+            <option value="">Blusas</option>
+            <option value="">Sacos</option>
+            <option value="">Pantalones</option>
+            <option value="">Bufandas</option>
+            <option value="">Calzado</option>
+         </select>
+          
           <textarea className={styles.texTank}type="text" placeholder="Descripción" cols="60" rows="8"  ></textarea>
          </div>
     
@@ -29,27 +48,13 @@ export default function details () {
           </div>
 
           <div className={styles.Photo}>
-          <button>
-             <img src="Camara.svg" alt=""></img>
-           </button>
-           <button>
-             <img src="Camara.svg" alt=""></img>
-           </button>
-           <button>
-            <img src="Camara.svg" alt=""></img>
-           </button>
-           <button>
-            <img src="Camara.svg" alt=""></img>
-           </button>
-           <button>
-            <img src="Camara.svg" alt=""></img>
-           </button>
+         
            <div>
-           <button> 
-             <img src="Camara.svg" alt=""></img>
-           </button>
+           <FileUpload/>
+            {/*  <img src="Camara.svg" alt=""></img>
+           </button> */}
            </div>
-          </div>
+           </div>
            
            <div className={styles.register}>
              <Link href="/sell-publication">
