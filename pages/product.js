@@ -9,7 +9,7 @@ export default function Product () {
   return (
     <>
         
-        <main className={styles.Main}>
+        <div className={styles.Main}>
             <section className = {styles.MainContainer}>
                 <section className={styles.Leftside}>
                     <ProductImage type="Leftside" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" />
@@ -27,7 +27,7 @@ export default function Product () {
                     </section>
                 </section>
             </section>
-        </main>
+        </div>
 
     </>
   );

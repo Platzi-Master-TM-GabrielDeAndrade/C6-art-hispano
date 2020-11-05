@@ -1,24 +1,96 @@
 @import "../styles.module.scss";
 
-.Main{
-  grid-template-columns: minmax(auto, 300px);
+.MainContainer {
+  min-height: calc(100vh - 100px - 175px);  // 100vh Navbar Footer
   display: grid;
-  justify-content: center;    
+  align-items: center;
+  justify-items: center;
 }
-.ContainerBody {
-  border: 1px solid #ccd5e0;
-  width: 300px;
-  border-radius: $border-radius;
-  padding: 10px;
+
+.Main {
+  width: 50%;
+  max-width: 420px;
+  display: grid;
+  grid-template: 4fr 1fr / 1fr ;
+  justify-items: center;
+  align-items: center;
+  gap: 2.5px; 
 }
-.ContainerFooter {   
-  border: 1px solid #ccd5e0;
-  margin-top: 2px;
-  width: 300px;
-  border-radius: $border-radius;
+
+//----------- CONTAINER LOG IN -----------//
+
+.ContainerLogin {
+  width: 100%;
   padding: 10px;
-  
+  border: 1px solid $color-login-border;
+  border-radius: $border-radius;
+}
+
+.Title {
+  text-align: center;
+  margin: 20px 0;
+  padding: 0;
+  font-weight: 300;
+  color: $color-secondary;
+  font-size: $light-medium-text;
+}
+
+.ContainerLoginLabel {
+  font-weight: 400;
+  font-family: $base-font;
+  font-size: $light-small-text;
+  color: $color-secondary;
+}
+
+.ContainerLogin input {
+  // border-right: none;
+  align-self: center;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  margin: 5px 0 15px 0; //Top Right Bottom Left
+  padding: 0 15px;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  border: 1px solid $color-input-border;
+  border-radius: $border-radius * 2; 
+  background-color: $color-input;
+}
+
+.ContainerLogin input::placeholder {
+  opacity: .65;
+}
+
+.RecoverPassword {
+  font-weight: 300;
+  font-size: $base-fontsize;
+  color: $color-secondary;
+}
+
+.RecoverPassword:hover {
+  cursor: pointer;
+  font-weight: 700;
 }
 
 
+
+//----------- END CONTAINER LOG IN -----------//
+
+//----------- CONTAINER SIGN UP -----------//
+
+.ContainerSignup {   
+  border: 1px solid #ccd5e0;
+  width: 100%;
+  border-radius: $border-radius;
+  padding: 10px;
+}
+
+.ContainerSignup label {
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+}
+
+//----------- END CONTAINER SIGN UP -----------//
   

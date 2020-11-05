@@ -28,14 +28,14 @@ export default function Navbar() {
 
         <section className={styles.nav_mainContainerInputs}>
           <section className={styles.nav_containerInput}>
-            <input type="text" />
+            <input type="text" placeholder="Busca tu producto ideal..." />
             <button>
-              <img src="search.svg" alt="" width="15" height="15" />
+              <img src="search.svg" alt="search" />
             </button>
           </section>
             
           <section className={styles.nav_containerTexts}>
-            <p>Categor&iacute;a</p>
+            <p>Categor&iacute;as</p>
             <p>Ofertas de la semana</p>
             <p>Filtrar</p>
           </section>
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <section className={styles.nav_containerButton}>
           <Link href= '/sell'>
-            <Button children="Vender" style="Sell" />            
+            <Button style="Sell">Vender</Button>
           </Link>
         </section>
 

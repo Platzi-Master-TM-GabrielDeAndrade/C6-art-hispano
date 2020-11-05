@@ -11,7 +11,7 @@ export default function Shipping () {
   return (
     <>
         
-        <main className={styles.Main}>
+        <div className={styles.Main}>
             <section className={styles.Container}>
 
                 <ShippingOptions customerName="Kevin J. Zea" address="Jardines de Galicia 7243, Col. Jardines de Babilonia, C. P. 68420, Abasolo, Nuevo León, México" />
@@ -19,16 +19,18 @@ export default function Shipping () {
                 <ProductShipping title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price={19999.97} imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" quantity={3} />
                 <div className={styles.ButtonContainer}>
                     <Link href="/successful-purchase">
-                        <Button children="Confirmar Compra" style="Continue" />
+                        <Button style="Continue">Confirmar Compra</Button>
                     </Link>
                 </div>
             </section>
             <section className={styles.RightBar}>
                 <section className={styles.SummaryContainer}>
                     <ShippingSummary totalQuantity={2} totalPrice={19999.97*2} shippingCost={5000} totalCost={19999.97*2+5000} />
+                    </section>
                 </section>
-            </section>
-        </main>
+            </div>
+        
+        
 
     </>
   );

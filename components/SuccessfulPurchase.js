@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SuccessfulPurchase = ( { deliveryDate, phone, email } ) => (    
 
-    <main className={styles.Main}>
+    <div className={styles.Main}>
         <section className={styles.TitleContainer}>
             <h2 className={styles.Title}>¡Felicitaciones!</h2>
             <h2 className={styles.Title}>Tu producto llegar&aacute; pronto.</h2>
@@ -21,10 +21,10 @@ const SuccessfulPurchase = ( { deliveryDate, phone, email } ) => (
         </section>
         <section className={styles.Button}>
             <Link href="/">
-                <Button children="Seguir comprando" style="Buy" />
+                <Button style="Buy">Seguir comprando</Button>
             </Link>
         </section>
-    </main>
+    </div>
 );
 
 export default SuccessfulPurchase;
