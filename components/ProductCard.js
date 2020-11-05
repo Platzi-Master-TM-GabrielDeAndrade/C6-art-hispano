@@ -9,7 +9,7 @@ export default function ProductCard({imgUrl, price}) {
                 <img src={imgUrl}  alt=""/>
                 
                 <div className ={styles.products_container_icons}>
-                    <p>{price}</p>
+                    <p>${price}</p>
                     <button>
                         <img src="car.svg" alt="Carrito"/>
                     </button>
