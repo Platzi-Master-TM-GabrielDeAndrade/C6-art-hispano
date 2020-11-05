@@ -13,8 +13,8 @@ export default function Cart () {
               <section className = {styles.GridContainer}>
                 <section className={styles.Container}>
                     <p className={styles.Total}>Total: ${40000}</p>
-                    <Link href= '/shipping'>
-                      <Button style="Continue" children="Continuar Comprar" />
+                    <Link href= '/shipping'>                      
+                        <Button style="Continue">Continuar Comprar</Button>
                     </Link>
                 </section>
               </section>

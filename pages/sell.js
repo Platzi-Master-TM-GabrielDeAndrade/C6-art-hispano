@@ -8,7 +8,7 @@ export default function Sell () {
       <div className={styles.cont_titleSell}>        
           <h1>Publica tu arte</h1>
       </div>
-   <  div className={styles.container}> 
+      <div className={styles.container}> 
       <div className={styles.images}>
          <figure>
             <img src="kiosko.svg" alt=""></img>

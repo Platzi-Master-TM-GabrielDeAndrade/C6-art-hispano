@@ -33,7 +33,7 @@ export default function Navbar() {
               <img src="search.svg" alt="" width="15" height="15" />
             </button>
           </section>
-            
+
           <section className={styles.nav_containerTexts}>
             <p>Categor&iacute;a</p>
             <p>Ofertas de la semana</p>
@@ -42,17 +42,20 @@ export default function Navbar() {
         </section>
 
         <section className={styles.nav_containerButton}>
-          <Link href= '/sell'>
-            <Button children="Vender" style="Sell" />            
+          <Link href="/sell">            
+            <Button style="Sell">Vender</Button>
           </Link>
         </section>
 
         <section className={styles.nav_icons}>
-
           <Link href="/cart">
             <img className={styles.nav_iconsImgs} src="car.svg" alt="Carrito" />
           </Link>
-          <img className={styles.nav_iconsImgs} src="favourite.svg" alt="Favorito" />
+          <img
+            className={styles.nav_iconsImgs}
+            src="favourite.svg"
+            alt="Favorito"
+          />
           <img
             className={styles.nav_iconsImgs}
             src="notificaciones.svg"
@@ -62,10 +65,8 @@ export default function Navbar() {
             <img className={styles.nav_userImg} src="user.svg" alt="user" />
           </Link>
         </section>
-
       </nav>
     </header>
-
   ) : (
     <p className={styles.when_loading}>Cargando tus productos favoritos...</p>
   );

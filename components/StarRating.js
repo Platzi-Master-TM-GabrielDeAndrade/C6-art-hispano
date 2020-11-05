@@ -8,7 +8,8 @@ const StarRating = ( { imgUrl='https://www.freepnglogos.com/uploads/star-png/sta
             <span className={styles.StarContainer}>
                 <img src={(index+1)<=rating ? imgUrl : ''} alt="Product Picture" />
             </span>
-        ) }
+            ) 
+        }
     </div>
 );
 
