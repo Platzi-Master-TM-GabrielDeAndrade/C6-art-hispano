@@ -3,49 +3,64 @@ import firebase from "firebase";
 import styles from "../styles/components/FileUpload.module.scss";
 
 class FileUpload extends Component {
-   constructor () {
-      super();
-      this.state = {
-         uploadValue: 0,
-         picture: true
-      };
-      this. handleUpload = this.handleUpload.bind(this);
-   }
+  constructor(props) {
+    super();
+    this.state = {
+      uploadValue: 0,
+      picture: true,
+    };
+    this.handleUpload = this.handleUpload.bind(this);
+  }
 
-   handleUpload (event) {
-      const file = event.target.files[0];
-      // const blob = new Blob([event.target.result], { type: "image/jpeg"});
-      const storageRef = firebase.storage().ref(`/photosPublication/${file.name}`);
-      console.log(file.name)
-      const task = storageRef.put(file);
+  handleUpload(event) {
+    const file = event.target.files[0];
+    const storageRef = firebase
+      .storage()
+      .ref(`/photosPublication/${file.name}`);
+    console.log(storageRef.fullPath);
+    console.log(file.name);
+    const task = storageRef.put(file);
 
-      task.on('statechanged', snapshot => {
-         const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-         this.setState({
-            uploadValue: percentage
-         })
-      }, error => {
-         console.log(error.message)
-      }, () => {
-         this.setState({
-            message: 'Archivo subido!',
+    task.on(
+      "state_changed",
+      (snapshot) => {
+        const percentage =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        this.setState({
+          uploadValue: percentage,
+        });
+      },
+      (error) => {
+        console.log(error.message);
+      },
+      () => {
+        task.snapshot.ref.getDownloadURL().then((downloadURL) => {
+          this.setState({
+            message: "Archivo subido!",
             uploadValue: 100,
-            picture: task.snapshot.ref.getDownloadURL
-         });
-      });
-   }
+            picture: downloadURL,
+          });
+          this.props.onImageUpload(this.state.picture);
+        });
+      }
+    );
+  }
 
-   render () {
-      return (
-         <div className={styles.UpPhoto} aria-setsize>
-            <progress value={this.state.uploadValue} max="100"></progress>
-            <br/>
-            <input type="file" onChange={this.handleUpload}/>
-            <br/>
-            <img width="104px" height="80px" src={this.state.picture} alt=""/>
-         </div>
-      );
-   }
+  render() {
+    return (
+      <div className={styles.UpPhoto} aria-setsize>
+        <img width="180px" height="140px" src={this.state.picture} alt="" />
+        <br />
+        <progress
+          className={styles.progress_bar}
+          value={this.state.uploadValue}
+          max="100"
+        ></progress>
+        <br />
+        <input type="file" onChange={this.handleUpload} />
+      </div>
+    );
+  }
 }
 
 export default FileUpload;

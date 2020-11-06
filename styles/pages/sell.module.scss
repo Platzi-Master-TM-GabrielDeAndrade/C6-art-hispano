@@ -1,10 +1,9 @@
-// Librerias, Settings y Variables
-// @import "@lib/variables.module.scss";
+
 @import "../styles.module";
 @import "../lib/variables.module";
 
 //sell
-
+/* 
 .cont_titleSell {
   display: grid;
   width: 100%;
@@ -74,7 +73,7 @@ display: grid;
 
 .option{
   margin:15px;
-}
+} */
 
 
 
@@ -87,7 +86,7 @@ display: grid;
   grid-template-rows: 100px 50px 50px 200px 50px;
   grid-template-areas: "title title title title title tittle"
                       "details details details details details details"
-                       ". client upfoto upfoto upfoto ."
+                       ". client upPhoto upPhoto upPhoto ."
                        ". client foto foto foto ."
                        ". client public public public . "
 
@@ -119,7 +118,7 @@ display: grid;
 .details_title  label{
   width: 100%;
   min-width: 250px;   
-  padding: 15px 22px;
+  padding: 15px 80px;
   margin-bottom: 20px;  
   color: #FFFFFF;  
   font-size: $base-fontSizeMedium;
@@ -127,7 +126,6 @@ display: grid;
   background-color: #6D5E52;
   border: 1px solid #6D5E52;
   box-sizing: border-box;
-  border-radius: $border-radius * 2;
 }
 
 .container_details Button:hover{
@@ -151,7 +149,8 @@ display: grid;
   }
 
 .form_client select{
-  width: 100%;
+    display: inline-block;
+    width: 100%;
     color: gray;
     height: 35px;
     min-width: 250px; 
@@ -163,61 +162,77 @@ display: grid;
     border: 1px solid #6D5E52;
     box-sizing: border-box;
     border-radius: 10px;
+    cursor: pointer;
 }
 
+.form_client select:hover{
+  background-color: #FF9F1C;
+  opacity: 40%;
+  cursor: pointer;
+}
 
-  .texTank {
+.texTank {
     width: 100%;
-    height: 109px;
-    min-width: 300px; 
+    height: 100px;
     padding: 10px 15px;
     margin-bottom: 10px;    
-    font-size: $base-fontSizeMedium;
-    font-weight: 300;
+    font-size: 16px;
     background-color: #e2e8f0;
     border: 1px solid #6D5E52;
     box-sizing: border-box;
     border-radius: $border-radius * 2;
- }
+}
 
- .texTank textarea:focus{
+ .texTank textarea:hover{
+  background-color: #FF9F1C;
+  opacity: 40%;
+  cursor: pointer;
+}
+
+/*  .texTank textarea:focus{
   background-color: #FF9F1C;
   opacity: 40%;
   border: 1px solid red;
   cursor: context-menu;
+} */
+
+.takePhoto{
+  grid-area: upPhoto;
+    
 }
 
-.takeFoto{
-    grid-area: upfoto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
-    justify-content: space-between; 
-}
-
-  .takeFoto h2{
+  .takePhoto h2{
     color: #6D5E52;;
-    border: 1px solid #6D5E52;
-    box-sizing: border-box;
-    text-align: left;
+    text-align: center;
     height: 35px;
-    background-color: #e2e8f0;
-    border: 1px solid #6D5E52;
     box-sizing: border-box;
-    border-radius: $border-radius * 2;
     grid-column: 1 / san 3;
-    font-size: $base-fontsize;
-    font-weight: 400;
+    font-size: 25px;
     min-width: 250px; 
-    padding: 10px 15px
-
+  
   }
 
   .Photo{
     display: grid;
     grid-area: foto;
-    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: 1fr/ 1fr 1fr;
     margin: auto;
-    column-gap: 110px;
+    column-gap: 50px;
+  }
+
+  .Photo input{
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: $base-fontSizeMedium;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #e2e8f0;
+    border: 1px solid #6D5E52;
+    box-sizing: border-box;
+    border-radius: $border-radius * 2;
+             
   }
  
   .foto button{
@@ -231,12 +246,13 @@ display: grid;
  }
 
 .register button{
+    border: none;
+    display: inline-block;
     color: #FFFFFF;
     font-size: 25px;
     background: #FF9F1C;
-    border-radius: 10px;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
   }
 

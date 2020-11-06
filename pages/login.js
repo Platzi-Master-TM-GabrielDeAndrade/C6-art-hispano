@@ -106,7 +106,7 @@ const Login = () => {
             <input
               id="email"
               type="email"
-              placeholder="Ingrese su email"
+              placeholder="Ingrese su correo"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -125,6 +125,7 @@ const Login = () => {
               style="--Brand"
               type="submit"
               onClick={() => login}
+              title="Iniciar sesi&oacute;n"
             >
               {" "}
               Empezar
@@ -134,6 +135,7 @@ const Login = () => {
               // className={styles.Button}
               style="--Facebook"
               onClick={loginFacebook}
+              title="Iniciar sesi&oacute;n con Facebook"
             >
               {" "}
               Continuar con Facebook
@@ -143,10 +145,11 @@ const Login = () => {
               // className={styles.Button}
               style="--Google"
               onClick={loginGoogle}
+              title="Iniciar sesi&oacute;n con Google"
             >
               Continuar con Google
             </Button>
-            <label className={styles.RecoverPassword}>
+            <label className={styles.RecoverPassword} title="Recuperar contrase&ntilde;a">
               Recuperar contrase&ntilde;a
             </label>
           </form>
@@ -158,6 +161,7 @@ const Login = () => {
           <Button
             style="--Registrate"            
             onClick={signup}
+            title="Crea tu cuenta"
           >
             Reg&iacute;strate
           </Button>

@@ -50,6 +50,20 @@
     color: $color-white;
     background-color: $color-buttonBrand;
   }
+  &--Registrar {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonRegistrate;
+  }
+  &--Account {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonAccount;
+  }
 }
 
 

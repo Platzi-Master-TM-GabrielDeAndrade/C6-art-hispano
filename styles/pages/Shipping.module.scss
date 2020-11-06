@@ -2,7 +2,7 @@
 
 
 .Main {
-    min-height: calc(100vh - 100px - 175px);  // 100vh Navbar Footer
+    min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
     display: grid;
     grid-template: 1fr / 4fr minmax(225px, 1fr);
     grid-template-areas: "main-content right-bar";
@@ -28,7 +28,7 @@
 .RightBar {
     grid-area: right-bar;
     display: grid;
-    height: 100%;
+    height: calc(100% + 15px);
     background-color: $color-input;
 }
 

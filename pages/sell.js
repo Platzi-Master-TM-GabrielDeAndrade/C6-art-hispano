@@ -1,64 +1,120 @@
-/* import styles from "../styles/pages/Index.module.scss"; */
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { db } from "../firebase/firebase.config";
 import styles from "@styles/pages/Sell.module.scss";
-// import Button from "../components/Button";
+import Input from "@components/Input"
+import Textarea from "@components/Textarea";
+import FileUpload from '../components/FileUpload'
+import Button from "@components/Button";
 
-export default function Sell () {
+export default function details () {
+  const router = useRouter(); 
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState([]);
+
+  const handleImageUpload = (url) => {
+    setImage([...image, url])
+  }
+
+  const addProduct = async (e) => {
+    e.preventDefault();
+
+    try {
+      const newProduct = {
+        // productId: "3",
+        userId: "3",
+        name: name,
+        description: description,
+        price: price,
+        category: category,
+        image: image
+        // itemsId: itemsId
+      };
+
+      console.log(newProduct);
+
+      await db.collection("products").add(newProduct);
+      router.push("/sell-publication");
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
+
   return (
     <>
-      <div className={styles.cont_titleSell}>        
-          <h1>Publica tu arte</h1>
-      </div>
-      <div className={styles.container}> 
-      <div className={styles.images}>
-         <figure>
-            <img src="kiosko.svg" alt=""></img>
-         </figure>
-         <figure>
-            <img src="Arete.svg" alt=""></img>
-         </figure>
-         <figure>
-            <img src="Flauta.svg" alt=""></img>
-         </figure>
-         <figure>
-            <img src="Saco.svg" alt=""></img>
-         </figure>
-         <figure>
-            <img src="Zapato.svg" alt=""></img>
-         </figure>
-      </div>
-      <div className={styles.search}>
-         <select>
-            <option value="/">Hogar</option>
-            <option value="">Cocina</option>
-            <option value="">Lencer&iacute;a</option>
-            <option value="">Decoraci&oacute;n</option>
-            <option value="">Accesorio para baño</option>
-         </select>
-         <select>
-            <option value="/">Bisuter&iacute;a</option>
-            <option value="">Collares</option>
-            <option value="">Pulseras</option>
-            <option value="">Manillas</option>
-         </select>
-         <select>
-            <option value="/">Instrumentos Musicales</option>
-            <option value="">Guitarras</option>
-            <option value="">Bongos</option>
-            <option value="">Panderetas</option>
-            <option value="">Flautas</option>
-         </select>
-         <select>
-            <option value="/">Ropa</option>
-            <option value="">Blusas</option>
-            <option value="">Sacos</option>
-            <option value="">Pantalones</option>
-            <option value="">Bufandas</option>
-         </select>
-         <select name="sell" className="sell-select">
-            <option value="/">Calzado</option>
-         </select>
-      </div>
-     </div>
+      <main className={styles.container_details}>
+        <div className={styles.cont_title_details}>
+          <h1>Publica tu artes</h1>
+        </div>
+
+        <div className={styles.details_title}>
+          <label>Agrega los detalles de producto</label>
+        </div>
+
+        <form onSubmit={addProduct} className={styles.form_client} >
+          <Input
+            type="text"
+            placeholder="Nombre"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Input
+            type="text"
+            placeholder="$ Precio"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+          {/* pregunta 1 */}
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option disabled selected value="">
+              --Elige una Categoria
+            </option>
+            <option value="Hogar">Hogar</option>
+            <option value="Bisuteria">Bisuter&iacute;a</option>
+            <option value="Instrumentos">Instrumentos Musicales</option>
+            <option value="Ropa">Ropa</option>
+            <option value="Calzado">Calzado</option>
+          </select>
+          <Textarea
+            className={styles.texTank}
+            type="textarea"
+            placeholder="Descripción"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          {/* <div className={styles.register}>
+            <Link href="/sell-publication">
+              <button type="submit">Publicar ahora</button>
+            </Link>
+          </div> */}
+          <Button type="submit">
+            {/* <Link href="/sell-publication">Publicar ahora</Link> */}
+            Publicar ahora
+            
+          </Button>
+        </form>
+
+        <div className={styles.takePhoto}>
+          <h2>Sube tus fotos</h2>
+        </div>
+
+        <div className={styles.Photo}>
+          <div>
+            <FileUpload onImageUpload={handleImageUpload} />
+            {/* setImage = src ="this.picture" */}
+          </div>
+          <div>
+            <FileUpload onImageUpload={handleImageUpload} />
+          </div>
+        </div>
+      </main>
     </>
   );
 }

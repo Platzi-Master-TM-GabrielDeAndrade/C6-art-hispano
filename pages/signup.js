@@ -18,7 +18,7 @@ export default function Signup() {
     e.preventDefault();
     if (!email.trim() || !pass.trim()) {
       console.log("Datos vacíos email!");
-      setError("Datos vacíos email!");
+      setError("Por favor, ingrese un correo");
       return;
     }
     if (!pass.trim()) {
@@ -28,7 +28,7 @@ export default function Signup() {
     }
     if (pass.length < 6) {
       console.log("6 o más carácteres");
-      setError("6 o más carácteres en pass");
+      setError("Su contraseña debe tener 6 o más carácteres.");
       return;
     }
     console.log("correcto...");
@@ -66,45 +66,54 @@ export default function Signup() {
 
   return (
     <>
-      <div className={styles.Main}>
-        <div className={styles.ContainerBody}>
+      <div className={styles.MainContainer}>
+        <div className={styles.Main}>
+          <form className={styles.FormContainer} onSubmit={procesarDatos}>
+            <h2 className={styles.Title}>
+              Registro
+            </h2>
 
-      <h3>
-        <Title text="Registro" />
-      </h3>
+            {error && error}
 
-      <form className={styles.Container} onSubmit={procesarDatos}>
-        {error && error}
-        <Label text="Email" />
-        <Input
-          type="email"
-          placeholder="Ingrese Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Label text="Contraseña" />
-        <Input
-          type="password"
-          placeholder="Ingrese una contraseña"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
-        />
-        <Button 
-          style="Registrate" 
-          type="submit">
-          Registrar
-        </Button>
+            <label className={styles.FormContainerLabel} for="email">Correo</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Ingrese su correo"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label className={styles.FormContainerLabel} for="password">Contraseña</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Ingrese su contrase&ntilde;a"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
 
-        <Button
-          style="Brand"
-          type="button"
-          // onClick={() => setEsRegistro(!setEsRegistro)}
-          onClick={Login}
-          // router.push("/admin");
-        >
-          ¿Ya tienes cuenta?
-        </Button>
-      </form>
+            <Button 
+              style="--Brand" 
+              type="submit"
+              title="Crea tu cuenta"
+            >
+              Registrar
+            </Button>
+
+            {/* <Button
+              style="--Account"
+              type="button"
+              // onClick={() => setEsRegistro(!setEsRegistro)}
+              onClick={Login}
+              // router.push("/admin");
+            >
+              ¿Ya tienes cuenta?
+            </Button> */}
+
+            <label className={styles.AlreadyAnAccount} onClick={Login} title="Inicia sesi&oacute;n">
+              ¿Ya tienes cuenta?
+            </label>
+          </form>
         </div>
       </div>
     </>
