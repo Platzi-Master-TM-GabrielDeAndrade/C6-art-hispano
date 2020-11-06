@@ -83,18 +83,20 @@ export default function details () {
         </div>
 
         <form onSubmit={addProduct} className={styles.form_client} >
-          <input
+          <Input
             type="text"
             placeholder="Producto"
             value={product}
             onChange={(e) => setProduct(e.target.value)}
           />
-          <input
+          <Input
             type="text"
             placeholder="$ Precio"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
+
+          
           <select
             value={category}
             onChange={(e) => (
@@ -115,12 +117,12 @@ export default function details () {
           <Textarea
             className={styles.texTank}
             type="textarea"
-            placeholder="Descripción"
+            placeholder="Descripci&oacute;n"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <Link href="/sell-publication">
-            <Button type="submit" router="/sell-publication" >          
+            <Button type="submit" style="Continue">          
               Publicar ahora
             </Button>
           </Link>

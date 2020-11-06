@@ -23,7 +23,7 @@ export default function Home () {
         
             <div className ={styles.products_container_oferta}>
                 <button>Oferta</button>
-                <img className ={styles.oferta} src="ajedrez.png" alt="" width= "80%" height= "80%"/>
+                <img className ={styles.oferta} src="ajedrez.png" alt="Ajedrez" width= "80%" height= "80%"/>
             </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function Home () {
         
             <div className ={styles.products_container_oferta}>
                 <h2>Instrumentos Musicales</h2>
-                <img src="flauta.png" alt="" width= "60%" height= "80%"/>
+                <img src="flauta.png" alt="Flauta" width= "60%" height= "80%"/>
             </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function Home () {
             </div>
         
             <div className ={styles.products_container_oferta}>
-                <h2>Bisuteria</h2>
+                <h2>Bisuter&iacute;a</h2>
                 <img src="bisuteria.png" alt="" width= "80%" height= "80%"/>
             </div>
         </div>

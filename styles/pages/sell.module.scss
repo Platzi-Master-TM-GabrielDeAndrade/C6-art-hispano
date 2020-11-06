@@ -92,7 +92,7 @@
     align-items: center;
   }
 
-.form_client select{
+.form_client select {
   cursor: pointer;
   outline: none;
   display: inline-block;
@@ -110,6 +110,10 @@
   
   box-sizing: border-box;
   border-radius: $border-radius * 2;
+}
+
+.form_client select {
+  opacity: 0.85;
 }
 
 .texTank {
