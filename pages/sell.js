@@ -6,6 +6,7 @@ import Input from "@components/Input"
 import Textarea from "@components/Textarea";
 import FileUpload from '../components/FileUpload'
 import Button from "@components/Button";
+import Link from "next/link";
 
 export default function details () {
   const router = useRouter(); 
@@ -118,9 +119,11 @@ export default function details () {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <Button type="submit">          
-            Publicar ahora
-          </Button>
+          <Link href="/sell-publication">
+            <Button type="submit" router="/sell-publication" >          
+              Publicar ahora
+            </Button>
+          </Link>
         </form>
 
         <div className={styles.takePhoto}>

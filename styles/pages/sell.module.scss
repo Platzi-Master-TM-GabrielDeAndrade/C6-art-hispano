@@ -2,82 +2,6 @@
 @import "../styles.module";
 @import "../lib/variables.module";
 
-//sell
-/* 
-.cont_titleSell {
-  display: grid;
-  width: 100%;
-  background-color: $color-brand;
-  text-align: center;
-}
-
-.cont_titleSell h1 {
-  color: $color-secondary;
-  font-size: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-} 
-
-.container{
-  display:grid;
-  grid-template-columns: 5% 50%;
-  background-color: white;
-  height: 350px;
-  justify-content: center;
-  align-items: center;
-}
-
-.container select:hover{
-  background-color: #FF9F1C;
-  opacity: 40%;
-  cursor: pointer;
-}
-
-.images {
-display: grid;
-align-items: flex-end;;
-}
-
-.images figure{
-  display: block;
-  margin: 5px;
-  padding: 5px;
-  background: #E2E8F0;
-  border: 1px solid #6D5E52;
-  box-sizing: border-box;
-  width: 50px;
-  height: 50px;
-  font-size: $base-fontSizeMedium;
-  background-color: #e2e8f0;
-  border: 1px solid #6D5E52;
-  box-sizing: border-box;
-  border-radius: $border-radius * 2;
-}
-
-.search select{
-  height: 50px;
-  padding: 10px 15px;
-  margin: 5px;
-  width: 495px;
-  font-size: $base-fontSizeMedium;
-  background-color: #e2e8f0;
-  border: 1px solid #6D5E52;
-  color: #6D5E52;
-  box-sizing: border-box;
-  border-radius: $border-radius * 2;
-}
-
-.search{
-display: grid;
-
-}
-
-.option{
-  margin:15px;
-} */
-
-
-
-// Details
 
 .container_details{
   display:grid;
@@ -128,11 +52,14 @@ display: grid;
   box-sizing: border-box;
 }
 
+
+
 // .container_details Button:hover{
 //     background-color: $color-brand;
 //     opacity: 40%;
 //     cursor: pointer;
 // }
+
 
 .form_client {
   grid-area: client;
@@ -272,31 +199,38 @@ display: grid;
   
 
 
-//Publication
+//---------- SELL PUBLICATION PAGE ----------//
 
-.cont_title{
-  display: grid;
-  grid-template-columns: 2fr 6fr;
-  align-content: center;
-  justify-items: center;
+.cont_title {
+  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
   width: 100%;
-  height: 350px;
-  background-color: $color-brand;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "logo text";
+  gap: 100px;
+  align-items: center;
   text-align: center;
+  background-color: $color-white;
 }
   
 .logo {
-  margin: auto;
-  width: 120px;
-  height: 120px;
+  grid-area: logo;
+  justify-self: end;
+  width: 200px;
+  height: 200px;
 }
 
 .title_publication{
+  grid-area: text;
+  justify-self: start;
   display: block;
-  width: 400px;
-  color: #FFFFFF;
-  font-size: $text-medium-buttons;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  min-width: 400px;
+  width: 600px;
+  
+  border-top: 2px solid $color-brand;
+  border-bottom: 2px solid $color-brand;
+  color: $color-brand;
+  font-size: $text-titles;
 }
 
+//---------- END SELL PUBLICATION PAGE ----------//
