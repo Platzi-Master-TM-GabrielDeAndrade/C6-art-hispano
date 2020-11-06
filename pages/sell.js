@@ -52,17 +52,17 @@ export default function details () {
         </div>
 
         <div className={styles.details_title}>
-          <label>Agrega los detalles de producto</label>
+          <label>Agrega los detalles del producto</label>
         </div>
 
         <form onSubmit={addProduct} className={styles.form_client} >
-          <Input
+          <input
             type="text"
             placeholder="Nombre"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Input
+          <input
             type="text"
             placeholder="$ Precio"
             value={price}
@@ -74,7 +74,7 @@ export default function details () {
             onChange={(e) => setCategory(e.target.value)}
           >
             <option disabled selected value="">
-              --Elige una Categoria
+              -- Elige una Categor&iacute;a
             </option>
             <option value="Hogar">Hogar</option>
             <option value="Bisuteria">Bisuter&iacute;a</option>
