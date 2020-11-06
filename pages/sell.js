@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { db } from "../firebase/firebase.config";
+import { db, auth } from "../firebase/firebase.config";
 import styles from "@styles/pages/Sell.module.scss";
 import Input from "@components/Input"
 import Textarea from "@components/Textarea";
@@ -9,11 +9,29 @@ import Button from "@components/Button";
 
 export default function details () {
   const router = useRouter(); 
-  const [name, setName] = useState("");
+  const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState([]);
+
+  const userLogin = auth.currentUser;
+  var uid;
+
+  if (userLogin != null) {
+    uid = userLogin.uid;
+  }
+
+
+  // const userLogin = auth.currentUser;
+
+  // if (userLogin) {
+  //     console.log(userLogin);
+  // } else {
+  //     console.log("No esta logueado");
+  // }
+
+  // console.log(userLogin);
 
   const handleImageUpload = (url) => {
     setImage([...image, url])
@@ -23,15 +41,13 @@ export default function details () {
     e.preventDefault();
 
     try {
-      const newProduct = {
-        // productId: "3",
-        userId: "3",
-        name: name,
+      const newProduct = {        
+        userId: uid,
+        product: product,
         description: description,
         price: price,
         category: category,
-        image: image
-        // itemsId: itemsId
+        image: image,        
       };
 
       console.log(newProduct);
@@ -55,12 +71,12 @@ export default function details () {
           <label>Agrega los detalles de producto</label>
         </div>
 
-        <form onSubmit={addProduct} className={styles.form_client} >
+        <form onSubmit={addProduct} className={styles.form_client}>
           <Input
             type="text"
-            placeholder="Nombre"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Producto"
+            value={product}
+            onChange={(e) => setProduct(e.target.value)}
           />
           <Input
             type="text"
@@ -97,7 +113,6 @@ export default function details () {
           <Button type="submit">
             {/* <Link href="/sell-publication">Publicar ahora</Link> */}
             Publicar ahora
-            
           </Button>
         </form>
 
