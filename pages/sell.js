@@ -14,7 +14,8 @@ export default function details () {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState([]);
-
+ 
+  
   const userLogin = auth.currentUser;
   var uid;
 
@@ -23,16 +24,6 @@ export default function details () {
   }
 
 
-  // const userLogin = auth.currentUser;
-
-  // if (userLogin) {
-  //     console.log(userLogin);
-  // } else {
-  //     console.log("No esta logueado");
-  // }
-
-  // console.log(userLogin);
-
   const handleImageUpload = (url) => {
     setImage([...image, url])
   }
@@ -40,6 +31,25 @@ export default function details () {
   const addProduct = async (e) => {
     e.preventDefault();
 
+      if (!product.trim()) {
+        console.log("escriba un producto");
+        return;
+      }
+
+      if (!description.trim()) {
+        console.log("escriba una descripcion");
+        return;
+      }
+
+      if (!category.trim()) {
+        console.log("escriba una categoria");
+        return;
+      }
+
+      if (!price.trim()) {
+        console.log("escriba el precio");
+        return;
+      }
     try {
       const newProduct = {        
         userId: uid,
@@ -84,10 +94,13 @@ export default function details () {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          {/* pregunta 1 */}
           <select
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => (
+
+
+              setCategory(e.target.value)
+            )}
           >
             <option disabled selected value="">
               --Elige una Categoria
@@ -105,13 +118,7 @@ export default function details () {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          {/* <div className={styles.register}>
-            <Link href="/sell-publication">
-              <button type="submit">Publicar ahora</button>
-            </Link>
-          </div> */}
-          <Button type="submit">
-            {/* <Link href="/sell-publication">Publicar ahora</Link> */}
+          <Button type="submit">          
             Publicar ahora
           </Button>
         </form>
@@ -122,8 +129,7 @@ export default function details () {
 
         <div className={styles.Photo}>
           <div>
-            <FileUpload onImageUpload={handleImageUpload} />
-            {/* setImage = src ="this.picture" */}
+            <FileUpload onImageUpload={handleImageUpload} />            
           </div>
           <div>
             <FileUpload onImageUpload={handleImageUpload} />
