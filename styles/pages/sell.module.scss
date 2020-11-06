@@ -173,9 +173,10 @@ display: grid;
   height: 35px;
   min-width: 250px; 
   padding: 1px 15px;
-  margin-bottom: 10px;    
-  font-size: $base-fontsize;
+  margin-bottom: 10px;
   font-weight: 400;
+  font-size: $base-fontsize;
+  
   border: 1px solid $color-secondary;
   background-color: $color-tertiary;
   

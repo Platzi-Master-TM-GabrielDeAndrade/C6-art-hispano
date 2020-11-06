@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { db } from "../firebase/firebase.config";
+import { db, auth } from "../firebase/firebase.config";
 import styles from "@styles/pages/Sell.module.scss";
 import Input from "@components/Input"
 import Textarea from "@components/Textarea";
@@ -9,11 +9,20 @@ import Button from "@components/Button";
 
 export default function details () {
   const router = useRouter(); 
-  const [name, setName] = useState("");
+  const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState([]);
+ 
+  
+  const userLogin = auth.currentUser;
+  var uid;
+
+  if (userLogin != null) {
+    uid = userLogin.uid;
+  }
+
 
   const handleImageUpload = (url) => {
     setImage([...image, url])
@@ -22,16 +31,33 @@ export default function details () {
   const addProduct = async (e) => {
     e.preventDefault();
 
+      if (!product.trim()) {
+        console.log("escriba un producto");
+        return;
+      }
+
+      if (!description.trim()) {
+        console.log("escriba una descripcion");
+        return;
+      }
+
+      if (!category.trim()) {
+        console.log("escriba una categoria");
+        return;
+      }
+
+      if (!price.trim()) {
+        console.log("escriba el precio");
+        return;
+      }
     try {
-      const newProduct = {
-        // productId: "3",
-        userId: "3",
-        name: name,
+      const newProduct = {        
+        userId: uid,
+        product: product,
         description: description,
         price: price,
         category: category,
-        image: image
-        // itemsId: itemsId
+        image: image,        
       };
 
       console.log(newProduct);
@@ -58,9 +84,9 @@ export default function details () {
         <form onSubmit={addProduct} className={styles.form_client} >
           <input
             type="text"
-            placeholder="Nombre"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="Producto"
+            value={product}
+            onChange={(e) => setProduct(e.target.value)}
           />
           <input
             type="text"
@@ -68,10 +94,13 @@ export default function details () {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          {/* pregunta 1 */}
           <select
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => (
+
+
+              setCategory(e.target.value)
+            )}
           >
             <option disabled selected value="">
               -- Elige una Categor&iacute;a
@@ -89,15 +118,8 @@ export default function details () {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          {/* <div className={styles.register}>
-            <Link href="/sell-publication">
-              <button type="submit">Publicar ahora</button>
-            </Link>
-          </div> */}
-          <Button type="submit">
-            {/* <Link href="/sell-publication">Publicar ahora</Link> */}
+          <Button type="submit">          
             Publicar ahora
-            
           </Button>
         </form>
 
@@ -107,8 +129,7 @@ export default function details () {
 
         <div className={styles.Photo}>
           <div>
-            <FileUpload onImageUpload={handleImageUpload} />
-            {/* setImage = src ="this.picture" */}
+            <FileUpload onImageUpload={handleImageUpload} />            
           </div>
           <div>
             <FileUpload onImageUpload={handleImageUpload} />
