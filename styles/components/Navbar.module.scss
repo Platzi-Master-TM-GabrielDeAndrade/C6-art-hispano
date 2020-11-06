@@ -131,6 +131,13 @@
     min-width: 30px;
 }
 
+.nav_icons img:hover{
+    background-color: #FF9F1C;
+    opacity: 40%;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 .nav_iconsImgsCart {
     max-width: 45px;
     width: 35%;

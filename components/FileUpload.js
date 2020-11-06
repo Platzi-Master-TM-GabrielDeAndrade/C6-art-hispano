@@ -13,13 +13,12 @@ class FileUpload extends Component {
    }
 
    handleUpload (event) {
-      const file = event.target.files[0];
-      //const blob = new Blob([event.target.result], { type: "image/jpeg"});      
+      const file = event.target.files[0];        
       const storageRef = firebase.storage().ref(`/photosPublication/${file.name}`);
       console.log(file.name)
       const task = storageRef.put(file);
 
-      task.on('statechanged', snapshot => {
+      task.on('state_changed', snapshot => {
          let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
          this.setState({
             uploadValue: percentage
@@ -27,22 +26,24 @@ class FileUpload extends Component {
       }, error => {
          console.log(error.message)
       }, () => {
-         this.setState({
-            message: 'Archivo subido!',
-            uploadValue: 100,
-            picture: task.snapshot.ref.getDownloadURL
-         });
+         task.snapshot.ref.getDownloadURL().then((downloadURL) => {
+            this.setState({
+               message: 'Archivo subido!',
+               uploadValue: 100,
+               picture: downloadURL
+            });
+         });      
       });
    }
 
    render () {
       return (
-         <div className={styles.UpPhoto} aria-setsize>
-            <progress value={this.state.uploadValue} max="100"></progress>
+         <div className={styles.UpPhoto} aria-setsize>                
+            <img width="180px" height="140px" src={this.state.picture} alt=""/>
+            <br/>
+            <progress className={styles.progress_bar} value={this.state.uploadValue} max="100"></progress>
             <br/>
             <input type="file" onChange={this.handleUpload}/>
-            <br/>
-            <img width="104px" height="80px" src={this.state.picture} alt=""/>
          </div>
       );
    }
