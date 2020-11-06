@@ -14,17 +14,13 @@ class FileUpload extends Component {
 
    handleUpload (event) {
       const file = event.target.files[0];
-      //const blob = new Blob([event.target.result], { type: "image/jpeg"});      
+      // const blob = new Blob([event.target.result], { type: "image/jpeg"});
       const storageRef = firebase.storage().ref(`/photosPublication/${file.name}`);
       console.log(file.name)
       const task = storageRef.put(file);
 
-<<<<<<< HEAD
-      task.on('state-changed', snapshot => {
-=======
       task.on('statechanged', snapshot => {
->>>>>>> 3d72e94cf656d558801bfc5f2defd192cda26ace
-         let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+         const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
          this.setState({
             uploadValue: percentage
          })

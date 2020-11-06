@@ -128,7 +128,7 @@ export default function Home() {
           onChange={(e) => setUser(e.target.value)}
           value={user}
         />
-        <button className={styles.btn} type="submit ">
+        <button className={styles.btn} type="submit">
           {modoEdicion ? "Editar" : "Agregar"}
         </button>
       </form>
