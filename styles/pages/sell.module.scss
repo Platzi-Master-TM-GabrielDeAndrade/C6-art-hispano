@@ -2,6 +2,7 @@
 @import "../styles.module";
 @import "../lib/variables.module";
 
+//--------- sell ---------//
 
 .container_details{
   display:grid;
@@ -11,7 +12,7 @@
   grid-template-areas: "title title title title title tittle"
                       "details details details details details details"
                        ". client upPhoto upPhoto upPhoto ."
-                       ". client foto foto foto ."
+                       ". client Photo Photo Photo ."
                        ". client public public public . "
 
 
@@ -129,75 +130,64 @@
   cursor: pointer;
 }
 
-/*  .texTank textarea:focus{
-  background-color: #FF9F1C;
-  opacity: 40%;
-  border: 1px solid red;
-  cursor: context-menu;
-} */
-
 .takePhoto{
   grid-area: upPhoto;
     
 }
 
-  .takePhoto h2{
-    color: #6D5E52;;
-    text-align: center;
-    height: 35px;
-    box-sizing: border-box;
-    grid-column: 1 / san 3;
-    font-size: 25px;
-    min-width: 250px; 
+.takePhoto h2{
+  color: #6D5E52;;
+  text-align: center;
+  height: 35px;
+  box-sizing: border-box;
+  grid-column: 1 / san 3;
+  font-size: 25px;
+  min-width: 250px; 
   
-  }
+}
 
-  .Photo{
-    display: grid;
-    grid-area: foto;
-    grid-template: 1fr/ 1fr 1fr;
-    margin: auto;
-    column-gap: 50px;
-  }
+.Photo{
+  display: grid;
+  grid-area: Photo;
+  grid-template: 1fr/ 1fr 1fr;
+  margin: auto;
+  column-gap: 50px;
+}
 
-  .Photo input{
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    color: $base-fontSizeMedium;
-    border: 1px solid #6D5E52;
-    box-sizing: border-box;
-    text-align: left;
-    background-color: #e2e8f0;
-    border: 1px solid #6D5E52;
-    box-sizing: border-box;
-    border-radius: $border-radius * 2;
-             
-  }
+.Photo input{
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: $base-fontSizeMedium;
+  border: 1px solid #6D5E52;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: #e2e8f0;
+  border: 1px solid #6D5E52;
+  box-sizing: border-box;
+  border-radius: $border-radius * 2;       
+}
  
-  .foto button{
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-  }
+.foto button{
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+}
 
 .register{
   grid-area: public;
- }
+}
 
 .register button{
-    border: none;
-    display: inline-block;
-    color: #FFFFFF;
-    font-size: 25px;
-    background: #FF9F1C;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-  }
-
-  
-
+  border: none;
+  display: inline-block;
+  font-size: 25px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  color: $color-white;
+  background-color: $color-brand;
+}
 
 //---------- SELL PUBLICATION PAGE ----------//
 

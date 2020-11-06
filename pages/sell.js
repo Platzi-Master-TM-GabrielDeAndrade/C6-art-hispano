@@ -75,7 +75,7 @@ export default function details () {
     <>
       <main className={styles.container_details}>
         <div className={styles.cont_title_details}>
-          <h1>Publica tu artes</h1>
+          <h1>Publica tu arte</h1>
         </div>
 
         <div className={styles.details_title}>
