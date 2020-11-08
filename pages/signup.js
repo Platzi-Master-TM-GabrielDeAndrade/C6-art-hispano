@@ -33,7 +33,7 @@ const Signup = () => {
   };
 
   const Login =  () => {    
-      router.push("/admin");    
+      router.push("/login");    
   };
   const signUp = async () => {
     try {
@@ -65,7 +65,7 @@ const Signup = () => {
         {error && <div className={styles.ContainerError}>{error}</div>}
         <div className={styles.Main}>
           <form className={styles.FormContainer} onSubmit={procesarDatos}>
-            <h2 className={styles.Title}>Registro</h2>
+            <h2 className={styles.Title}>Registro de usuarios</h2>
 
             {/* {error && error} */}
 
@@ -90,17 +90,26 @@ const Signup = () => {
               onChange={(e) => setPass(e.target.value)}
             />
             <Button style="--Brand" type="submit" title="Crea tu cuenta">
-              Registrar
+              Registrarse
             </Button>
 
-            <Label
+
+            {/* <Label
               className={styles.AlreadyAnAccount}
               onClick={Login}
               title="Inicia sesi&oacute;n"
-            >
+              >
               ¿Ya tienes cuenta?
-            </Label>
+            </Label> */}
           </form>
+          <section className={styles.ContainerSignup}>
+            <Button
+              style="--Registrate"
+              onClick={Login}
+            >
+              ¿Ya estás registrado?
+            </Button>
+          </section>
         </div>
       </div>
     </>

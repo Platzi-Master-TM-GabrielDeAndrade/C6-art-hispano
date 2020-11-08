@@ -74,6 +74,19 @@
   font-weight: 700;
 }
 
+.ContainerSignup {   
+  border: 1px solid #ccd5e0;
+  width: 100%;
+  border-radius: $border-radius;
+  padding: 10px;
+}
+
+.ContainerSignup label {
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+}
+
 //------ ERROR
 .ContainerError {
   color: #a94442;

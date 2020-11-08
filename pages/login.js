@@ -97,7 +97,7 @@ const Login = () => {
         <div className={styles.Main}>
           <section className={styles.ContainerLogin}>
             <form className={styles.Container} onSubmit={processData}>
-              <h2 className={styles.Title}>Iniciar Sesi&oacute;n</h2>
+              <h2 className={styles.Title}>Iniciar sesi&oacute;n</h2>
               <Label className={styles.ContainerLoginLabel} for="email">
                 Correo
               </Label>
@@ -164,7 +164,7 @@ const Login = () => {
               onClick={signup}
               title="Crea tu cuenta"
             >
-              Reg&iacute;strate
+              ¿No tienes cuenta?
             </Button>
           </section>
         </div>
