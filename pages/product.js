@@ -1,14 +1,10 @@
-// import styles from "../styles/pages/Index.module.scss";
 import styles from "../styles/pages/Product.module.scss";
 import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
-// import juejue from "public/bolsos.jpg";
-
 
 export default function Product () {
   return (
     <>
-        
         <div className={styles.Main}>
             <section className = {styles.MainContainer}>
                 <section className={styles.Leftside}>
@@ -28,7 +24,6 @@ export default function Product () {
                 </section>
             </section>
         </div>
-
     </>
   );
 };

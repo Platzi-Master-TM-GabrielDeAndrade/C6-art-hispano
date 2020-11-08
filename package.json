@@ -8,7 +8,7 @@
     "lint": "eslint . --fix",
     "build": "next build",
     "start": "next start",
-    "deploy": "now"
+    "deploy": "vercel --prod"
   },
   "repository": {
     "type": "git",

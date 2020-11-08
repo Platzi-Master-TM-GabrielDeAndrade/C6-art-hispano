@@ -22,12 +22,8 @@ export default function Admin() {
     }
   return (
     <div>
-      <p>Esta es la pagina Ruta protegida</p>
-      {
-        user && 
-          user.email
-      }
-
+      <h3>Usuario: {user && user.email}</h3>
+      
       <button
         onClick={() => {
           cerrarSesion();

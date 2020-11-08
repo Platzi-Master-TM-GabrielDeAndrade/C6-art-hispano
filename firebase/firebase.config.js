@@ -1,4 +1,4 @@
-import * as Firebase from "firebase/app";
+import * as FireApp from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
@@ -8,14 +8,14 @@ const firebaseConfig = JSON.parse(process.env.NEXT_PUBLIC_FIREBASE_CONFIG);
 
 // Initialize Firebase
 // Se valida si ya esta inicializada
-const firebase = Firebase.apps.length
-  ? Firebase.app()
-  : Firebase.initializeApp(firebaseConfig);
+const firebase = FireApp.apps.length
+  ? FireApp.app()
+  : FireApp.initializeApp(firebaseConfig);
 
-const db = Firebase.firestore();
-const auth = Firebase.auth();
-const googleProvider = new Firebase.auth.GoogleAuthProvider();
-const facebookProvider = new Firebase.auth.FacebookAuthProvider();
+const db = FireApp.firestore();
+const auth = FireApp.auth();
+const googleProvider = new FireApp.auth.GoogleAuthProvider();
+const facebookProvider = new FireApp.auth.FacebookAuthProvider();
 
 
 export { firebase, db, auth, googleProvider, facebookProvider };

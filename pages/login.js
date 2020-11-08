@@ -1,14 +1,14 @@
 import { useState } from "react";
 import {
   auth,
-  googleProvider,
+  googleProvider, 
   facebookProvider,
 } from "../firebase/firebase.config";
 import { useRouter } from "next/router";
 import styles from "@styles/pages/Login.module.scss";
 import Input from "components/Input";
 import Button from "components/Button";
-import Title from "components/Title";
+// import Title from "components/Title";
 import Label from "components/Label";
 
 const Login = () => {
@@ -22,12 +22,12 @@ const Login = () => {
   const loginGoogle = () => {
     auth
       .signInWithPopup(googleProvider)
-      .then((result) => {
-        console.log(result.user);
+      .then((result) => {        
         setUser(result.user);
       })
       .catch((err) => {
         console.log(err);
+        setError(err);
       });
   };
 
@@ -40,30 +40,28 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
+        setError(err);
       });
   };
+
   const processData = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(pass);
-    if (!email.trim() || !pass.trim()) {
-      console.log("Datos vacíos email y/o contraseña!");
-      setError("Datos vacíos email y/o contraseña!");
+    
+    if (!email.trim()) {      
+      setError("Completa este campo!");
       return;
     }
-    if (!pass.trim()) {
-      console.log("Datos vacíos pass!");
-      setError("Datos vacíos pass!");
-      return;
-    }
-    if (pass.length < 6) {
-      console.log("6 o más carácteres");
-      setError("6 o más carácteres en pass");
-      return;
-    }
-    console.log("Correcto...");
-    setError(null);
 
+    if (!pass.trim()) {
+      setError("Introduce una contraseña!");
+      return;
+    }
+
+    if (pass.length < 6) {      
+      setError("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
+    setError(null);
     login();
   };
 
@@ -76,7 +74,6 @@ const Login = () => {
       setError(null);
       router.push("/admin");
     } catch (error) {
-      console.log(error);
       if (error.code === "auth/user-not-found") {
         setError("Usuario no encontrado");
       }
@@ -94,81 +91,84 @@ const Login = () => {
   };
   return (
     <>
-    <div className={styles.MainContainer}>
-      <div className={styles.Main}>
-        <section className={styles.ContainerLogin}>
-          <form className={styles.Container} onSubmit={processData}>
-            <h2 className={styles.Title}>
-              Iniciar Sesi&oacute;n
-            </h2>
-            {error && error}
-            <label className={styles.ContainerLoginLabel} for="email">Correo</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Ingrese su correo"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <label className={styles.ContainerLoginLabel} for="password">Contraseña</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Ingrese su contrase&ntilde;a"
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
-            />
+      <div className={styles.MainContainer}>
+        {error && error}
+        <div className={styles.Main}>
+          <section className={styles.ContainerLogin}>
+            <form className={styles.Container} onSubmit={processData}>
+              <h2 className={styles.Title}>Iniciar Sesi&oacute;n</h2>
+              {/* {error && error} */}
+              <Label className={styles.ContainerLoginLabel} for="email">
+                Correo
+              </Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="Ingrese su correo"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Label className={styles.ContainerLoginLabel} for="password">
+                Contraseña
+              </Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Ingrese su contrase&ntilde;a"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+              />
 
-            <Button
-              param={true}
-              // className={styles.Button}
-              style="--Brand"
-              type="submit"
-              onClick={() => login}
-              title="Iniciar sesi&oacute;n"
-            >
-              {" "}
-              Empezar
-            </Button>
+              <Button
+                param={true}
+                // className={styles.Button}
+                style="--Brand"
+                type="submit"
+                onClick={() => login}
+                title="Iniciar sesi&oacute;n"
+              >
+                {" "}
+                Empezar
+              </Button>
 
+              <Button
+                // className={styles.Button}
+                style="--Facebook"
+                onClick={loginFacebook}
+                title="Iniciar sesi&oacute;n con Facebook"
+              >
+                {" "}
+                Continuar con Facebook
+              </Button>
+
+              <Button
+                // className={styles.Button}
+                style="--Google"
+                onClick={loginGoogle}
+                title="Iniciar sesi&oacute;n con Google"
+              >
+                Continuar con Google
+              </Button>
+              <Label
+                className={styles.RecoverPassword}
+                title="Recuperar contrase&ntilde;a"
+              >
+                Recuperar contrase&ntilde;a
+              </Label>
+            </form>
+          </section>
+          <section className={styles.ContainerSignup}>
+            <Label>¿No tienes cuenta en Art-Hispano?</Label>
             <Button
-              // className={styles.Button}
-              style="--Facebook"
-              onClick={loginFacebook}
-              title="Iniciar sesi&oacute;n con Facebook"
+              style="--Registrate"
+              onClick={signup}
+              title="Crea tu cuenta"
             >
-              {" "}
-              Continuar con Facebook
+              Reg&iacute;strate
             </Button>
-            
-            <Button
-              // className={styles.Button}
-              style="--Google"
-              onClick={loginGoogle}
-              title="Iniciar sesi&oacute;n con Google"
-            >
-              Continuar con Google
-            </Button>
-            <label className={styles.RecoverPassword} title="Recuperar contrase&ntilde;a">
-              Recuperar contrase&ntilde;a
-            </label>
-          </form>
-        </section>
-        <section className={styles.ContainerSignup}>
-          <label>
-            ¿No tienes cuenta en Art-Hispano?
-          </label>
-          <Button
-            style="--Registrate"            
-            onClick={signup}
-            title="Crea tu cuenta"
-          >
-            Reg&iacute;strate
-          </Button>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
-      
     </>
   );
 };

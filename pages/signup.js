@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import styles from "@styles/pages/Signup.module.scss";
 import Input from "components/Input";
 import Button from "components/Button";
-import Title from "components/Title";
 import Label from "components/Label";
 
 export default function Signup() {
@@ -16,31 +15,28 @@ export default function Signup() {
 
   const procesarDatos = (e) => {
     e.preventDefault();
-    if (!email.trim() || !pass.trim()) {
-      console.log("Datos vacíos email!");
-      setError("Por favor, ingrese un correo");
+    if (!email.trim()) {
+      setError("Completa este campo!");
       return;
     }
     if (!pass.trim()) {
-      console.log("Datos vacíos pass!");
-      setError("Datos vacíos pass!");
+      setError("Introduce una contraseña!");
       return;
     }
     if (pass.length < 6) {
-      console.log("6 o más carácteres");
-      setError("Su contraseña debe tener 6 o más carácteres.");
+      setError("La contraseña debe tener al menos 6 caracteres");
       return;
     }
-    console.log("correcto...");
+    
     setError(null);
 
-    registrar();
+    signUp();
   };
 
   const Login =  () => {    
       router.push("/admin");    
   };
-  const registrar = async () => {
+  const signUp = async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, pass);
       console.log(res);
@@ -75,23 +71,32 @@ export default function Signup() {
 
             {error && error}
 
-            <label className={styles.FormContainerLabel} for="email">Correo</label>
-            <input
+            <Label 
+              className={styles.FormContainerLabel} 
+              for="email"
+            >
+              Correo
+            </Label>
+            <Input
               id="email"
               type="email"
               placeholder="Ingrese su correo"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label className={styles.FormContainerLabel} for="password">Contraseña</label>
-            <input
+            <Label 
+              className={styles.FormContainerLabel}
+              for="password"
+            >
+              Contraseña
+            </Label>
+            <Input
               id="password"
               type="password"
               placeholder="Ingrese su contrase&ntilde;a"
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
-
             <Button 
               style="--Brand" 
               type="submit"
@@ -100,19 +105,13 @@ export default function Signup() {
               Registrar
             </Button>
 
-            {/* <Button
-              style="--Account"
-              type="button"
-              // onClick={() => setEsRegistro(!setEsRegistro)}
-              onClick={Login}
-              // router.push("/admin");
+            <Label 
+              className={styles.AlreadyAnAccount} 
+              onClick={Login} 
+              title="Inicia sesi&oacute;n"
             >
               ¿Ya tienes cuenta?
-            </Button> */}
-
-            <label className={styles.AlreadyAnAccount} onClick={Login} title="Inicia sesi&oacute;n">
-              ¿Ya tienes cuenta?
-            </label>
+            </Label>
           </form>
         </div>
       </div>
