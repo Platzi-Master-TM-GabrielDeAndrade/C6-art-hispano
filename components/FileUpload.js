@@ -1,6 +1,6 @@
 import { Component } from "react";
 import firebase from "firebase";
-import styles from "../styles/components/FileUpload.module.scss";
+import styles from "../styles/components/FileUpLoad.module.scss";
 
 class FileUpload extends Component {
   constructor(props) {

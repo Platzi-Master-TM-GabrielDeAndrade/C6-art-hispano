@@ -16,14 +16,13 @@ export default function details () {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState([]);
  
-  
   const userLogin = auth.currentUser;
   var uid;
 
+  console.log(uid);
   if (userLogin != null) {
     uid = userLogin.uid;
   }
-
 
   const handleImageUpload = (url) => {
     setImage([...image, url])
@@ -96,11 +95,9 @@ export default function details () {
             onChange={(e) => setPrice(e.target.value)}
           />
 
-          
           <select
             value={category}
             onChange={(e) => (
-
 
               setCategory(e.target.value)
             )}
