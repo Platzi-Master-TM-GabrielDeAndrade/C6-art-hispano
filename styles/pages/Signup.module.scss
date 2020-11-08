@@ -73,3 +73,15 @@
   cursor: pointer;
   font-weight: 700;
 }
+
+//------ ERROR
+.ContainerError {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 10px;
+  height: 50px;
+  max-width: 500px;
+  padding: 15px; 
+  margin-bottom: -190px;
+}

@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 import styles from "@styles/pages/Login.module.scss";
 import Input from "components/Input";
 import Button from "components/Button";
-// import Title from "components/Title";
 import Label from "components/Label";
 
 const Login = () => {
@@ -47,6 +46,8 @@ const Login = () => {
   const processData = (e) => {
     e.preventDefault();
     
+    setError(null);
+
     if (!email.trim()) {      
       setError("Completa este campo!");
       return;
@@ -92,12 +93,11 @@ const Login = () => {
   return (
     <>
       <div className={styles.MainContainer}>
-        {error && error}
+        {error && <div className={styles.ContainerError}>{error}</div>}
         <div className={styles.Main}>
           <section className={styles.ContainerLogin}>
             <form className={styles.Container} onSubmit={processData}>
               <h2 className={styles.Title}>Iniciar Sesi&oacute;n</h2>
-              {/* {error && error} */}
               <Label className={styles.ContainerLoginLabel} for="email">
                 Correo
               </Label>

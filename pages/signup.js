@@ -6,11 +6,10 @@ import Input from "components/Input";
 import Button from "components/Button";
 import Label from "components/Label";
 
-export default function Signup() {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState(null);
-  // const [esRegistro, setEsRegistro] = useState(false);
   const router = useRouter();
 
   const procesarDatos = (e) => {
@@ -49,8 +48,8 @@ export default function Signup() {
       setPass("");
       setError(null);
       router.push("/admin");
-    } catch (error) {
-      console.log(error);
+    } catch (err) {      
+      setError(err);
       if (error.code === "auth/email-already-in-use") {
         setError("El email ya está registrado");
       }
@@ -63,18 +62,14 @@ export default function Signup() {
   return (
     <>
       <div className={styles.MainContainer}>
+        {error && <div className={styles.ContainerError}>{error}</div>}
         <div className={styles.Main}>
           <form className={styles.FormContainer} onSubmit={procesarDatos}>
-            <h2 className={styles.Title}>
-              Registro
-            </h2>
+            <h2 className={styles.Title}>Registro</h2>
 
-            {error && error}
+            {/* {error && error} */}
 
-            <Label 
-              className={styles.FormContainerLabel} 
-              for="email"
-            >
+            <Label className={styles.FormContainerLabel} for="email">
               Correo
             </Label>
             <Input
@@ -84,10 +79,7 @@ export default function Signup() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Label 
-              className={styles.FormContainerLabel}
-              for="password"
-            >
+            <Label className={styles.FormContainerLabel} for="password">
               Contraseña
             </Label>
             <Input
@@ -97,17 +89,13 @@ export default function Signup() {
               value={pass}
               onChange={(e) => setPass(e.target.value)}
             />
-            <Button 
-              style="--Brand" 
-              type="submit"
-              title="Crea tu cuenta"
-            >
+            <Button style="--Brand" type="submit" title="Crea tu cuenta">
               Registrar
             </Button>
 
-            <Label 
-              className={styles.AlreadyAnAccount} 
-              onClick={Login} 
+            <Label
+              className={styles.AlreadyAnAccount}
+              onClick={Login}
               title="Inicia sesi&oacute;n"
             >
               ¿Ya tienes cuenta?
@@ -118,3 +106,5 @@ export default function Signup() {
     </>
   );
 }
+
+export default Signup;
