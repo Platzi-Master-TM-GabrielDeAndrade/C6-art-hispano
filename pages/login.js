@@ -172,7 +172,7 @@ const Login = () => {
                 // style="--RecoverPassword"
                 >
 
-                  Recuperar contrase&ntilde;a
+                  Recuperar contramse&ntilde;a
                 </a>
               </Link>
             </form>
