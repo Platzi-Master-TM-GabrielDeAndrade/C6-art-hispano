@@ -95,10 +95,10 @@ export default function details () {
             onChange={(e) => setPrice(e.target.value)}
           />
 
+          {/* Tomar la categoria y buscarla en la bd y obtener uid y guardar */}
           <select
             value={category}
             onChange={(e) => (
-
               setCategory(e.target.value)
             )}
           >
