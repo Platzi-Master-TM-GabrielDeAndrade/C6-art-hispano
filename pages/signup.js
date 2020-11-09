@@ -32,26 +32,26 @@ const Signup = () => {
     signUp();
   };
 
-  const Login =  () => {    
-      router.push("/login");    
+  const login = () => {
+    router.push("/login");
   };
   const signUp = async () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, pass);
-      console.log(res);
-      await db.collection("users").doc(res.user.email).set({
-        email: res.user.email,
-        uid: res.user.uid,
-      });
+      console.log(res.user);
+      await db.collection("usuarios").doc(res.user.email).set({
+        email : res.user.email,
+        uid : res.user.uid,
+      })
       // Todo : user.sendEmailVerification() -clase 7 y 8 firebase
       setEmail("");
       setPass("");
       setError(null);
       router.push("/admin");
-    } catch (err) {      
-      setError(err);
+    } catch (error) {   
+      // console.log(error)
       if (error.code === "auth/email-already-in-use") {
-        setError("El email ya está registrado");
+        setError("El email ya está registrado");         
       }
       if (error.code === "auth/invalid-email") {
         setError("El email no es válido");
@@ -62,13 +62,10 @@ const Signup = () => {
   return (
     <>
       <div className={styles.MainContainer}>
-        {error && <div className={styles.ContainerError}>{error}</div>}
+        {error && <div className={styles.ContainerError}>{error}</div>}        
         <div className={styles.Main}>
           <form className={styles.FormContainer} onSubmit={procesarDatos}>
             <h2 className={styles.Title}>Registro de usuarios</h2>
-
-            {/* {error && error} */}
-
             <Label className={styles.FormContainerLabel} for="email">
               Correo
             </Label>
@@ -92,21 +89,9 @@ const Signup = () => {
             <Button style="--Brand" type="submit" title="Crea tu cuenta">
               Registrarse
             </Button>
-
-
-            {/* <Label
-              className={styles.AlreadyAnAccount}
-              onClick={Login}
-              title="Inicia sesi&oacute;n"
-              >
-              ¿Ya tienes cuenta?
-            </Label> */}
           </form>
           <section className={styles.ContainerSignup}>
-            <Button
-              style="--Registrate"
-              onClick={Login}
-            >
+            <Button style="--Registrate" onClick={login}>
               ¿Ya estás registrado?
             </Button>
           </section>

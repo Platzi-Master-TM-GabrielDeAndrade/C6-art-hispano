@@ -1,28 +1,20 @@
 import Link from "next/link";
-import { auth } from "../firebase/firebase.config";
-import { useEffect, useState } from "react";
 import styles from "../styles/components/Navbar.module.scss";
 import Button from "components/Button"
 
 export default function Navbar() {
-  const [firebaseUser, setFirebaseUser] = useState(false);
-
-    useEffect(() => {
-      auth.onAuthStateChanged((user) => {
-        console.log(user);
-        if (user) {
-          setFirebaseUser(user);
-        } else {
-          setFirebaseUser(null);
-        }
-      });
-    }, []);
-  return firebaseUser !== false ? (
+  
+  return (
     <header>
       <nav className={styles.nav_container}>
         <section className={styles.nav_containerLogo}>
           <Link href="/">
-            <img src="logo.svg" alt="logo" className={styles.nav_logo} title="Inicio" />
+            <img
+              src="logo.svg"
+              alt="logo"
+              className={styles.nav_logo}
+              title="Inicio"
+            />
           </Link>
         </section>
 
@@ -42,16 +34,31 @@ export default function Navbar() {
         </section>
 
         <section className={styles.nav_containerButton}>
-          <Link href= '/sell'>
-            <Button title="Vender" style="Sell">Vender</Button>
+          <Link href="/sell">
+            <Button 
+              title="Vender" 
+              style="Sell">
+
+              Vender
+            </Button>
           </Link>
         </section>
 
         <section className={styles.nav_icons}>
           <Link href="/cart">
-            <img className={styles.nav_iconsImgsCart} src="car.svg" alt="Carrito" title="Carrito" />
+            <img
+              className={styles.nav_iconsImgsCart}
+              src="car.svg"
+              alt="Carrito"
+              title="Carrito"
+            />
           </Link>
-          <img className={styles.nav_iconsImgs} src="favourite.svg" alt="Favoritos" title="Favoritos" />
+          <img
+            className={styles.nav_iconsImgs}
+            src="favourite.svg"
+            alt="Favoritos"
+            title="Favoritos"
+          />
           <img
             className={styles.nav_iconsImgs}
             src="notificaciones.svg"
@@ -59,12 +66,15 @@ export default function Navbar() {
             title="Notificaciones"
           />
           <Link href="/login">
-            <img className={styles.nav_userImg} src="user.svg" alt="user" title="Perfil" />
+            <img
+              className={styles.nav_userImg}
+              src="user.svg"
+              alt="user"
+              title="Perfil"
+            />
           </Link>
         </section>
       </nav>
     </header>
-  ) : (
-    <p className={styles.when_loading}>Cargando tus productos favoritos...</p>
-  );
-}
+  )
+};

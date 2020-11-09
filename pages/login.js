@@ -18,29 +18,40 @@ const Login = () => {
 
   const router = useRouter();
 
-  const loginGoogle = () => {
-    auth
-      .signInWithPopup(googleProvider)
-      .then((result) => {        
-        setUser(result.user);
-      })
-      .catch((err) => {
-        console.log(err);
-        setError(err);
-      });
-  };
+  // const loginGoogle = () => {
+  //   auth
+  //     .signInWithPopup(googleProvider)
+  //     .then((result) => {        
+  //       setUser(result.user);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       setError(err);
+  //     });
+  // };
 
-  const loginFacebook = () => {
-    auth
-      .signInWithPopup(facebookProvider)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-      })
-      .catch((err) => {
-        console.log(err);
-        setError(err);
-      });
+
+  const loginGoogle = async () => {
+    try {
+      const res = await auth.signInWithPopup(googleProvider);
+      console.log(res.user);
+      setUser(res.user);
+      router.push("/admin");
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    }
+  };
+  const loginFacebook = async  () => {
+    try {
+      const res = await auth.signInWithPopup(facebookProvider);
+      console.log(res.user);
+      setUser(res.user);
+      // router.push("/admin");
+    } catch (error) {
+     console.log(error);
+     setError(error);
+    }   
   };
 
   const processData = (e) => {

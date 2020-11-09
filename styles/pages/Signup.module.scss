@@ -1,6 +1,5 @@
 @import "../styles.module.scss";
 
-
 .MainContainer {
   min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
   display: grid;
@@ -96,5 +95,5 @@
   height: 50px;
   max-width: 500px;
   padding: 15px; 
-  margin-bottom: -190px;
+  margin-bottom: -120px;
 }
