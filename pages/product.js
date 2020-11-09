@@ -3,6 +3,8 @@ import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
 
 export default function Product () {
+
+    
   return (
     <>
         <div className={styles.Main}>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { db, auth } from "../firebase/firebase.config";
 import styles from "@styles/pages/Sell.module.scss";
@@ -14,6 +14,7 @@ export default function details () {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState("");
   const [image, setImage] = useState([]);
  
   const userLogin = auth.currentUser;
@@ -70,6 +71,26 @@ export default function details () {
 
   };
 
+    const getCategories = async () => {
+      try {
+        const query = await db.collection("categories").get();
+        const categories = query.docs.map((categories) => {
+          return {
+            id: categories.id,
+            ...categories.data(),
+          };
+        });
+
+        setCategories(categories);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+      useEffect(() => {
+        getCategories();
+      }, []);
+
   return (
     <>
       <main className={styles.container_details}>
@@ -81,7 +102,7 @@ export default function details () {
           <label>Agrega los detalles del producto</label>
         </div>
 
-        <form onSubmit={addProduct} className={styles.form_client} >
+        <form onSubmit={addProduct} className={styles.form_client}>
           <Input
             type="text"
             placeholder="Producto"
@@ -98,18 +119,19 @@ export default function details () {
           {/* Tomar la categoria y buscarla en la bd y obtener uid y guardar */}
           <select
             value={category}
-            onChange={(e) => (
-              setCategory(e.target.value)
-            )}
+            onChange={(e) => setCategory(e.target.value)}
           >
             <option disabled selected value="">
               -- Elige una Categor&iacute;a
             </option>
-            <option value="Hogar">Hogar</option>
+            {/* <option value="Hogar">Hogar</option>
             <option value="Bisuteria">Bisuter&iacute;a</option>
             <option value="Instrumentos">Instrumentos Musicales</option>
             <option value="Ropa">Ropa</option>
-            <option value="Calzado">Calzado</option>
+            <option value="Calzado">Calzado</option> */}
+            {/* {getCategories.map((item, index) => {
+              return <option key={index}>{item.name}</option>;
+            })} */}
           </select>
           <Textarea
             className={styles.texTank}
@@ -119,7 +141,7 @@ export default function details () {
             onChange={(e) => setDescription(e.target.value)}
           />
           <Link href="/sell-publication">
-            <Button type="submit" style="Continue">          
+            <Button type="submit" style="Continue">
               Publicar ahora
             </Button>
           </Link>
@@ -131,7 +153,7 @@ export default function details () {
 
         <div className={styles.Photo}>
           <div>
-            <FileUpload onImageUpload={handleImageUpload} />            
+            <FileUpload onImageUpload={handleImageUpload} />
           </div>
           <div>
             <FileUpload onImageUpload={handleImageUpload} />
