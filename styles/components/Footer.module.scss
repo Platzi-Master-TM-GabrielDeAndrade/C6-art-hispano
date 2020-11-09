@@ -1,2 +1,59 @@
 @import "../styles.module.scss";
 @import "../lib/variables.module";
+
+
+.Footer {
+  // clear: both;
+  // position: relative;
+  // min-height: calc(100vh - 250px);
+  // height: calc();
+  // margin-top: 300px;
+  // max-height: 25vh;
+  // height: auto;
+  // position: absolute;
+  // bottom: 0;
+
+  margin-top: 15px;
+  min-height: 150px;
+  width: 100%;
+  color: $color-secondary;
+  background-color: $color-footer;
+}
+
+.Container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 25px 30px 0 30px; // top right bottom left
+  display: grid;
+  grid-template: 1fr / repeat(4, 1fr) 1fr;
+  column-gap: 20px;
+  justify-items: center;
+}
+
+.Subtitle {
+  margin: 0;
+  font-size: $medium-text;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.Text {
+  margin: 0;
+  font-size: $footer-text;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.SocialMedia {
+  align-self: center;
+  min-width: 200px;
+}
+
+.Icon {
+  margin: 0;
+  margin-right: 30px;
+}
+
+.SocialMedia img:hover {
+  cursor: pointer;
+}

@@ -1,66 +1,77 @@
 import Link from "next/link";
-import { auth } from "../firebase/firebase.config";
-import { useEffect, useState } from "react";
 import styles from "../styles/components/Navbar.module.scss";
+import Button from "components/Button"
 
-
-const Navbar = () => {
-  const [firebaseUser, setFirebaseUser] = useState(false);
-
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      console.log(user);
-      if (user) {
-        setFirebaseUser(user);
-      } else {
-        setFirebaseUser(null);
-      }
-    });
-  }, []);
-
-  return firebaseUser !== false ? (
-    <div>
-      <header>
-        <nav className={styles.nav_container}>
-          <div className={styles.nav_containerLogo}>
-            <Link href="/">
-              <img src="logo.svg" alt="logo" className={styles.nav_logo} />
-            </Link>
-          </div>
-
-          <div className={styles.nav_inputs}>
-            <input type="text" />
-            <button>
-              <img src="search.svg" alt="" width="15" height="15" />
-            </button>
-            <p>Categotira</p>
-            <p>Ofertas de la semana</p>
-            <p>Filtrar</p>
-          </div>
-
-          <div className={styles.nav_icons}>
-            <button type="text" value="hola">
-              {" "}
-              Vender
-            </button>
-            <img src="carrito.svg" alt="Carrito" width="30" height="30" />
-            <img src="favorito.svg" alt="Favorito" width="30" height="30" />
+export default function Navbar() {
+  
+  return (
+    <header>
+      <nav className={styles.nav_container}>
+        <section className={styles.nav_containerLogo}>
+          <Link href="/">
             <img
-              src="notificaciones.svg"
-              alt="Notificaciones"
-              width="30"
-              height="30"
+              src="logo.svg"
+              alt="logo"
+              className={styles.nav_logo}
+              title="Inicio"
             />
-            <Link href="/login">
-              <img src="user.svg" alt="user" width="70" height="80" />              
-            </Link>
-          </div>
-        </nav>
-      </header>
-    </div>
-  ) : (
-    <p>Loading ..</p>
+          </Link>
+        </section>
+
+        <section className={styles.nav_mainContainerInputs}>
+          <section className={styles.nav_containerInput}>
+            <input type="text" placeholder="Busca tu producto ideal..." />
+            <button title="Buscar">
+              <img src="search.svg" alt="search" />
+            </button>
+          </section>
+
+          <section className={styles.nav_containerTexts}>
+            <p title="Categor&iacute;as">Categor&iacute;as</p>
+            <p title="Ofertas">Ofertas de la semana</p>
+            <p title="Filtrar">Filtrar</p>
+          </section>
+        </section>
+
+        <section className={styles.nav_containerButton}>
+          <Link href="/sell">
+            <Button title="Vender" style="Sell">
+              Vender
+            </Button>
+          </Link>
+        </section>
+
+        <section className={styles.nav_icons}>
+          <Link href="/cart">
+            <img
+              className={styles.nav_iconsImgsCart}
+              src="car.svg"
+              alt="Carrito"
+              title="Carrito"
+            />
+          </Link>
+          <img
+            className={styles.nav_iconsImgs}
+            src="favourite.svg"
+            alt="Favoritos"
+            title="Favoritos"
+          />
+          <img
+            className={styles.nav_iconsImgs}
+            src="notificaciones.svg"
+            alt="Notificaciones"
+            title="Notificaciones"
+          />
+          <Link href="/login">
+            <img
+              className={styles.nav_userImg}
+              src="user.svg"
+              alt="user"
+              title="Perfil"
+            />
+          </Link>     
+        </section>
+      </nav>
+    </header>
   );
 };
-
-export default Navbar;

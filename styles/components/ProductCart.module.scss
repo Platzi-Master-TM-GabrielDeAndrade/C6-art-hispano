@@ -1,0 +1,86 @@
+@import "../styles.module.scss";
+
+
+.MainContainer {
+    padding: 0;
+    margin: 30px auto 20px auto;
+    min-height: 150px;
+    height: auto;
+    width: 95%;
+    display: grid;
+    grid-template: 1fr / 3fr 4fr 1.5fr 1.5fr;
+    grid-template-areas: "img description quantity totalPrice";
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid $color-secondary;
+}
+
+
+.ImageContainer {
+    grid-area: img;
+    height: 200px;
+}
+
+.ImageContainer img {
+    height: 200px;
+}
+
+.DescriptionContainer {
+    grid-area: description;
+    max-width: 470px;
+    margin-bottom: 15px;
+}
+
+.Name {
+    margin: 0;
+    padding: 0;
+    margin: 0 0 25px 0;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
+.Description {
+    margin: 0;
+    padding: 0;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+.ButtonsGrid {
+    display: grid;
+    grid-template: 1fr / 200px 70px;
+    justify-items: self-start;
+}
+
+.QuantityContainer {
+    grid-area: quantity;
+}
+
+.QuantityButtonsContainer {
+    margin: 0;
+    padding: 0;
+    border: 1px solid $color-secondary;
+    border-radius: $border-radius;
+}
+
+.Quantity {
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+    margin: 10px;
+}
+
+.Total {
+    margin: 0;
+    padding: 0;
+    grid-area: totalPrice;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
+

@@ -4,6 +4,12 @@
 //   @include max-width;  
 // }
 
-body {
-  @include max-width;  
+// body {
+//   @include max-width;  
+// }
+
+.Main {
+  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
+  // display: flex;
+  // align-items: center;
 }

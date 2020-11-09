@@ -1,0 +1,65 @@
+@import "../styles.module.scss";
+
+
+.Main {
+    /////// AUTO ///////
+    height: 100%;
+    background-color: #ffffff;
+    font-family: $base-font;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    
+    // Maybe not that necessary
+    // margin-top: 50px;
+}
+
+//-------- MAIN GRID ------//
+
+.MainContainer {
+    height: 100%;
+    display: grid;
+    // Modificar altura del espacio
+    /////// AUTO ///////
+    grid-template: minmax(500px, auto) / 120px 550px 1fr;
+    grid-template-areas: "imgs main-img description"
+}
+
+//-------- END MAIN GRID ------//
+
+//-------- LEFTSIDE GRID ------//
+
+.Leftside {
+    grid-area: imgs;
+    display: grid;
+    grid-template: repeat(5, 100px) / 1fr;
+    gap: 10px;
+}
+
+//-------- END LEFTSIDE GRID ------//
+
+//-------- MAIN IMAGE -------//
+
+.MainImageContainer {
+    grid-area: main-img;
+    display: flex;
+}
+
+//-------- END MAIN IMAGE -------//
+
+//-------- DESCRIPTION GRID -------//
+
+.MainDescriptionContainer {
+    grid-area: description;
+    display: grid;
+    grid-template: 1fr minmax(350px, auto) 1fr / 1fr 8fr 1fr;
+    grid-template-areas: ". . ."
+                         ". container ."
+                         ". . .";
+}
+
+.DescriptionContainer {
+    grid-area: container;
+}
+
+//-------- END DESCRIPTION GRID -------//

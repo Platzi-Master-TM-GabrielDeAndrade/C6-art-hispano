@@ -16,7 +16,7 @@
   align-items: center;
   justify-items: center;
   height: 60px;
-  width: 100vw;
+  width: 100%;
 }
 .tittle {
   color: $color-secondary;
@@ -36,7 +36,6 @@
 }git status
 
 
-
 // Estilos del index page principal
 
 .slider{
@@ -49,4 +48,71 @@
 }
 .slider li{
   list-style: none;
+}
+
+
+//Estilos del Header Carusel
+
+.carusel img{
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+}
+
+
+.products_container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+}
+
+.products_container_info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.products_container_info img {
+  width: 100%;
+  height: 100%;
+}
+
+.products_container_oferta {
+  display: flex;
+  flex-direction: column;
+  padding-top: 38px;
+  justify-content: center;
+  align-items: center;
+  h2 {
+  color: $color-secondary;
+  }
+  button {
+      border-radius:5px; 
+      background-color: $color-brand;
+      border: none;
+      height: 35px;
+      width: 50%;
+      color: white;
+      font-size: 25px;
+      padding: 0;
+  }
+}
+
+// Estilos botton oferta 
+
+.products_container_oferta{
+
+  button:hover {
+  cursor: pointer;
+  box-shadow: 8px 8px 8px $color-tertiary;
+}
+  img:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px $color-tertiary;
+  
+}
+h2 {
+  color: $color-secondary;
+  font-size: $light-medium-text;
+}
 }

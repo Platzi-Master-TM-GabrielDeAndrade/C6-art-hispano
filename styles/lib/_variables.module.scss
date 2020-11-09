@@ -5,7 +5,7 @@
 /*-------Branding Colors */
 $color-brand:#ff9f1c;
 $color-secondary:#6d5e52;
-$color-tertiary:#e2e8f0;
+$color-tertiary: #e2e8f0;
 
 $color-black:#000000;
 $color-purple: purple;  
@@ -14,10 +14,17 @@ $color-grey:#737373;
 $color-lightGrey:#bfbfbf;
 $color-darkWhite:#f1f1f1;
 $color-white:#ffffff;
-$color-buttonFacebook:#3456f3;
-$color-buttonGoogle:#dd4B39;
-$color-buttonBrand:#ff9f1c;
-
+$color-buttonFacebook: rgba($color: #3456f3, $alpha: 0.83);
+$color-buttonGoogle: rgba($color: #dd4B39, $alpha: 0.83);
+$color-buttonBrand: rgba($color: #ff9f1c, $alpha: 0.83);
+$color-buttonRegistrate: rgba($color: #056a48, $alpha: 0.83);
+$color-buttonAccount: rgba($color: #c81025, $alpha: 0.83);
+$color-freeShipping: #52C236;
+$color-login-border: #CCD5E0;
+$color-footer: rgba($color: #FF9F1C, $alpha: 0.2);
+$color-input: rgba($color: #e2e8f0, $alpha: 0.5);
+$color-input-border: rgba($color: #6d5e52, $alpha: 0.5);
+$color-shadow: rgba($color: #6d5e52, $alpha: 0.25);
 
 /*-------Alerts Colors */
 $color-alert: #ffa500;
@@ -26,8 +33,16 @@ $color-info: #5474f5;
 $color-success: #30e92c;
 
 /*-------Fonts Styles */
-$base-font:Roboto, sans-serif;
-$base-fontSizeSmall: 14px;
+$base-font: Roboto, sans-serif;
+$medium-text: 25px; //bold
+$light-medium-text: 25px; 
+$text-medium-buttons: 30px; //bold
+$text-titles: 50px; //bold
+$light-small-text: 18px; 
+$small-text: 18px;//bold
+$footer-text: 12px; 
+$large-light-text:40px;
+//------------------------------//
 $base-fontsize: 16px;
 $base-fontSizeMedium: 18px;
 $base-fontSizeLarge: 20px;
@@ -39,6 +54,5 @@ $button-small: 20px;
 $button-color: red;
 $button-backgroundColor: $color-brand;
 
-
 //Constantes
-$border-radius: 3px;
+$border-radius: 5px;

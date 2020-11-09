@@ -1,64 +1,252 @@
 @import "../styles.module.scss";
 @import "../lib/variables.module";
 
-// background-color: = @include button-colors(onClick)
-
-// @include button-colors(Google);
-
-.ButtonBrand {
-  width: 100%;
+.Button{
+  cursor: pointer;
+  outline: none;
   padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;  
-  
+  height: 30px;
   font-size: $button-small ;  
   font-weight: bold;  
   border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
+  border-radius: $border-radius * 2;  
+  transition: .5s;
   text-align: center;
   line-height: 10px;
-  background-color:$color-buttonBrand;
+
+  &:disabled {
+    opacity: .25;
+    pointer-events: none;
+    margin-bottom: 10px;
+    min-width: 250px;
+    margin-right: 2px;
+    width: 100%;
+  }
+  &--Facebook {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonFacebook;
+  }
+  &--Google {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonGoogle;
+  }
+  &--Registrate {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonRegistrate;
+  }
+  &--Brand {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonBrand;
+  }
+  &--Registrar {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonRegistrate;
+  }
+  &--Account {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    color: $color-white;
+    background-color: $color-buttonAccount;
+  }
 }
 
 
-.ButtonGoogle {
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;  
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
-  background-color:$color-buttonGoogle;
+// USED IN PRODUCT PAGE
+
+.ButtonBuy {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+  padding: 2.5px 40px;
+  margin: 0 18px 0 0;
+  outline: none;
+  cursor: pointer;
 }
 
-.ButtonFacebook{
-  width: 100%;
-  padding: 10px 30px;
-  margin-right: 2px;
-  margin-bottom: 10px;
-  min-width: 250px;  
-  height: 30px;  
-  color:white;
-  background-color: $color-buttonFacebook;
-  
-  font-size: $button-small ;  
-  font-weight: bold;  
-  border:none;
-  border-radius: $border-radius * 2 ;  
-  cursor: pointer;  
-  text-align: center;
-  line-height: 10px;
+.ButtonAddToCart {
+  font-size: $light-small-text;
+  font-weight: 400;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  color: $color-buttonBrand;
+  padding: 2.5px 5px;
+  outline: none;
+  cursor: pointer;
 }
+
+
+// Used in the Product Page
+.ButtonOneMore {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 7.5px;
+  outline: none;
+  cursor: pointer;
+  // width: 10px;
+}
+
+// Used in the Product Page
+.ButtonOneLess {
+  font-size: $light-small-text;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-white;
+  border: 0.5px solid $color-secondary;
+  border-radius: 2rem;
+  padding: 2.5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonBuyNow {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonBuyNow:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonRemove {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonRemove:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonContinue {
+  cursor: pointer;
+  outline: none;
+  padding: 15px 10px 25px 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: $medium-text;
+  border: 1px solid $color-buttonBrand;
+  border-radius: $border-radius;
+  background-color: $color-buttonBrand;
+  color: $color-white;
+}
+
+//USED IN THE CART PAGE
+
+.ButtonOneMoreCart {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 7.5px;
+  font-weight: 400;  
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonOneMoreCart:hover {
+  font-weight: 700;
+}
+
+//USED IN THE CART PAGE
+.ButtonOneLessCart {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-secondary;
+  background-color: $color-white;
+}
+
+.ButtonOneLessCart:hover {
+  font-weight: 700;
+}
+
+// USED IN SHIPPING PAGE
+
+.ButtonRemoveShipping {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  color: $color-buttonBrand;
+}
+
+.ButtonRemoveShipping:hover {
+  font-weight: 700;
+}
+
+
+// USED IN SHIPPING PAGE
+
+.ButtonShippingBall {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: $color-secondary;
+}
+
+
+.ButtonSell {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 15px;
+  margin: 0;
+  font-weight: 400;
+  font-size: $light-small-text;
+  border-radius: $border-radius;
+  border: 1px solid $color-buttonBrand;
+  color: $color-white;
+  background-color: $color-buttonBrand;
+}
+

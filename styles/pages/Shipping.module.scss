@@ -1,0 +1,42 @@
+@import "../styles.module.scss";
+
+
+.Main {
+    min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
+    display: grid;
+    grid-template: 1fr / 4fr minmax(225px, 1fr);
+    grid-template-areas: "main-content right-bar";
+}
+
+//------- MAIN CONTAINER -------//
+
+.Container {
+    grid-area: main-content;
+    display: inline-block;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+//------- END MAIN CONTAINER -------//
+
+//------- RIGHT BAR -------//
+
+.RightBar {
+    grid-area: right-bar;
+    display: grid;
+    height: calc(100% + 15px);
+    background-color: $color-input;
+}
+
+.SummaryContainer {
+    padding: 0;
+    margin: 100px 0 0 0; // Top Right Bottom Left
+    justify-self: center;
+}
+    
+
+//------- END RIGHT BAR -------//

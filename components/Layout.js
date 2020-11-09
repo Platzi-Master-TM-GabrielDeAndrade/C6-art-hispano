@@ -1,6 +1,7 @@
 import Navbar from "@components/Navbar";
 // import Head from 'next/head';
 import Footer from "@components/Footer";
+import styles from "styles/components/Layout.module.scss";
 
 const Layout = ({ children }) => {
   return (
@@ -15,7 +16,9 @@ const Layout = ({ children }) => {
       </Head> */}
       
       <Navbar />
-      {children}
+      <main className={styles.Main}>
+        {children}
+      </main>
       <Footer />
     </>
   );

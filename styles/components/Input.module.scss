@@ -2,17 +2,26 @@
 @import "../lib/variables.module";
 
 .Input {
+  outline: none;
   width: 100%;
   height: 35px;
   min-width: 250px; 
   padding: 10px 15px;
   margin-bottom: 10px;    
-  font-size: $base-fontSizeSmall;
-  font-weight: 400;
-  
-  background-color: #e2e8f0;
-  border: 1px solid #6D5E52;
+  font-size: $base-fontsize;
+  font-weight: 400;  
+  background-color: $color-tertiary;
+  border: 1px solid $color-secondary;
   box-sizing: border-box;
   border-radius: $border-radius * 2;
 
-  }
+
+  // &:hover {
+  //   background-color: #FF9F1C;
+  //   opacity: 40%;
+  //   cursor: pointer;
+}
+
+.Input::placeholder {
+  opacity: 0.85;
+}

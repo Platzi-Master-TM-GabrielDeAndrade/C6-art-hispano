@@ -8,7 +8,7 @@ const Input = ({ name, placeholder, type, onChange }) => (
       type={type}
       placeholder={placeholder}
       // onChange={(e) => handleChange(e.target.name, e.target.value)}
-      onChange={(e) => onChange(e)}
+      onChange={(e) => onChange(e)}      
     />
   </div>
 );

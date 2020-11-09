@@ -8,7 +8,7 @@
     "lint": "eslint . --fix",
     "build": "next build",
     "start": "next start",
-    "deploy": "now"
+    "deploy": "vercel --prod"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "dependencies": {
     "firebase": "7.22.0",
     "next": "9.5.3",
+    "next-images": "^1.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "1.27.0"

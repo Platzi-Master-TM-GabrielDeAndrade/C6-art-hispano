@@ -1,0 +1,25 @@
+@import "../styles.module.scss";
+
+.GridContainer {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr / 1fr 280px;
+    grid-template-areas: ". container";
+    justify-items: end;
+}
+
+.Container {
+    grid-area: container;
+}
+
+.Total {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    justify-self: end;
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary;
+}
+
