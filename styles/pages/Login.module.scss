@@ -35,12 +35,12 @@
   font-size: $light-medium-text;
 }
 
-.ContainerLoginLabel {
-  font-weight: 400;
-  font-family: $base-font;
-  font-size: $light-small-text;
-  color: $color-secondary;
-}
+// .ContainerLoginLabel {
+//   font-weight: 400;
+//   font-family: $base-font;
+//   font-size: $light-small-text;
+//   color: $color-secondary;
+// }
 
 .ContainerLogin input {
   // border-right: none;
@@ -62,17 +62,6 @@
   opacity: .65;
 }
 
-.RecoverPassword {
-  font-weight: 300;
-  font-size: $base-fontsize;
-  color: $color-secondary;
-}
-
-.RecoverPassword:hover {
-  cursor: pointer;
-  font-weight: 700;
-}
-
 
 
 //----------- END CONTAINER LOG IN -----------//
@@ -84,12 +73,6 @@
   width: 100%;
   border-radius: $border-radius;
   padding: 10px;
-}
-
-.ContainerSignup label {
-  font-weight: 400;
-  font-size: $light-small-text;
-  color: $color-secondary;
 }
 
 //----------- END CONTAINER SIGN UP -----------//

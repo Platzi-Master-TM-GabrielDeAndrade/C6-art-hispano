@@ -2,7 +2,19 @@
 @import "../lib/variables.module";
 
 .Label {
-  font-family: $base-font;  
-  font-size: $base-fontsize;
+  font-weight: 400;
+  font-size: $light-small-text;
   color: $color-secondary;
+
+  &--RecoverPassword {
+    font-weight: 300;
+    font-size: $base-fontsize;
+    color: $color-secondary;
+    &:hover {
+      cursor: pointer;
+      font-weight: 700;
+    }  
+  }
 }
+
+

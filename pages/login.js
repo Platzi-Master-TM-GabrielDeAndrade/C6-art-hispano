@@ -6,6 +6,7 @@ import {
 } from "../firebase/firebase.config";
 import { useRouter } from "next/router";
 import styles from "@styles/pages/Login.module.scss";
+import Link from "next/link";
 import Input from "components/Input";
 import Button from "components/Button";
 import Label from "components/Label";
@@ -101,6 +102,11 @@ const Login = () => {
   const signup = () => {
     router.push("/signup");
   };
+ 
+  // const reset = () => {
+  //   router.push("/reset");
+  // };
+
   return (
     <>
       <div className={styles.MainContainer}>
@@ -109,9 +115,7 @@ const Login = () => {
           <section className={styles.ContainerLogin}>
             <form className={styles.Container} onSubmit={processData}>
               <h2 className={styles.Title}>Iniciar sesi&oacute;n</h2>
-              <Label className={styles.ContainerLoginLabel} for="email">
-                Correo
-              </Label>
+              <Label>Correo</Label>
               <Input
                 id="email"
                 type="email"
@@ -119,9 +123,7 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <Label className={styles.ContainerLoginLabel} for="password">
-                Contraseña
-              </Label>
+              <Label>Contraseña</Label>
               <Input
                 id="password"
                 type="password"
@@ -132,7 +134,6 @@ const Login = () => {
 
               <Button
                 param={true}
-                // className={styles.Button}
                 style="--Brand"
                 type="submit"
                 onClick={() => login}
@@ -153,29 +154,36 @@ const Login = () => {
               </Button>
 
               <Button
-                // className={styles.Button}
                 style="--Google"
                 onClick={loginGoogle}
                 title="Iniciar sesi&oacute;n con Google"
               >
                 Continuar con Google
               </Button>
-              <Label
-                className={styles.RecoverPassword}
-                title="Recuperar contrase&ntilde;a"
+              {/* <Link
+                href="/reset"                
               >
-                Recuperar contrase&ntilde;a
-              </Label>
+                <Label style="--RecoverPassword">
+                  Recuperar contrase&ntilde;a
+                </Label>
+              </Link> */}
+              <Link href="/reset">
+                <a 
+                // style="--RecoverPassword"
+                >
+
+                  Recuperar contrase&ntilde;a
+                </a>
+              </Link>
             </form>
           </section>
           <section className={styles.ContainerSignup}>
-            <Label>¿No tienes cuenta en Art-Hispano?</Label>
             <Button
               style="--Registrate"
               onClick={signup}
               title="Crea tu cuenta"
             >
-              ¿No tienes cuenta?
+              ¿No tienes cuenta en Art-Hispano?
             </Button>
           </section>
         </div>

@@ -35,10 +35,7 @@ export default function Navbar() {
 
         <section className={styles.nav_containerButton}>
           <Link href="/sell">
-            <Button 
-              title="Vender" 
-              style="Sell">
-
+            <Button title="Vender" style="Sell">
               Vender
             </Button>
           </Link>
@@ -72,9 +69,9 @@ export default function Navbar() {
               alt="user"
               title="Perfil"
             />
-          </Link>
+          </Link>     
         </section>
       </nav>
     </header>
-  )
+  );
 };
