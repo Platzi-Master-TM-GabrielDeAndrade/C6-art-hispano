@@ -49,7 +49,11 @@ class FileUpload extends Component {
   render() {
     return (
       <div className={styles.UpPhoto} aria-setsize>
-        <img width="180px" height="140px" src={this.state.picture} alt="" />
+        <img 
+          width="180px" 
+          height="140px" 
+          src={this.state.picture} alt="" 
+        />
         <br />
         <progress
           className={styles.progress_bar}
