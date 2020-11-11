@@ -176,7 +176,7 @@ const Login = () => {
               onClick={signup}
               title="Crea tu cuenta"
             >
-              ¿No tienes cuenta en Art-Hispano?
+              ¿No tienes cuenta en Art-Hixpano?
             </Button>
           </section>
         </div>
