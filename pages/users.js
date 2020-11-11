@@ -78,11 +78,11 @@ export default function Home() {
   //   }
   // }
 
-  const activarEdicion = (item) => {
-    setModoEdicion(true)
-    setUser(item.email)
-    setId(item.id);
-  }
+  // const activarEdicion = (item) => {
+  //   setModoEdicion(true)
+  //   setUser(item.email)
+  //   setId(item.id);
+  // }
 
   const editar = async(e) => {
     e.preventDefault()    

@@ -13,8 +13,8 @@ export default function details () {
   const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState("");
+  const [category, setCategory] = useState("");  
+  const [categories, setCategories] = useState([]);  
   const [image, setImage] = useState([]);
  
   const userLogin = auth.currentUser;
@@ -57,7 +57,7 @@ export default function details () {
         product: product,
         description: description,
         price: price,
-        category: category,
+        // category: category,
         image: image,        
       };
 
@@ -74,10 +74,10 @@ export default function details () {
     const getCategories = async () => {
       try {
         const query = await db.collection("categories").get();
-        const categories = query.docs.map((categories) => {
+        const categories = query.docs.map((user) => {
           return {
-            id: categories.id,
-            ...categories.data(),
+            id: user.id,
+            ...user.data(),
           };
         });
 
@@ -117,21 +117,20 @@ export default function details () {
           />
 
           {/* Tomar la categoria y buscarla en la bd y obtener uid y guardar */}
-          <select
-            value={category}
+          <select     
+                   
+            value={category}            
             onChange={(e) => setCategory(e.target.value)}
           >
             <option disabled selected value="">
               -- Elige una Categor&iacute;a
             </option>
-            {/* <option value="Hogar">Hogar</option>
-            <option value="Bisuteria">Bisuter&iacute;a</option>
-            <option value="Instrumentos">Instrumentos Musicales</option>
-            <option value="Ropa">Ropa</option>
-            <option value="Calzado">Calzado</option> */}
-            {/* {getCategories.map((item, index) => {
-              return <option key={index}>{item.name}</option>;
-            })} */}
+
+            {categories.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.name}
+              </option>
+            ))}
           </select>
           <Textarea
             className={styles.texTank}
