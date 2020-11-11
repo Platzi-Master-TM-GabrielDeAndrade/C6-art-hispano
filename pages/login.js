@@ -14,53 +14,35 @@ import Label from "components/Label";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const [setUser] = useState(null);
+  // const [setUser] = useState(null);
   const [error, setError] = useState(null);
 
   const router = useRouter();
 
-  // const loginGoogle = () => {
-  //   auth
-  //     .signInWithPopup(googleProvider)
-  //     .then((result) => {        
-  //       setUser(result.user);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       setError(err);
-  //     });
-  // };
-
-
   const loginGoogle = async () => {
     try {
-      const res = await auth.signInWithPopup(googleProvider);
-      console.log(res.user);
-      setUser(res.user);
+      await auth.signInWithPopup(googleProvider);            
       router.push("/admin");
     } catch (error) {
-      console.log(error);
       setError(error);
     }
   };
+
   const loginFacebook = async  () => {
     try {
-      const res = await auth.signInWithPopup(facebookProvider);
-      console.log(res.user);
-      setUser(res.user);
-      // router.push("/admin");
-    } catch (error) {
-     console.log(error);
+      await auth.signInWithPopup(facebookProvider);     
+      router.push("/admin");
+    } catch (error) {     
      setError(error);
     }   
   };
 
   const processData = (e) => {
     e.preventDefault();
-    
+
     setError(null);
 
-    if (!email.trim()) {      
+    if (!email.trim()) {
       setError("Completa este campo!");
       return;
     }
@@ -70,7 +52,7 @@ const Login = () => {
       return;
     }
 
-    if (pass.length < 6) {      
+    if (pass.length < 6) {
       setError("La contraseña debe tener al menos 6 caracteres");
       return;
     }
@@ -103,10 +85,6 @@ const Login = () => {
     router.push("/signup");
   };
  
-  // const reset = () => {
-  //   router.push("/reset");
-  // };
-
   return (
     <>
       <div className={styles.MainContainer}>
@@ -147,6 +125,7 @@ const Login = () => {
                 // className={styles.Button}
                 style="--Facebook"
                 onClick={loginFacebook}
+                type="submit"
                 title="Iniciar sesi&oacute;n con Facebook"
               >
                 {" "}
@@ -156,13 +135,14 @@ const Login = () => {
               <Button
                 style="--Google"
                 onClick={loginGoogle}
+                type="submit"
                 title="Iniciar sesi&oacute;n con Google"
               >
                 Continuar con Google
               </Button>
-              
+
               <Link href="/reset">
-                <a 
+                <a
                 // style="--RecoverPassword"
                 >
                   Recuperar contrase&ntilde;a
