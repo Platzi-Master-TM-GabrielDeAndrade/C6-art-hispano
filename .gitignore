@@ -4,7 +4,9 @@ node_modules
 # next.js
 .next
 # production
+out
 build
+.out
 
 # misc
 .DS_Store
