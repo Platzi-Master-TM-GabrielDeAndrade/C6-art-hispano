@@ -29,6 +29,28 @@ export default function details () {
     setImage([...image, url])
   }
 
+
+  const getCategories = async () => {
+    try {
+      const query = await db.collection("categories").get();
+      const categories = query.docs.map((user) => {
+        return {
+          id: user.id,
+          ...user.data(),
+        };
+      });
+
+      setCategories(categories);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+
   const addProduct = async (e) => {
     e.preventDefault();
 
@@ -71,26 +93,7 @@ export default function details () {
 
   };
 
-    const getCategories = async () => {
-      try {
-        const query = await db.collection("categories").get();
-        const categories = query.docs.map((user) => {
-          return {
-            id: user.id,
-            ...user.data(),
-          };
-        });
-
-        setCategories(categories);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-      useEffect(() => {
-        getCategories();
-      }, []);
-
+    
   return (
     <>
       <main className={styles.container_details}>
