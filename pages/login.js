@@ -160,19 +160,12 @@ const Login = () => {
               >
                 Continuar con Google
               </Button>
-              {/* <Link
-                href="/reset"                
-              >
-                <Label style="--RecoverPassword">
-                  Recuperar contrase&ntilde;a
-                </Label>
-              </Link> */}
+              
               <Link href="/reset">
                 <a 
                 // style="--RecoverPassword"
                 >
-
-                  Recuperar contramse&ntilde;a
+                  Recuperar contrase&ntilde;a
                 </a>
               </Link>
             </form>

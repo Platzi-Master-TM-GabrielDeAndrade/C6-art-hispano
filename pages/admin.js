@@ -8,10 +8,10 @@ export default function Admin() {
 
   useEffect(() => {
     if (auth.currentUser) {
-      console.log("Existe un usuario");
+      // console.log("Existe un usuario");
       setUser(auth.currentUser);
     } else {
-      console.log("No existe un usuario");
+      // console.log("No existe un usuario");
       router.push("/login");
     }
   }, [router]);
