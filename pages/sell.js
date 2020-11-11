@@ -6,7 +6,7 @@ import Input from "@components/Input"
 import Textarea from "@components/Textarea";
 import FileUpload from '../components/FileUpload'
 import Button from "@components/Button";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function details () {
   const router = useRouter(); 
@@ -73,28 +73,29 @@ export default function details () {
         console.log("escriba el precio");
         return;
       }
-    try {
+    
       const newProduct = {        
         userId: uid,
         product: product,
         description: description,
         price: price,
-        // category: category,
+        category: category,
         image: image,        
       };
 
       console.log(newProduct);
 
-      await db.collection("products").add(newProduct);
-      router.push("/sell-publication");
-    } catch (error) {
-      console.log(error);
-    }
-
+      db.collection("products").add(newProduct).then( 
+        (param) => {
+          console.log(param)
+          router.push("/sell-publication");
+        }
+      )
+      console.log(category)
   };
 
     
-  return (
+  return  (
     <>
       <main className={styles.container_details}>
         <div className={styles.cont_title_details}>
@@ -118,11 +119,9 @@ export default function details () {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-
           {/* Tomar la categoria y buscarla en la bd y obtener uid y guardar */}
-          <select     
-                   
-            value={category}            
+          <select
+            value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
             <option disabled selected value="">
@@ -135,6 +134,7 @@ export default function details () {
               </option>
             ))}
           </select>
+          {/* console.log(category) */}
           <Textarea
             className={styles.texTank}
             type="textarea"
@@ -142,11 +142,9 @@ export default function details () {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <Link href="/sell-publication">
             <Button type="submit" style="Continue">
               Publicar ahora
-            </Button>
-          </Link>
+            </Button>          
         </form>
 
         <div className={styles.takePhoto}>
