@@ -16,6 +16,7 @@ export default function details () {
   const [category, setCategory] = useState("");  
   const [categories, setCategories] = useState([]);  
   const [image, setImage] = useState([]);
+  const [setError] = useState(null);
  
   const userLogin = auth.currentUser;
   var uid;
@@ -28,7 +29,6 @@ export default function details () {
   const handleImageUpload = (url) => {
     setImage([...image, url])
   }
-
 
   const getCategories = async () => {
     try {
@@ -83,15 +83,23 @@ export default function details () {
         image: image,        
       };
 
-      console.log(newProduct);
+      // console.log(newProduct);
 
-      db.collection("products").add(newProduct).then( 
-        (param) => {
-          console.log(param)
-          router.push("/sell-publication");
-        }
-      )
-      console.log(category)
+      // db.collection("products").add(newProduct).then( 
+      //   (param) => {
+      //     console.log(param)
+      //     router.push("/sell-publication");
+      //   }
+      // )
+
+       try {
+         await db.collection("products").add(newProduct);         
+         router.push("/sell-publication");
+       } catch (error) {
+         setError(error);
+       }
+
+      // console.log(category)
   };
 
     

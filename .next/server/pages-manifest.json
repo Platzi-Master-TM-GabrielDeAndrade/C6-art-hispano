@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/login": "pages/login.js",
-  "/admin": "pages/admin.js"
+  "/sell": "pages/sell.js",
+  "/sell-publication": "pages/sell-publication.js"
 }
