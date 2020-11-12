@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/cDD1S_D_dFbb2ndpNVj9P/_buildManifest.js",
-    "static/cDD1S_D_dFbb2ndpNVj9P/_ssgManifest.js"
+    "static/bZ5X3-sLrOqRmdDZsV8Xw/_buildManifest.js",
+    "static/bZ5X3-sLrOqRmdDZsV8Xw/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -36,7 +36,6 @@
       "static/chunks/framework.cb05d56be993eb6b088a.js",
       "static/chunks/pages/_error-cb6685cdcea506c8b6dd.js"
     ],
-<<<<<<< HEAD
     "/admin": [
       "static/chunks/main-0066061faed2edd99abc.js",
       "static/chunks/webpack-e067438c4cf4ef2ef178.js",
@@ -116,7 +115,7 @@
       "static/chunks/2eb4d0c757c5a433fd573fbf99f45d14c6b0db0b.35547f69f63cd511bc06.js",
       "static/chunks/642dbba10639cefb9b44a2417465d7663f9fa2b5.e0115b0a794ce01150ed.js",
       "static/css/88ca0e74fc50ca8b39fc.css",
-      "static/chunks/pages/sell-c42e981de0a2d459804c.js"
+      "static/chunks/pages/sell-089ca0edb7fbeea4c0ec.js"
     ],
     "/sell-details": [
       "static/chunks/main-0066061faed2edd99abc.js",
@@ -176,17 +175,6 @@
       "static/chunks/642dbba10639cefb9b44a2417465d7663f9fa2b5.e0115b0a794ce01150ed.js",
       "static/css/86715c53bc5c56111f55.css",
       "static/chunks/pages/users-f015b7960efccb7fd8e1.js"
-=======
-    "/sell": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/sell.js"
-    ],
-    "/sell-publication": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/sell-publication.js"
->>>>>>> develop
     ]
   },
   "ampFirstPages": []

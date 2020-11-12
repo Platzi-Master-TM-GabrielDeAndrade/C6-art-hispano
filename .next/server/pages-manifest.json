@@ -17,10 +17,5 @@
   "/users": "pages/users.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
   "/404": "pages/404.html"
-=======
-  "/sell": "pages/sell.js",
-  "/sell-publication": "pages/sell-publication.js"
->>>>>>> develop
 }
