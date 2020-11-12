@@ -1,8 +1,25 @@
 import Link from "next/link";
+import { auth } from "../firebase/firebase.config";
+// import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styles from "../styles/components/Navbar.module.scss";
 import Button from "components/Button"
 
 export default function Navbar() {
+  // const [firebaseUser, setFirebaseUser] = useState(false);
+  
+  const router = useRouter();
+  
+   const validateLogin = () => {
+     auth.onAuthStateChanged((user) => {
+       console.log(user);
+       if (user) {
+         router.push("/sell"); 
+       } else {
+         router.push("/login"); 
+       }
+     });
+   };
   
   return (
     <header>
@@ -34,11 +51,21 @@ export default function Navbar() {
         </section>
 
         <section className={styles.nav_containerButton}>
-          <Link href="/sell">
+          <Button
+            title="Vender"
+            style="Sell"
+            onClick={() => {
+              validateLogin();
+            }}
+          >
+            Vender
+          </Button>
+
+          {/* <Link href="/sell">
             <Button title="Vender" style="Sell">
               Vender
             </Button>
-          </Link>
+          </Link> */}
         </section>
 
         <section className={styles.nav_icons}>
@@ -69,7 +96,7 @@ export default function Navbar() {
               alt="user"
               title="Perfil"
             />
-          </Link>     
+          </Link>
         </section>
       </nav>
     </header>

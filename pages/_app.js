@@ -16,9 +16,12 @@ export default function MyApp({ Component, pageProps }) {
        }
      });
    }, []);
-  return (
+   
+  return firebaseUser !== false ? (
     <Layout firebaseUser={firebaseUser}>
       <Component {...pageProps} />
     </Layout>
-  )
+  ) : (
+    <div>Cargando;</div>
+  );
 };
