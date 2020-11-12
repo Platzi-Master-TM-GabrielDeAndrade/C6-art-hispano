@@ -36,6 +36,7 @@
       "static/chunks/framework.cb05d56be993eb6b088a.js",
       "static/chunks/pages/_error-cb6685cdcea506c8b6dd.js"
     ],
+<<<<<<< HEAD
     "/admin": [
       "static/chunks/main-0066061faed2edd99abc.js",
       "static/chunks/webpack-e067438c4cf4ef2ef178.js",
@@ -175,6 +176,17 @@
       "static/chunks/642dbba10639cefb9b44a2417465d7663f9fa2b5.e0115b0a794ce01150ed.js",
       "static/css/86715c53bc5c56111f55.css",
       "static/chunks/pages/users-f015b7960efccb7fd8e1.js"
+=======
+    "/sell": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/sell.js"
+    ],
+    "/sell-publication": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/sell-publication.js"
+>>>>>>> develop
     ]
   },
   "ampFirstPages": []
