@@ -15,10 +15,14 @@ export default function Home () {
      const getProduct = async () => {
        try {
          const data = await db
-           .collection("products")
-           .limit(1)         
+           .collection("products") 
+           .limit(4)                         
            .get();
-         const arrayData = data.docs.map((doc) => ({ ...doc.data() }));
+         const arrayData = data.docs.map((doc) => ({
+           id: doc.id,
+           ...doc.data(),
+         }));
+         console.log(arrayData);
          setProduct(arrayData);
        } catch (error) {
          setError(error);
@@ -30,72 +34,78 @@ export default function Home () {
      }, []); 
   return (
     <>
-      {product.map((item) => (
-        <p key={item.id}>
-          <div className={styles.slider}>
-            <div className={styles.carusel}>
-              <img src="home.png" alt="" />
-            </div>
+      <div className={styles.slider}>
+        <div className={styles.carusel}>
+          <img src="home.png" alt="" />
+        </div>
 
-            <div className={styles.products_container}>
-              <div>
-                <LineTitle text={"Productos Destacados"} />
-                <div className={styles.products_container_info}>
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                </div>
-              </div>
-
-              <div className={styles.products_container_oferta}>
-                <button>Oferta</button>
-                <img
-                  className={styles.oferta}
-                  src="ajedrez.png"
-                  alt="Ajedrez"
-                  width="80%"
-                  height="80%"
+        <div className={styles.products_container}>
+          <div>
+            <LineTitle text={"Productos Destacados"} />
+            <div className={styles.products_container_info}>
+              {product.map((item) => (
+                <ProductCard
+                  id={item.id}
+                  key={item.id}
+                  imgUrl={item.image}
+                  price={item.price}
                 />
-              </div>
-            </div>
-
-            <div className={styles.products_container}>
-              <div>
-                <LineTitle text={"Recomendados para ti"} />
-                <div className={styles.products_container_info}>
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                </div>
-              </div>
-
-              <div className={styles.products_container_oferta}>
-                <h2>Instrumentos Musicales</h2>
-                <img src="flauta.png" alt="Flauta" width="60%" height="80%" />
-              </div>
-            </div>
-
-            <div className={styles.products_container}>
-              <div>
-                <LineTitle text={"Novedades"} />
-                <div className={styles.products_container_info}>
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                  <ProductCard imgUrl={item.image} price={item.price} />
-                </div>
-              </div>
-
-              <div className={styles.products_container_oferta}>
-                <h2>Bisuter&iacute;a</h2>
-                <img src="bisuteria.png" alt="" width="80%" height="80%" />
-              </div>
+              ))}
             </div>
           </div>
-        </p>
-      ))}
+
+          <div className={styles.products_container_oferta}>
+            <button>Oferta</button>
+            <img
+              className={styles.oferta}
+              src="ajedrez.png"
+              alt="Ajedrez"
+              width="80%"
+              height="80%"
+            />
+          </div>
+        </div>
+
+        <div className={styles.products_container}>
+          <div>
+            <LineTitle text={"Recomendados para ti"} />            
+            <div className={styles.products_container_info}>
+              {product.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  imgUrl={item.image}
+                  price={item.price}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.products_container_oferta}>
+            <h2>Instrumentos Musicales</h2>
+            <img src="flauta.png" alt="Flauta" width="60%" height="80%" />
+          </div>
+        </div>
+
+        <div className={styles.products_container}>
+          <div>
+            <LineTitle text={"Novedades"} />
+            <div className={styles.products_container_info}>
+              {product.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  imgUrl={item.image}
+                  price={item.price}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.products_container_oferta}>
+            <h2>Bisuter&iacute;a</h2>
+            <img src="bisuteria.png" alt="" width="80%" height="80%" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

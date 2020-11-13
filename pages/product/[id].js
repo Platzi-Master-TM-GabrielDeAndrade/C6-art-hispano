@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
-import { db } from "../firebase/firebase.config";
-import styles from "../styles/pages/Product.module.scss";
+import { useRouter } from "next/router";
+import { db } from "../../firebase/firebase.config";
+import styles from "../../styles/pages/Product.module.scss";
 import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
 
-export default function Product () {
-  // const router = useRouter();
-  // const { id, productPage } = router.query;
+export default function id () {
+  const router = useRouter();
+  const { id: productId } = router.query ;
   const [product, setProduct] = useState([]);
   const [setError] = useState(null);
 
@@ -15,12 +15,17 @@ export default function Product () {
     try {      
       const data = await db
         .collection("products")
-        .where("price", "==", "19999.97")
+        .where(id, "==", productId)
         .get();
-      const arrayData = data.docs.map((doc) => ({ ...doc.data() }));
-      setProduct(arrayData);
+        const arrayData = data.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProduct(arrayData);
+        console.log(arrayData);
     } catch (error) {      
       setError(error);
+      //  console.log(error);
     }
   };
 
