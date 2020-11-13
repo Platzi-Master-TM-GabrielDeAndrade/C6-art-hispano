@@ -77,6 +77,9 @@ export default function Navbar() {
               title="Carrito"
             />
           </Link>
+<<<<<<< HEAD
+          
+=======
           <img
             className={styles.nav_iconsImgs}
             src="favourite.svg"
@@ -89,6 +92,7 @@ export default function Navbar() {
             alt="Notificaciones"
             title="Notificaciones"
           />
+>>>>>>> 6bed09887c270c53a68c8d326e5197fba69a4725
           <Link href="/login">
             <img
               className={styles.nav_userImg}
