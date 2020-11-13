@@ -50,8 +50,6 @@ class FileUpload extends Component {
     return (
       <div className={styles.UpPhoto} aria-setsize>
         <img 
-          width="180px" 
-          height="140px" 
           src={this.state.picture} alt="" 
         />
         <br />
