@@ -3,7 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/sell": "pages/sell.js",
-  "/product": "pages/product.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/sell": "pages/sell.js"
 }

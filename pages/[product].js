@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
 import { db } from "../firebase/firebase.config";
 import styles from "../styles/pages/Product.module.scss";
 import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
 
 export default function Product () {
-const [product, setProduct] = useState([]);
-const [setError] = useState(null);
+  // const router = useRouter();
+  // const { id, productPage } = router.query;
+  const [product, setProduct] = useState([]);
+  const [setError] = useState(null);
 
   const getProduct = async () => {
     try {      
