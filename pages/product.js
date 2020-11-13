@@ -1,31 +1,59 @@
+import { useState, useEffect } from "react";
+import { db } from "../firebase/firebase.config";
 import styles from "../styles/pages/Product.module.scss";
 import ProductImage from "components/ProductImage";
 import ProductDescription from "components/ProductDescription";
 
 export default function Product () {
+const [product, setProduct] = useState([]);
+const [setError] = useState(null);
 
-    
+  const getProduct = async () => {
+    try {      
+      const data = await db
+        .collection("products")
+        .where("price", "==", "19999.97")
+        .get();
+      const arrayData = data.docs.map((doc) => ({ ...doc.data() }));
+      setProduct(arrayData);
+    } catch (error) {      
+      setError(error);
+    }
+  };
+
+  useEffect(() => {
+    getProduct();
+  }, []); 
   return (
     <>
-        <div className={styles.Main}>
-            <section className = {styles.MainContainer}>
-                <section className={styles.Leftside}>
-                    <ProductImage type="Leftside" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" />
-                    <ProductImage type="Leftside" imgUrl='' />
-                    <ProductImage type="Leftside" imgUrl="search.svg" />
-                    <ProductImage type="Leftside" imgUrl="car.svg" />
-                    <ProductImage type="Leftside" imgUrl="https://i.pinimg.com/originals/ce/16/bd/ce16bd6d2bdb6d59773a51ec8bade190.png" />
+      {product.map((item) => (
+        <p key={item.id}>
+          <div className={styles.Main}>
+            <section className={styles.MainContainer}>
+              <section className={styles.Leftside}>
+                <ProductImage type="Leftside" imgUrl={item.image} />
+                <ProductImage type="Leftside" imgUrl={item.image} />
+                <ProductImage type="Leftside" imgUrl={item.image} />
+                <ProductImage type="Leftside" imgUrl={item.image} />
+                <ProductImage type="Leftside" imgUrl={item.image} />
+              </section>
+              <section className={styles.MainImageContainer}>
+                <ProductImage type="Main" imgUrl={item.image} />
+              </section>
+              <section className={styles.MainDescriptionContainer}>
+                <section className={styles.DescriptionContainer}>
+                  <ProductDescription
+                    // starsQuantity="3"
+                    title={item.product}
+                    description={item.description}
+                    price={item.price}
+                  />
                 </section>
-                <section className={styles.MainImageContainer}>
-                    <ProductImage type="Main" imgUrl="https://http2.mlstatic.com/crazdo-craneo-decorativo-azteca-dorado-artesania-mexicana-D_NQ_NP_954974-MLM31546603590_072019-F.jpg" />
-                </section>
-                <section className={styles.MainDescriptionContainer}>
-                    <section className={styles.DescriptionContainer}>
-                        <ProductDescription starsQuantity='3' title="Cráneo Decorativo Azteca Dorado Artesanía Mexicana" description="Reliquia de los antiguos aztecas, encontrada en las ruinas de Tenochtitlán durante investigaciones arqueológicas en 1937. Cráneo bañado en oro y conservado por los museos de historia prehispánica en la Ciudad de México." price={19999.97} />
-                    </section>
-                </section>
+              </section>
             </section>
-        </div>
+          </div>
+        </p>
+      ))}
     </>
   );
 };
