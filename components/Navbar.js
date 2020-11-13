@@ -51,13 +51,7 @@ export default function Navbar() {
           <Link href="/cart">
             <img className={styles.nav_iconsImgsCart} src="car.svg" alt="Carrito" title="Carrito" />
           </Link>
-          <img className={styles.nav_iconsImgs} src="favourite.svg" alt="Favoritos" title="Favoritos" />
-          <img
-            className={styles.nav_iconsImgs}
-            src="notificaciones.svg"
-            alt="Notificaciones"
-            title="Notificaciones"
-          />
+          
           <Link href="/login">
             <img className={styles.nav_userImg} src="user.svg" alt="user" title="Perfil" />
           </Link>
