@@ -10,16 +10,16 @@ export default function Navbar() {
   
   const router = useRouter();
   
-   const validateLogin = () => {
-     auth.onAuthStateChanged((user) => {
-       console.log(user);
-       if (user) {
-         router.push("/sell"); 
-       } else {
-         router.push("/login"); 
-       }
-     });
-   };
+  const validateLogin = () => {
+    auth.onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+      router.push("/sell"); 
+      } else {
+      router.push("/login"); 
+      }
+    });
+  };
   
   return (
     <header>
@@ -77,22 +77,7 @@ export default function Navbar() {
               title="Carrito"
             />
           </Link>
-<<<<<<< HEAD
           
-=======
-          <img
-            className={styles.nav_iconsImgs}
-            src="favourite.svg"
-            alt="Favoritos"
-            title="Favoritos"
-          />
-          <img
-            className={styles.nav_iconsImgs}
-            src="notificaciones.svg"
-            alt="Notificaciones"
-            title="Notificaciones"
-          />
->>>>>>> 6bed09887c270c53a68c8d326e5197fba69a4725
           <Link href="/login">
             <img
               className={styles.nav_userImg}
