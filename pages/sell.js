@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { db, auth } from "../firebase/firebase.config";
 import styles from "@styles/pages/Sell.module.scss";
@@ -6,28 +6,50 @@ import Input from "@components/Input"
 import Textarea from "@components/Textarea";
 import FileUpload from '../components/FileUpload'
 import Button from "@components/Button";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function details () {
   const router = useRouter(); 
   const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("");  
+  const [categories, setCategories] = useState([]);  
   const [image, setImage] = useState([]);
+  const [setError] = useState(null);
  
-  
   const userLogin = auth.currentUser;
   var uid;
 
+  console.log(uid);
   if (userLogin != null) {
     uid = userLogin.uid;
   }
 
-
   const handleImageUpload = (url) => {
     setImage([...image, url])
   }
+
+  const getCategories = async () => {
+    try {
+      const query = await db.collection("categories").get();
+      const categories = query.docs.map((user) => {
+        return {
+          id: user.id,
+          ...user.data(),
+        };
+      });
+
+      setCategories(categories);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
 
   const addProduct = async (e) => {
     e.preventDefault();
@@ -51,7 +73,7 @@ export default function details () {
         console.log("escriba el precio");
         return;
       }
-    try {
+    
       const newProduct = {        
         userId: uid,
         product: product,
@@ -61,17 +83,27 @@ export default function details () {
         image: image,        
       };
 
-      console.log(newProduct);
+      // console.log(newProduct);
 
-      await db.collection("products").add(newProduct);
-      router.push("/sell-publication");
-    } catch (error) {
-      console.log(error);
-    }
+      // db.collection("products").add(newProduct).then( 
+      //   (param) => {
+      //     console.log(param)
+      //     router.push("/sell-publication");
+      //   }
+      // )
 
+       try {
+         await db.collection("products").add(newProduct);         
+         router.push("/sell-publication");
+       } catch (error) {
+         setError(error);
+       }
+
+      // console.log(category)
   };
 
-  return (
+    
+  return  (
     <>
       <main className={styles.container_details}>
         <div className={styles.cont_title_details}>
@@ -82,7 +114,7 @@ export default function details () {
           <label>Agrega los detalles del producto</label>
         </div>
 
-        <form onSubmit={addProduct} className={styles.form_client} >
+        <form onSubmit={addProduct} className={styles.form_client}>
           <Input
             type="text"
             placeholder="Producto"
@@ -95,25 +127,22 @@ export default function details () {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-
-          
+          {/* Tomar la categoria y buscarla en la bd y obtener uid y guardar */}
           <select
             value={category}
-            onChange={(e) => (
-
-
-              setCategory(e.target.value)
-            )}
+            onChange={(e) => setCategory(e.target.value)}
           >
             <option disabled selected value="">
               -- Elige una Categor&iacute;a
             </option>
-            <option value="Hogar">Hogar</option>
-            <option value="Bisuteria">Bisuter&iacute;a</option>
-            <option value="Instrumentos">Instrumentos Musicales</option>
-            <option value="Ropa">Ropa</option>
-            <option value="Calzado">Calzado</option>
+
+            {categories.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.name}
+              </option>
+            ))}
           </select>
+          {/* console.log(category) */}
           <Textarea
             className={styles.texTank}
             type="textarea"
@@ -121,11 +150,9 @@ export default function details () {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <Link href="/sell-publication">
-            <Button type="submit" style="Continue">          
+            <Button type="submit" style="Continue">
               Publicar ahora
-            </Button>
-          </Link>
+            </Button>          
         </form>
 
         <div className={styles.takePhoto}>
@@ -134,7 +161,7 @@ export default function details () {
 
         <div className={styles.Photo}>
           <div>
-            <FileUpload onImageUpload={handleImageUpload} />            
+            <FileUpload onImageUpload={handleImageUpload} />
           </div>
           <div>
             <FileUpload onImageUpload={handleImageUpload} />

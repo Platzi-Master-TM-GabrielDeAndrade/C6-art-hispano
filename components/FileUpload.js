@@ -1,6 +1,6 @@
 import { Component } from "react";
 import firebase from "firebase";
-import styles from "../styles/components/FileUpload.module.scss";
+import styles from "../styles/components/FileUpLoad.module.scss";
 
 class FileUpload extends Component {
   constructor(props) {
@@ -49,7 +49,11 @@ class FileUpload extends Component {
   render() {
     return (
       <div className={styles.UpPhoto} aria-setsize>
-        <img width="180px" height="140px" src={this.state.picture} alt="" />
+        <img 
+          width="180px" 
+          height="140px" 
+          src={this.state.picture} alt="" 
+        />
         <br />
         <progress
           className={styles.progress_bar}
