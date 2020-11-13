@@ -2,6 +2,10 @@ import { auth } from "../firebase/firebase.config";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Button from "components/Button";
+import styles from "styles/pages/Admin.module.scss";
+
+
+
 export default function Admin() {
   const [user, setUser] = useState(null);
   const router = useRouter();

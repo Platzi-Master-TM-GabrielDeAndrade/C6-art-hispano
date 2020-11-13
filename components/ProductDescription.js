@@ -2,12 +2,19 @@ import styles from "../styles/components/ProductDescription.module.scss";
 import Button from "components/Button";
 import StarRating from "components/StarRating";
 import Link from "next/link";
+import React from 'react';
 
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => {
 
     const state = {
-        quantity: '1',
+        quantity: 1,
+    };
+
+    const addOne = () => {
+        const setState = state => {
+            state.quantity = state.quantity + 1
+        }
     };
 
     // const addOne = (e) => {
@@ -22,7 +29,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
                 <h2 className={styles.Price}>${price}</h2>
             </section>
             <section className={styles.FreeShipping}>
-                <img src="car.png" alt="Free Shipping" />
+                <img src="car.png" alt="Free Shipping" title="Env&iacute;o gratis" />
                 <span>Env&iacute;o Gratis</span>
             </section>
             <section className={styles.Rating}>
@@ -31,7 +38,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
             <section className={styles.Quantity}>
                     <span>Cantidad</span>
                     <span>
-                        <Button style="OneMore">+</Button>
+                        <Button style="OneMore" onClick={addOne}>+</Button>
                     </span>
                         <span>{state.quantity}</span>
                     <span>
