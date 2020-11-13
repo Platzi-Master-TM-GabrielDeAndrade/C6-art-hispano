@@ -1,18 +1,21 @@
 @import "../styles.module";
 @import "../lib/variables.module";
+@import "../styles.module.scss";
 
 //--------- sell ---------//
 
 .container_details{
+  padding: 0%;
   display:grid;
-  width: 100vw;
-  grid-template-columns: 5% 45% 15% 15% 15% 5%;
-  grid-template-rows: 100px 50px 50px 200px 50px;
-  grid-template-areas: "title title title title title tittle"
-                      "details details details details details details"
-                       ". client upPhoto upPhoto upPhoto ."
-                       ". client Photo Photo Photo ."
-                       ". client public public public . "
+  width: 100%;
+  height: auto;
+  grid-template-columns: .5fr 4fr 2.5fr 2.5fr .5fr;
+  grid-template-rows: .4fr .4fr .3fr 1fr .3fr;
+  grid-template-areas: "title title title title tittle"
+                       "details details details details details"
+                       ". client upPhoto upPhoto  ."
+                       ". client Photo Photo ."
+                       ". client public public . "
 
 
 }
@@ -34,7 +37,6 @@
 .details_title{
   grid-area: details;
   color: $color-secondary;
-  font-size: 50px;
   align-content: center;
   display: grid;
 }
@@ -53,16 +55,9 @@
 }
 
 
-
-// .container_details Button:hover{
-//     background-color: $color-brand;
-//     opacity: 40%;
-//     cursor: pointer;
-// }
-
-
 .form_client {
   grid-area: client;
+  border: 15px;
 }
 
 .form_client input {
@@ -127,26 +122,20 @@
     border-radius: $border-radius * 2;
 }
 
- .texTank textarea:hover{
-  background-color: #FF9F1C;
-  opacity: 40%;
-  cursor: pointer;
-}
-
 .takePhoto{
   grid-area: upPhoto;
-    
+  width: 100%;
+     
 }
 
 .takePhoto h2{
-  color: #6D5E52;;
+
+  color: $color-secondary;
   text-align: center;
-  height: 35px;
   box-sizing: border-box;
   grid-column: 1 / san 3;
-  font-size: 25px;
-  min-width: 250px; 
-  
+  font-size: 20px;
+
 }
 
 .Photo{
@@ -154,7 +143,7 @@
   grid-area: Photo;
   grid-template: 1fr/ 1fr 1fr;
   margin: auto;
-  column-gap: 50px;
+  column-gap: 30px;
 }
 
 .Photo input{

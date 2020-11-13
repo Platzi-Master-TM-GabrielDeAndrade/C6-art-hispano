@@ -1,0 +1,169 @@
+@import "../styles.module.scss";
+
+
+.Main {
+    min-height: calc(100vh - 100px - 165px);  /* 100vh Navbar Footer */
+    display: grid;
+}
+
+.MainContainer {
+    height: 500px;
+    width: 80%;
+    max-width: 850px;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template: 3fr 2fr 60px / 250px 1fr 200px;
+    grid-template-areas: " pic data history "
+                " biography biography history "
+                " buttons buttons buttons ";
+    gap: 15px;
+}
+
+/*------------ PICTURE CONTAINER -------------*/
+
+.PicContainer {
+    grid-area: pic;
+    align-self: center;
+    justify-self: center;
+    
+    padding: 15px 10px;
+    width: 90%;
+    max-width: 180px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: $border-radius * 2;
+    background-color: $color-input;
+}
+
+.PicContainer p {
+    margin: 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+.PicContainer img {
+    width: 50%;
+}
+
+/*------------ END PICTURE CONTAINER -------------*/
+
+
+/*------------ DATA CONTAINER -------------*/
+
+.DataContainer {
+    grid-area: data;
+    align-self: center;
+    justify-self: center;
+}
+.DataContainer h3 {
+    margin: 0 0 10px 0; // Top Right Bottom Left
+    font-weight: 700;
+    font-size: $medium-text;
+    color: $color-secondary
+}
+.DataContainer label {
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+.DataContainer input {
+    width: 95%;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.DataContainer input {
+    align-self: center;
+    outline: none;
+    height: 30px;
+    width: 95%;
+    margin: 5px 0; //Top-Bottom Right-Left
+    padding: 5px 15px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+    border: 1px solid $color-input-border;
+    border-radius: $border-radius; 
+    background-color: $color-input;
+  }
+  
+  .DataContainer input::placeholder {
+    opacity: .65;
+  }
+
+/*------------ END DATA CONTAINER -------------*/
+
+/*------------ BIOGRAPHY CONTAINER -------------*/
+
+.BiographyContainer {
+    grid-area: biography;
+    width: 100%;
+    padding: 0 10px 0 20px;
+    align-self: center;
+    justify-self: end;
+    border-radius: 10px;
+    display: grid;
+}
+
+.BiographyContainer label {
+    margin: 0 0 5px 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+.BiographyContainer input {
+    // align-self: center;
+    outline: none;
+    justify-self: end;
+    height: 150px;
+    width: 100%;
+    margin: 5px 0; //Top-Bottom Right-Left
+    padding: 5px 15px;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+    border: 1px solid $color-input-border;
+    border-radius: $border-radius; 
+    background-color: $color-input;
+}
+
+/*------------ END BIOGRAPHY CONTAINER -------------*/
+
+/*------------ HISTORY CONTAINER -------------*/
+
+.HistoryContainer {
+    grid-area: history;
+    align-self: center;
+    height: 100%;
+    padding: 15px 10px;
+    border: 1px solid $color-secondary;
+    border-radius: $border-radius * 2;
+    background-color: $color-input;
+}
+
+.HistoryContainer h3 {
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    font-size: $small-text;
+    color: $color-secondary;
+}
+
+.HistoryContainer p {
+    margin: 0;
+    font-weight: 400;
+    font-size: $light-small-text;
+    color: $color-secondary;
+}
+
+/*------------ END BIOGRAPHY CONTAINER -------------*/
+
+.ButtonsContainer {
+    grid-area: buttons;
+    max-height: 50px;
+    align-self: center;
+    justify-self: end;
+}

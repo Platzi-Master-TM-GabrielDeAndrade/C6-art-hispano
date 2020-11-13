@@ -14,9 +14,7 @@ export default function id () {
   const getProduct = async () => {
     try {      
       const data = await db
-        .collection("products")
-        .where(id, "==", productId)
-        .get();
+        .collection("products").doc(productId).get();
         const arrayData = data.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -24,8 +22,7 @@ export default function id () {
         setProduct(arrayData);
         console.log(arrayData);
     } catch (error) {      
-      setError(error);
-      //  console.log(error);
+      setError(error);      
     }
   };
 

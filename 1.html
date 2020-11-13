@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            height: 100px;
+            background-color: darkcyan;
+        }
+        footer {
+            height: 165px;
+            background-color: darkcyan;
+        }
+
+
+        .Main {
+            min-height: calc(100vh - 100px - 165px);  /* 100vh Navbar Footer */
+            display: grid;
+        }
+        .MainContainer {
+            border: 1px solid black;
+            border-radius: 10px;
+            align-self: center;
+            justify-self: center;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template: 2fr 1fr / 1fr 1fr 200px;
+            grid-template-areas: " pic data history "
+                        " biography biography history ";
+            gap: 10px;
+        }
+
+        .PicContainer {
+            grid-area: pic;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 75%;
+            align-self: center;
+            justify-self: center;
+        }
+        .PicContainer p {
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+        }
+        .PicContainer img {
+            border-radius: 20%;
+        }
+
+        .PicContainer button {
+            cursor: pointer;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 10px 15px;
+            max-width: 120px;
+            width: 80%;
+            margin: 0;
+            justify-self: center;
+        }
+
+
+        .DataContainer {
+            grid-area: data;
+            align-self: center;
+            justify-self: center;
+        }
+        .DataContainer h3 {
+            font-weight: 700;
+            font-size: 25px;
+        }
+        .DataContainer label {
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .DataContainer input {
+            width: 95%;
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .BiographyContainer {
+            grid-area: biography;
+            width: 90%;
+            align-self: center;
+            justify-self: center;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .BiographyContainer p {
+            font-weight: 400;
+            font-size: 18px;
+        }
+        .BiographyContainer input {
+            height: 100px;
+            width: 90%;
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        .HistoryContainer {
+            grid-area: history;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="Main">
+        <section class="MainContainer">
+            <section class="PicContainer">
+                <p>Foto</p>
+                <img src="" alt="Profile Picture">
+                <button>Subir foto</button>
+            </section>
+            <section class="DataContainer">
+                <h3>Informaci&oacute;n personal</h3>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+                <label for="contact">Contacto</label>
+                <input type="tel" name="contact" id="contact">
+                <label for="email">Correo</label>
+                <input type="email" name="email" id="email">
+            </section>
+            <section class="BiographyContainer">
+                <label for="biography">Biography</label>
+                <input type="text" name="biography" id="biography">
+            </section>
+            <section class="HistoryContainer"></section>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
