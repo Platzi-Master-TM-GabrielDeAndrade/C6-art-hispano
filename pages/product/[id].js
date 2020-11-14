@@ -7,28 +7,33 @@ import ProductDescription from "components/ProductDescription";
 
 export default function id () {
   const router = useRouter();
-  const { id: productId } = router.query ;
+  const { id } = router.query;
   const [product, setProduct] = useState([]);
   const [setError] = useState(null);
 
   const getProduct = async () => {
-    try {      
-      const data = await db
-        .collection("products").doc(productId).get();
-        const arrayData = data.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setProduct(arrayData);
-        console.log(arrayData);
-    } catch (error) {      
-      setError(error);      
+    try {
+      const query = await db
+      .collection("products")
+      .where("__name__", "==", id)
+      .get();
+      const arrayData = query.docs.map((product) => {
+        return {
+          id: product.id,
+          ...product.data(),
+        };
+      });
+      setProduct(arrayData);
+      console.log(arrayData);
+    } catch (error) {
+      setError(error);
+      // console.log(error);
     }
   };
 
   useEffect(() => {
     getProduct();
-  }, []); 
+  }, []);
   return (
     <>
       {product.map((item) => (
