@@ -8,7 +8,7 @@
   height: 120px;
   min-width: 250px; 
   padding: 10px 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-weight: 400;
   font-family: $base-font;
   border: 1px solid $color-secondary;
@@ -17,13 +17,3 @@
   color: $color-secondary;
   border-radius: $border-radius * 2;
 }
-
-.Textarea::placeholder {
-  opacity: 0.85;
-}
-
-//  .Textarea:hover{
-//     background-color: #FF9F1C;
-//     opacity: 40%;
-//     cursor: pointer;
-// }

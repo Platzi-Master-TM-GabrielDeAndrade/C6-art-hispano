@@ -105,7 +105,7 @@ export default function details () {
     
   return  (
     <>
-      <main className={styles.container_details}>
+      
         <div className={styles.cont_title_details}>
           <h1>Publica tu arte</h1>
         </div>
@@ -113,7 +113,8 @@ export default function details () {
         <div className={styles.details_title}>
           <label>Agrega los detalles del producto</label>
         </div>
-
+     
+     <section className={styles.container_details}>
         <form onSubmit={addProduct} className={styles.form_client}>
           <Input
             type="text"
@@ -167,7 +168,7 @@ export default function details () {
             <FileUpload onImageUpload={handleImageUpload} />
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 }
