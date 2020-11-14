@@ -2,8 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/sell": "pages/sell.js",
   "/[product]": "pages/[product].js",
+=======
+>>>>>>> 7aa09d3849781823d17b08ff3d02d24166f458c0
   "/sell-publication": "pages/sell-publication.js",
   "/": "pages/index.js"
 }

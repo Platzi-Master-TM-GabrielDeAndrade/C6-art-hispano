@@ -19,11 +19,14 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/index.js"
     ],
+<<<<<<< HEAD
     "/[product]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/[product].js"
     ],
+=======
+>>>>>>> 7aa09d3849781823d17b08ff3d02d24166f458c0
     "/_app": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
@@ -34,11 +37,14 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
     "/sell": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/sell.js"
     ],
+=======
+>>>>>>> 7aa09d3849781823d17b08ff3d02d24166f458c0
     "/sell-publication": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
