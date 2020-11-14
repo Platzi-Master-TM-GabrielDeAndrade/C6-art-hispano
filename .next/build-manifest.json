@@ -38,6 +38,7 @@
       "static/chunks/pages/_error.js"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/sell": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
@@ -46,9 +47,17 @@
 =======
 >>>>>>> 7aa09d3849781823d17b08ff3d02d24166f458c0
     "/sell-publication": [
+=======
+    "/next/dist/pages/_error": [
+>>>>>>> master
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/sell-publication.js"
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/product/[id]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/product/[id].js"
     ]
   },
   "ampFirstPages": []

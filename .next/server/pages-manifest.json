@@ -3,10 +3,16 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/sell": "pages/sell.js",
   "/[product]": "pages/[product].js",
 =======
 >>>>>>> 7aa09d3849781823d17b08ff3d02d24166f458c0
   "/sell-publication": "pages/sell-publication.js",
   "/": "pages/index.js"
+=======
+  "/": "pages/index.js",
+  "/product/[id]": "pages/product/[id].js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+>>>>>>> master
 }

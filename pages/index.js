@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { db } from "../firebase/firebase.config";
 import styles from "../styles/pages/Index.module.scss";
 import ProductCard from "../components/ProductCard";
 import LineTitle from "@components/LineTitle";
 
 export default function Home() {
-  // const router = useRouter();
-  // const { id } = router.query;
+  const router = useRouter();
+  const { id } = router.query;
 
   const [product, setProduct] = useState([]);
-  const [setError] = useState(null);
+  // const [ setError] = useState(null);
 
   const getProduct = async () => {
     try {
@@ -22,7 +22,8 @@ export default function Home() {
       console.log(arrayData);
       setProduct(arrayData);
     } catch (error) {
-      setError(error);
+      // setError(error);
+      console.log(error)
     }
   };
 
