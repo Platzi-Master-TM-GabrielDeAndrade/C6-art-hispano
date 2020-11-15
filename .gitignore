@@ -3,7 +3,7 @@ node_modules
 
 # next.js
 .next
-next/
+.next/
 # production
 out
 build
