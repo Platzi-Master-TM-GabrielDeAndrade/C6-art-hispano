@@ -27,7 +27,7 @@ export default function id () {
       console.log(arrayData);
     } catch (error) {
       setError(error);
-      // console.log(error);
+
     }
   };
 
