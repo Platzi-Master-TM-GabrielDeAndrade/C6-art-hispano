@@ -4,13 +4,12 @@ import StarRating from "components/StarRating";
 import Link from "next/link";
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { incrementCount, decrementCount } from "./actions";
+import { incrementQuantity, decrementQuantity } from "./actions";
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => {
 
      const quantity = useSelector((state) => state.quantity);
      const dispatch = useDispatch();
-     
 
     return (
       <div>
@@ -30,7 +29,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
         <section className={styles.Quantity}>
           <span>Cantidad</span>
           <span>
-            <Button style="OneMore" onClick={() => dispatch(incrementCount())}>
+            <Button style="OneMore" onClick={() => dispatch(incrementQuantity())}>
               +
             </Button>
           </span>
@@ -39,7 +38,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
           {/* <span>{state.quantity}</span> */}
 
           <span>
-            <Button style="OneLess" onClick={() => dispatch(decrementCount())}>
+            <Button style="OneLess" onClick={() => dispatch(decrementQuantity())}>
               -
             </Button>
           </span>

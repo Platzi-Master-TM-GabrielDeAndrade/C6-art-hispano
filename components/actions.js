@@ -1,10 +1,7 @@
 import * as types from "./types";
 
-// INCREMENT COUNTER BY 1
-export const incrementCount = () => ({ type: types.INCREMENT });
+// INCREMENT QUANTITY BY 1
+export const incrementQuantity = () => ({ type: types.INCREMENT });
 
-// DECREMENT COUNTER BY 1
-export const decrementCount = () => ({ type: types.DECREMENT });
-
-// // RESET COUNTER
-// export const resetCount = () => ({ type: types.RESET });
+// DECREMENT QUANTITY BY 1
+export const decrementQuantity = () => ({ type: types.DECREMENT });
