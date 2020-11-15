@@ -8,32 +8,16 @@ import { incrementCount, decrementCount } from "./actions";
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => {
 
-     const count = useSelector((state) => state.counter);
+     const quantity = useSelector((state) => state.quantity);
      const dispatch = useDispatch();
      
-
-    // const state = {
-    //     quantity: 1,
-    // };
-
-    // const addOne = () => {
-    //     // const setState = state => {
-    //     //     state.quantity = state.quantity + 1
-    //     // }
-
-    //     dispatch(incrementCount());
-    // };
-
-    // const addOne = (e) => {
-    //     state.quantity.innerText = '2';
-    // }
 
     return (
       <div>
         <section className={styles.DescriptionContent}>
           <h1 className={styles.Title}>{title}</h1>
           <p className={styles.Description}>{description}</p>
-          
+
           <h2 className={styles.Price}>{price}</h2>
         </section>
         <section className={styles.FreeShipping}>
@@ -50,8 +34,8 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
               +
             </Button>
           </span>
-          <span>{count}</span>
-           
+          <span>{quantity}</span>
+
           {/* <span>{state.quantity}</span> */}
 
           <span>
