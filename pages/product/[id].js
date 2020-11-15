@@ -41,11 +41,7 @@ export default function id () {
           <div className={styles.Main}>
             <section className={styles.MainContainer}>
               <section className={styles.Leftside}>
-                <ProductImage type="Leftside" imgUrl={item.image} />
-                <ProductImage type="Leftside" imgUrl={item.image} />
-                <ProductImage type="Leftside" imgUrl={item.image} />
-                <ProductImage type="Leftside" imgUrl={item.image} />
-                <ProductImage type="Leftside" imgUrl={item.image} />
+                <ProductImage type="Leftside" imgUrl={item.image} />                
               </section>
               <section className={styles.MainImageContainer}>
                 <ProductImage type="Main" imgUrl={item.image} />
