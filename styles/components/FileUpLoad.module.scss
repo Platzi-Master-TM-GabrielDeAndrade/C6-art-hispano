@@ -1,4 +1,6 @@
 @import "../styles.module.scss";
+@import "../lib/variables.module";
+
 
 
 .UpPhoto{
@@ -14,6 +16,7 @@
 }
 
 .UpPhoto progress{
+        background-color:  rgba(255, 159, 28, 0.83);;
         border-bottom: 15px;
         width: 300px;
         height: 10px;
@@ -23,6 +26,7 @@
 
 .UpPhoto input{
         margin-top: 5px;
+        font-weight: 400;
         cursor: pointer;
         border: 1px solid #6D5E52;
         box-sizing: border-box;

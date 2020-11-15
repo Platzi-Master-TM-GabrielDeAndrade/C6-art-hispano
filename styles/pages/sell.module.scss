@@ -2,7 +2,7 @@
 @import "../lib/variables.module";
 @import "../styles.module.scss";
 
-//--------- sell ---------//
+//--------- SELL PAGE---------//
 
 
 .cont_title_details {
@@ -84,19 +84,19 @@
 }
 
 .takePhoto{
-  position: relative;
-  text-align: center;
+  
+
   grid-area: 1 / 2;
   width: 100%;
 }
 
 .takePhoto h2{
-  position: absolute;
+  
   color: $color-secondary;
   text-align: center;
   box-sizing: border-box;
-  margin-left: 280px;
-  top: 50px;   
+  margin-top: 60px;
+      
 }
 
 .Photo{
@@ -105,41 +105,7 @@
   display: grid;
   grid-area: 2 / 2;
   grid-template: 1fr/ 1fr 1fr;
-  column-gap: 30px;
+  column-gap: 100px;
 }
 
-//---------- SELL PUBLICATION PAGE ----------//
-
-.cont_title {
-  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "logo text";
-  gap: 100px;
-  align-items: center;
-  text-align: center;
-  background-color: $color-white;
-}
-  
-.logo {
-  grid-area: logo;
-  justify-self: end;
-  width: 200px;
-  height: 200px;
-}
-
-.title_publication{
-  grid-area: text;
-  justify-self: start;
-  display: block;
-  min-width: 400px;
-  width: 600px;
-  
-  border-top: 2px solid $color-brand;
-  border-bottom: 2px solid $color-brand;
-  color: $color-brand;
-  font-size: $text-titles;
-}
-
-//---------- END SELL PUBLICATION PAGE ----------//
+//---------- END SELL PAGE ----------//

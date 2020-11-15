@@ -4,7 +4,7 @@ import StarRating from "components/StarRating";
 import Link from "next/link";
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { incrementCount, decrementCount } from "../pages/redux/actions";
+import { incrementCount, decrementCount } from "./actions";
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => {
 
