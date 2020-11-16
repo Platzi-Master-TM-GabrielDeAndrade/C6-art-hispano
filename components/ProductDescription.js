@@ -16,8 +16,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
         <section className={styles.DescriptionContent}>
           <h1 className={styles.Title}>{title}</h1>
           <p className={styles.Description}>{description}</p>
-
-          <h2 className={styles.Price}>{price}</h2>
+          <h2 className={styles.Price}>$ {price}</h2>
         </section>
         <section className={styles.FreeShipping}>
           <img src="car.png" alt="Free Shipping" title="Env&iacute;o gratis" />
@@ -29,22 +28,29 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
         <section className={styles.Quantity}>
           <span>Cantidad</span>
           <span>
-            <Button style="OneMore" onClick={() => dispatch(incrementQuantity())}>
-              +
+            <Button
+               style="OneLess"
+               onClick={() => dispatch(decrementQuantity())}  
+            >
+              -
             </Button>
           </span>
           <span>{quantity}</span>
-
           {/* <span>{state.quantity}</span> */}
 
           <span>
-            <Button style="OneLess" onClick={() => dispatch(decrementQuantity())}>
-              -
+            <Button
+               style="OneMore"
+               onClick={() => dispatch(incrementQuantity())}             
+            >
+              +
             </Button>
           </span>
         </section>
         <section className={styles.Buttons}>
-          <Link href="/shipping">
+          <Link 
+            href="/shipping"
+          >
             <Button style="Buy" title="Comprar">
               Comprar
             </Button>

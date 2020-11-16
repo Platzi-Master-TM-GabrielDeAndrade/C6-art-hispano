@@ -1,8 +1,13 @@
 import styles from "../styles/components/ProductCart.module.scss";
 import Button from "components/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { incrementQuantity, decrementQuantity } from "./actions";
 
 
 const ProductCart = ( { title, description, price, imgUrl, quantity } ) => {
+
+    const quantitys = useSelector((state) => state.quantity);
+    const dispatch = useDispatch();
 
     return (    
 
@@ -21,14 +26,24 @@ const ProductCart = ( { title, description, price, imgUrl, quantity } ) => {
                 </section>
                 <section className={styles.QuantityContainer}>
                     <div className={styles.QuantityButtonsContainer}>
-                        <Button style="OneMoreCart">+</Button>
-                        <span className={styles.Quantity}>{quantity}</span>
-                        <Button style="OneLessCart">-</Button>
+                        <Button 
+                           style="OneLessCart"
+                           onClick={() => dispatch(decrementQuantity())}
+                        >
+                          -
+                        </Button>
+                        <span>{quantitys}</span>
+                        <Button 
+                           style= "OneMoreCart"
+                           onClick={() => dispatch(incrementQuantity())}
+                        >
+                          +
+                        </Button>
                     </div>
                 </section>
                 <p className={styles.Total}>${price*quantity}</p>
             </section>
-                
+              
         </div>
     );
 }
