@@ -1,8 +1,11 @@
-import { combineReducers } from "redux";
+// import {} from "./actions";
 import * as types from "./types";
 
-// QUANTITY REDUCER
-const quantityReducer = (state = 0, { type }) => {
+// const initialState = {
+//   quantity: 1,
+// };
+
+const quantity = (state = 1, { type  }) => {
   switch (type) {
     case types.INCREMENT:
       return state + 1;
@@ -12,14 +15,12 @@ const quantityReducer = (state = 0, { type }) => {
       } else {
         return state - 1;
       }
+    // case types.TOTAL:
+    //   return state * price;
     default:
       return state;
   }
+
 };
 
-// COMBINED REDUCERS
-const reducers = {
-  quantity: quantityReducer,
-};
-
-export default combineReducers(reducers)
+export default quantity;

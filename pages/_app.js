@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import "@styles/globals.scss"
 
 import { Provider } from "react-redux";
-import { generateStore } from "../components/store";
+import { generateStore } from "./redux/store";
 
 export default function MyApp({ Component, pageProps }) {
   const [firebaseUser, setFirebaseUser] = useState(false);
-  const store = generateStore();
+  const store = generateStore(); 
 
    useEffect(() => {
      auth.onAuthStateChanged((user) => {
@@ -22,11 +22,11 @@ export default function MyApp({ Component, pageProps }) {
    }, []);
    
   return firebaseUser !== false ? (
-    <Layout firebaseUser={firebaseUser}>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <Layout firebaseUser={firebaseUser}>
+            <Component {...pageProps} />
+        </Layout>
       </Provider>
-    </Layout>
   ) : (
     <div>Cargando;</div>
   );

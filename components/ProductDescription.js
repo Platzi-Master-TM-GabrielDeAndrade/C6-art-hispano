@@ -4,11 +4,13 @@ import StarRating from "components/StarRating";
 import Link from "next/link";
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { incrementQuantity, decrementQuantity } from "./actions";
+import { incrementQuantity, decrementQuantity } from "../pages/redux/actions";
 
 const ProductDescription = ( { title, description, price, starsQuantity } ) => {
 
      const quantity = useSelector((state) => state.quantity);
+     const total = useSelector((state) => state.total);
+     
      const dispatch = useDispatch();
 
     return (
@@ -16,7 +18,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
         <section className={styles.DescriptionContent}>
           <h1 className={styles.Title}>{title}</h1>
           <p className={styles.Description}>{description}</p>
-          <h2 className={styles.Price}>$ {price}</h2>
+          <h2 className={styles.Price}>$ {total}</h2>
         </section>
         <section className={styles.FreeShipping}>
           <img src="car.png" alt="Free Shipping" title="Env&iacute;o gratis" />
@@ -49,9 +51,7 @@ const ProductDescription = ( { title, description, price, starsQuantity } ) => {
           </span>
         </section>
         <section className={styles.Buttons}>
-          <Link 
-            href="/shipping"
-          >
+          <Link href="/shipping">
             <Button style="Buy" title="Comprar">
               Comprar
             </Button>
