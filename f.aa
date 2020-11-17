@@ -1,0 +1,563 @@
+[33mcommit 8c609309e256d46c4edd6041fe75ce724ab98b68[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Merge: 10d8bd4 a9821d3
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sat Nov 14 10:31:15 2020 -0500
+
+    ok
+
+[33mcommit a9821d3e653407cd4dfaaf894610cb2d0a54796f[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sat Nov 14 10:29:28 2020 -0500
+
+    ok
+
+[33mcommit c943142ca997c2a83e36314462d86656c168d75d[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sat Nov 14 09:28:48 2020 -0500
+
+    fix choice products
+
+[33mcommit 403426b18d92449adb184488d1acf49a9378db19[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sat Nov 14 09:25:24 2020 -0500
+
+    fix choice products
+
+[33mcommit 10d8bd4c4a271e53c5932e6d6ad36b16f8523982[m
+Merge: 7aea1a8 7aa09d3
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Sat Nov 14 01:16:37 2020 -0500
+
+    Conflicto manifest.json
+
+[33mcommit 7aea1a8c549ede18920faf096e47762d68fc0030[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Sat Nov 14 01:09:31 2020 -0500
+
+    SELL-Actualización estilos y alineación
+    
+    Se realiza alineacion de los elementos  y se mejoran los estilos
+    Actualmente se sigue presentando inconveniente con los archivos
+    manifest.json
+
+[33mcommit 7aa09d3849781823d17b08ff3d02d24166f458c0[m
+Merge: 5f45722 0228368
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 13 17:13:21 2020 -0500
+
+    imagenes
+
+[33mcommit 5f45722a1329de953da0d086349dab79ffc4c395[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 13 16:46:17 2020 -0500
+
+    productos
+
+[33mcommit 6d669ed6ca1e7af1333e169459947e4d0d73db05[m
+Merge: cd23eea 0228368
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 16:41:48 2020 -0500
+
+    Actualizacion manifest.json
+
+[33mcommit 0228368b29512093dfd5c0303b738ba167a32f47[m
+Merge: 8f7a8f9 289d0ad
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Fri Nov 13 16:35:40 2020 -0500
+
+    correcion error navbar, quito icono fvorito y notificaciones
+
+[33mcommit cd23eea5ec53f465a104132209ca3dd70e0f7c9c[m
+Merge: efe393e 289d0ad
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 16:32:13 2020 -0500
+
+    solucion Conflicto Manifest.js
+    
+    Se han presentado frecuentes eliminacioes y actualizaciones de de la
+    documentación manifest.js
+    
+    Mierge branch 'develop' of https://github.com/Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit efe393e6498e0d19f15cecd3fcbd70dc8bdd2622[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 16:22:51 2020 -0500
+
+    actualizacion manifest
+
+[33mcommit 8f7a8f977f6660fcf8ff6b5de111968bc5f143d0[m
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Fri Nov 13 16:14:20 2020 -0500
+
+    verificacion navbar
+
+[33mcommit 289d0ad7d9ce35cf47a1382c253d84fc086481c7[m
+Merge: 5ec0b5f cd59748
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 13 15:08:32 2020 -0600
+
+    KZ. Solving conflicts.
+
+[33mcommit 5ec0b5f3d8efb3f16edb216d05eec630190b209c[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 13 15:03:16 2020 -0600
+
+    KZ. Admin page.
+    Added styles to Admin page.
+    Changed styles in Button.module.scss.
+
+[33mcommit cd59748895de1d0b5352fc507e9c4cd52b8f0c44[m
+Merge: 1bbf3b9 d294845
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 15:49:21 2020 -0500
+
+    Requerimiento Pull
+
+[33mcommit 1bbf3b9707ca733128afbcfa13d7b72a81e20562[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 15:43:43 2020 -0500
+
+    Actualizar- Estilos pagina Sell
+
+[33mcommit d294845651a6bcfc56fa61eb9c5309782e0cd684[m
+Merge: 8872725 6bed098
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Fri Nov 13 14:05:30 2020 -0500
+
+    resolucion de errores
+
+[33mcommit 8872725fd24fe63b57fdc3d7cbedf935cc072b37[m
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Fri Nov 13 13:52:47 2020 -0500
+
+    modifico tamano de imagenes en la page principal, se quita icono favorito y notificaciones
+
+[33mcommit 52e33a49e0cfb71301fb2b944113af7ff82eeeea[m
+Merge: 59c5102 6bed098
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 13 12:10:19 2020 -0600
+
+    KZ. Solving conflict.
+
+[33mcommit 59c5102fb89d62dbcb40381c276cc83e4a53281f[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 13 11:01:24 2020 -0600
+
+    Commit because pull.
+    I was working on the Admin page and its styles.
+
+[33mcommit 6bed09887c270c53a68c8d326e5197fba69a4725[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 09:37:18 2020 -0500
+
+    resolucion conflicto
+
+[33mcommit 64a328208b6234adaa7f9cfebe5af2ff6bd09324[m
+Merge: 4fbc4a2 80e2360
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 09:09:35 2020 -0500
+
+    Request actualization
+
+[33mcommit 4fbc4a26c445e5c8435b8370be209e0dcd9aadde[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 13 09:02:11 2020 -0500
+
+    Actualizacion manifest
+
+[33mcommit 80e23605ad4f6c79b2ab25563a2e51444fe85857[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 13 08:52:40 2020 -0500
+
+    products
+
+[33mcommit 01b5dab1b8d78115f967ffebeb2766f55f1adb4e[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 13 08:50:27 2020 -0500
+
+    products
+
+[33mcommit 489ffcf92c097deed7313ce8b3f10dd757e2d94b[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 12 22:51:44 2020 -0500
+
+    get products
+
+[33mcommit cc0e659308cdbe10f386c9ddc43fc42093756ddd[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 12 18:56:56 2020 -0500
+
+    add control user login
+
+[33mcommit 71a402035de6362cc78c2c14a56469ff28af8a0b[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 12 18:55:03 2020 -0500
+
+    add control user login2
+
+[33mcommit 620d3747865b6ab8033c5dc5c93c7c9f04431af5[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 12 18:46:58 2020 -0500
+
+    add control user login
+
+[33mcommit c76e16e96a7e6d723f31ac659b940e39f34f7712[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 12 14:46:19 2020 -0500
+
+    ultimo
+
+[33mcommit 6a7b5a79d1d51b3be99cc76c45b0947cd2e07882[m
+Merge: 8ef7f46 25a3a9e
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 20:20:46 2020 -0500
+
+    ultimo
+
+[33mcommit 25a3a9e67296ae33d27da3c5016fb64bee578129[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 18:48:32 2020 -0500
+
+    use trycatch login
+
+[33mcommit 8ef7f46a781d08bf7266b13ce514782e134d232d[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 18:32:53 2020 -0500
+
+    todo ok
+
+[33mcommit 89c45a203705033fd7daee4224ea6e9557ee5f71[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 18:25:28 2020 -0500
+
+    fix login facebook and google
+
+[33mcommit c5a5e00649dd5f2220b23ef2e56c9bd3cbc9702f[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:46:43 2020 -0500
+
+    corrijo prueba
+
+[33mcommit ba6f2b0f1ccbcc9ab57db306c5fed8b7f3b6ec7c[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:45:07 2020 -0500
+
+    prueba
+
+[33mcommit f10bcdf0351db3dd27ad8892e1a612efb6836b2e[m
+Merge: e156be9 6116195
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:43:41 2020 -0500
+
+    login
+
+[33mcommit 6116195d11c6f8e7577e84cdf10d491c48ba7e75[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:41:02 2020 -0500
+
+    fix package.json
+
+[33mcommit e156be9e809e97c7873088896e9d26633d1a666d[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:35:13 2020 -0500
+
+    fix build
+
+[33mcommit 1c028804f59b35255b43470ea80123e6fe3d9b64[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 17:13:40 2020 -0500
+
+    erase
+
+[33mcommit 2bc5b2120bf1e7c77381dd4070c971efaa781535[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 16:58:44 2020 -0500
+
+    fix deploy
+
+[33mcommit 3ddc7e0652cdfa222f089356670604ec68dbf6ac[m
+Merge: cedaa2d 9f3356e
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 16:35:11 2020 -0500
+
+    Merge branch 'develop'
+
+[33mcommit 9f3356e87d7faf1fd453f353d5befb7dad2fe27b[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 16:21:21 2020 -0500
+
+    fix sell all right
+
+[33mcommit 23d84a48e5cc1fca7a391182d39f04d9277028fb[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Wed Nov 11 08:12:40 2020 -0500
+
+    fix sell
+
+[33mcommit cbb9d039d63e817f7951513afa6836020b6fad3e[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Tue Nov 10 21:17:08 2020 -0500
+
+    categories
+
+[33mcommit e08a92b9fdf3763db03abd243ec2b88af60f3487[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 17:29:43 2020 -0500
+
+    nov_9
+
+[33mcommit cedaa2d44f4133a5951182d66341655509c22122[m
+Merge: 2f2d9fc 53b399b
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:59:58 2020 -0500
+
+    Merge branch 'master' of github.com:Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano
+
+[33mcommit 2f2d9fc64c14624ba1a9ff333f91e0332209cc18[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:59:49 2020 -0500
+
+    rules
+
+[33mcommit 746cd5506cf537ead0b25076952b4a2ea075b1e8[m
+Merge: 0744b26 0bb0d26
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:43:49 2020 -0500
+
+    Merge branch 'develop'
+
+[33mcommit 0bb0d2621e29f194f2b40dc3cfa485c86c0786d5[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:42:51 2020 -0500
+
+    login
+
+[33mcommit 0744b266fb74af781cd695aae42009dee88d0c8d[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:38:24 2020 -0500
+
+    add .env
+
+[33mcommit 1d6bb58964fc75e6e342feadcfbeab3f5ea4ea6a[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:33:20 2020 -0500
+
+    error
+
+[33mcommit dc722b8319f16310a50f0eb8156ca47b4f6512d3[m
+Merge: 20f8109 561be00
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:29:42 2020 -0500
+
+    trae develop
+
+[33mcommit 561be00d9da2f84dc968b436e2c722f92ae1fa30[m
+Merge: 15aef66 543a7b9
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:25:55 2020 -0500
+
+    Merge branch 'develop' of github.com:Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit 15aef66a1a4e21598cd6c8ee0f948dc0e17de6d4[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 15:25:48 2020 -0500
+
+    sell
+
+[33mcommit 53b399ba826fb5f245079ae081acabd46fa5fa8b[m
+Author: Gabriel De Andrade <30420087+gabrielelpidio@users.noreply.github.com>
+Date:   Mon Nov 9 15:43:18 2020 -0400
+
+    Delete .env
+
+[33mcommit 543a7b98909de802e7ad0b7161cfe296ed8723ec[m
+Author: Gabriel De Andrade <30420087+gabrielelpidio@users.noreply.github.com>
+Date:   Mon Nov 9 15:43:05 2020 -0400
+
+    Delete .env
+
+[33mcommit be2f0e4d9c976d3abffe262ad20234b72871e4c7[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 13:55:44 2020 -0500
+
+    fix login
+
+[33mcommit 0a28b47205f612d7ebd896101548b7b79d7f0880[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Mon Nov 9 10:01:32 2020 -0500
+
+    fix login
+
+[33mcommit 032f1c46bb5f1e5bdebe94e997ed312e5bd6d911[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sun Nov 8 15:04:28 2020 -0500
+
+    fix signup
+
+[33mcommit 3c1564f713dce48a81e19cf42db37f92afb54b7b[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sun Nov 8 14:43:44 2020 -0500
+
+    fix signup
+
+[33mcommit 8d6f634accb0eaae7da6cecf726e76c577e49e06[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sun Nov 8 14:06:58 2020 -0500
+
+    fix login
+
+[33mcommit 6bd45e62f7d0f9ed2da96694c38d28e4cacc3808[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Sun Nov 8 12:21:44 2020 -0500
+
+    build
+
+[33mcommit d5c187976e46479464b7316037891cafac51809f[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 6 16:00:31 2020 -0600
+
+    KZ. Modified Sell, Input and Textarea styles.
+    Besides that, I made orthographic changes in Index.js. and ProductCard.js
+
+[33mcommit 2194140b024bdb03c74bccebd4ee8181c5006212[m
+Merge: 250d0fe 7ea5690
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 6 15:34:14 2020 -0600
+
+    KZ. Resolving conflict in Sell styles.scss
+
+[33mcommit 250d0fea98990216981b8cf25cceb41db6b2b891[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 6 15:31:18 2020 -0600
+
+    KZ. Commit because pulling.
+    I modified the Sell Publication page and its styles.
+
+[33mcommit 7ea5690dfcd766afb67064dbfc64fcb4dd2ea03d[m
+Merge: 9468950 f5f61de
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 6 16:04:44 2020 -0500
+
+    Merge branch 'develop' of https://github.com/Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit 946895077242ebb341b4b94e9e7e161a78e35b4e[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 6 16:04:07 2020 -0500
+
+    sell styles update
+
+[33mcommit b38030fa3a2dedc47ec0ab7f8cc797d7ffcf04b6[m
+Merge: e5ed291 f5f61de
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 6 14:47:12 2020 -0600
+
+    KZ. Conflict in Sell.js solved.
+
+[33mcommit e5ed2915d2dcd2ac65f134be855acd5569c1e6ad[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Fri Nov 6 14:44:35 2020 -0600
+
+    KZ. Commit because pulling.
+    I was working on the Sell page styles, modifying the inputs styles.
+
+[33mcommit f5f61de669a9ac0deac2410731aa08094eebe158[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 6 15:34:37 2020 -0500
+
+    validacion producto
+
+[33mcommit 76408b5fd816a7b0c256933ddaa7aa96838ef41e[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 6 15:19:18 2020 -0500
+
+    validacion usuario
+
+[33mcommit 7b7cef2242fd5c5eb05a03479021723f77fdcef2[m
+Merge: e9bb7e9 3ecf42c
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 6 14:37:41 2020 -0500
+
+    grabar productos
+
+[33mcommit e9bb7e921457d21078120ceca42f8a8613be1f0c[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Fri Nov 6 08:37:40 2020 -0500
+
+    pull
+
+[33mcommit 3ecf42c6220903e872493287b99d5192b1c6da7e[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Fri Nov 6 01:28:43 2020 -0500
+
+    Sales Update
+    Field is enabled to upload images
+    FileUpLoad component with its styles is added
+    hover is modified to icons in the navbar
+
+[33mcommit 4c2d269b52ad52c1895bc0afb10ea4dd87959681[m
+Merge: 0b2a5a5 3d72e94
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Thu Nov 5 17:44:11 2020 -0600
+
+    Merge branch 'develop' of github.com:Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit 0b2a5a5d5f544ba70771f67cee0f039d9d233c6f[m
+Author: KevinJZea <kevinjzea@gmail.com>
+Date:   Thu Nov 5 17:43:37 2020 -0600
+
+    KZ. Modified Signup, adjusted Footer, and put titles in many HTML tags.
+    I modified the Signup page, giving it improved styles.
+    Adjusted the footer for most of the pages.
+    Put titles that can be read when 'hovering' the element.
+
+[33mcommit 7502e810091dcd1266fce269c0506f4806e77c5b[m
+Merge: e6c3aa3 3d72e94
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 5 18:32:48 2020 -0500
+
+    vrios
+
+[33mcommit 3d72e94cf656d558801bfc5f2defd192cda26ace[m
+Merge: ce3db6f 5442d9c
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Thu Nov 5 17:37:16 2020 -0500
+
+    Merge branch 'develop' of https://github.com/Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit ce3db6f73ea0192caae6ee31eda5115a114a6072[m
+Author: javitecsis <69080742+javitecsis@users.noreply.github.com>
+Date:   Thu Nov 5 17:35:36 2020 -0500
+
+    Sell-2 page creation, new proposal
+
+[33mcommit e6c3aa30aa9d78daa910afe6bbb08c4da6f4ddd4[m
+Merge: 2c7eb42 5442d9c
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 5 16:30:39 2020 -0500
+
+    Merge branch 'develop' of github.com:Platzi-Master-TM-GabrielDeAndrade/C6-art-hispano into develop
+
+[33mcommit 2c7eb4256a59e782148d3c9a08ad225014e9cc39[m
+Author: MrElvix <elvismarrugo@gmail.com>
+Date:   Thu Nov 5 16:30:32 2020 -0500
+
+    changes
+
+[33mcommit 5442d9c5d70dbabcc298c55b3bc90e19c66b722d[m
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Thu Nov 5 16:28:24 2020 -0500
+
+    actuliza imagenes del index
+
+[33mcommit 4dd77469cc30148ab66dc58771d75683eb21dfbb[m
+Merge: 2db6c05 112624a
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Thu Nov 5 14:39:39 2020 -0500
+
+    se agrega margin al index
+
+[33mcommit 2db6c05b91009f0c2155bb862fa2050e0fe4d5d8[m
+Author: Jonathan Restan <jonathanrchamorro@gmail.com>
+Date:   Thu Nov 5 14:36:33 2020 -0500
+
+    Se agrega propiedad cursor pointer y box shadow  a la page principal.

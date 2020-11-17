@@ -241,6 +241,7 @@
   cursor: pointer;
   outline: none;
   padding: 5px 15px;
+  height: 36px;
   margin: 0;
   font-weight: 400;
   font-size: $light-small-text;
@@ -250,3 +251,31 @@
   background-color: $color-buttonBrand;
 }
 
+.ButtonUploadPhoto {
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+  max-width: 120px;
+  width: 80%;
+  margin: 0;
+  justify-self: center;
+  font-weight: 400;
+  font-size: $light-small-text;
+  border: 1px solid $color-secondary;
+  background-color: $color-upload-photo;
+  color: $color-secondary;
+  border-radius: $border-radius * 2;
+}
+
+.ButtonLogout {
+  cursor: pointer;
+  outline: none;
+  padding: 15px 10px 25px 10px;
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: $medium-text;
+  border: 1px solid $color-secondary;
+  background-color: $color-upload-photo;
+  color: $color-secondary;
+  border-radius: $border-radius;
+}

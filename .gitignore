@@ -3,12 +3,19 @@ node_modules
 
 # next.js
 .next
+<<<<<<< HEAD
 .next/
+=======
+next/
+.next/
+
+>>>>>>> 22acb08644ea1a92f479186da6e5acfd3a265c7a
 # production
-out
-build
-.out
 out/
+
+# firebase
+.firebase
+firebase/
 
 # misc
 .DS_Store
@@ -20,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env
+.env.build
 .env.local
 .env.development.local
 .env.test.local

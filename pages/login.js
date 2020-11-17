@@ -13,10 +13,11 @@ import Label from "components/Label";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [pass, setPass] = useState("");  
   // const [setUser] = useState(null);
   const [error, setError] = useState(null);
 
+     
   const router = useRouter();
 
   const loginGoogle = async () => {
@@ -42,7 +43,7 @@ const Login = () => {
 
     setError(null);
 
-    if (!email.trim()) {
+    if ((!email.trim() )) {           
       setError("Completa este campo!");
       return;
     }
@@ -86,7 +87,7 @@ const Login = () => {
   };
  
   return (
-    <>
+    <>    
       <div className={styles.MainContainer}>
         {error && <div className={styles.ContainerError}>{error}</div>}
         <div className={styles.Main}>
@@ -122,12 +123,12 @@ const Login = () => {
               </Button>
 
               <Button
-                // className={styles.Button}
+                // className={styles.Button}                
                 style="--Facebook"
                 onClick={loginFacebook}
                 type="submit"
-                title="Iniciar sesi&oacute;n con Facebook"
-              >
+                title="Iniciar sesi&oacute;n con Facebook"                
+              >                
                 {" "}
                 Continuar con Facebook
               </Button>
@@ -136,7 +137,7 @@ const Login = () => {
                 style="--Google"
                 onClick={loginGoogle}
                 type="submit"
-                title="Iniciar sesi&oacute;n con Google"
+                title="Iniciar sesi&oacute;n con Google"                
               >
                 Continuar con Google
               </Button>

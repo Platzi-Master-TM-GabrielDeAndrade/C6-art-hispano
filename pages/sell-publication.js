@@ -1,5 +1,5 @@
 /* import styles from "../styles/pages/Index.module.scss"; */
-import styles from "@styles/pages/Sell.module.scss";
+import styles from "@styles/pages/Sell-publication.module.scss";
 
 
 export default function SellPublication () {

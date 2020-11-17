@@ -21,11 +21,11 @@ export default function Home() {
 
   const getUsers = async () => {
     try {
-      const query = await db.collection("users").get()
-      const users = query.docs.map((user) => {
+      const query = await db.collection("products").get();
+      const users = query.docs.map((products) => {
         return {
-          id: user.id,
-          ...user.data(),
+          id: products.id,
+          ...products.data(),
         };
       });
 

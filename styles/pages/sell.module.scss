@@ -1,68 +1,52 @@
 @import "../styles.module";
 @import "../lib/variables.module";
+@import "../styles.module.scss";
 
-//--------- sell ---------//
+//--------- SELL PAGE---------//
 
-.container_details{
-  display:grid;
-  width: 100vw;
-  grid-template-columns: 5% 45% 15% 15% 15% 5%;
-  grid-template-rows: 100px 50px 50px 200px 50px;
-  grid-template-areas: "title title title title title tittle"
-                      "details details details details details details"
-                       ". client upPhoto upPhoto upPhoto ."
-                       ". client Photo Photo Photo ."
-                       ". client public public public . "
-
-
-}
 
 .cont_title_details {
-  grid-area: title;
+  text-align: center;
   display: grid;
   background-color: $color-brand;
-  justify-content: space-evenly;
-  width: 100vw;
 }
 
 .cont_title_details h1 {
+  width: 100%;
+  align-items: center;
+  grid-template-columns: 4fr 2fr 4fr;
   color: $color-secondary;;
   font-size: 30px;
   font-family: $base-font;
 } 
 
 .details_title{
-  grid-area: details;
-  color: $color-secondary;
-  font-size: 50px;
-  align-content: center;
   display: grid;
+  margin-top: 5px;
 }
 
-.details_title  label{
-  width: 100%;
-  min-width: 250px;   
-  padding: 15px 80px;
-  margin-bottom: 20px;  
+.container_details{
+  justify-items: center;
+  display:grid ;
+  grid-template-columns: .8fr 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.details_title label{
+  padding: 15px 80px; 
   color: $color-white;  
   font-size: $base-fontSizeMedium;
-  font-weight: 400;
   background-color: $color-secondary;
   border: 1px solid $color-secondary;
-  box-sizing: border-box;
 }
-
-
-
-// .container_details Button:hover{
-//     background-color: $color-brand;
-//     opacity: 40%;
-//     cursor: pointer;
-// }
 
 
 .form_client {
-  grid-area: client;
+  width: 90%;
+  margin: 20px;
+  align-items: center;
+  grid-area: 2 / 1;
+ 
 }
 
 .form_client input {
@@ -72,7 +56,6 @@
   height: 35px;
   min-width: 250px;
   padding: 10px 15px;
-  margin-bottom: 10px;
   font-weight: 400;
   color: $color-secondary;
   background-color: $color-tertiary;
@@ -80,16 +63,6 @@
   font-size: $base-fontsize;
   border-radius: $border-radius * 2;
 }
-
-.contElements{
-  width: 80%;
-}
-
-
-.form_client{
-    margin: 15px;
-    align-items: center;
-  }
 
 .form_client select {
   cursor: pointer;
@@ -97,133 +70,42 @@
   display: inline-block;
   width: 100%;
   color: $color-secondary;
+  opacity: 0.85;
   height: 35px;
   min-width: 250px; 
   padding: 1px 15px;
-  margin-bottom: 10px;
   font-weight: 400;
   font-size: $base-fontsize;
-  
+  margin-bottom: 15px;
   border: 1px solid $color-secondary;
   background-color: $color-tertiary;
-  
   box-sizing: border-box;
   border-radius: $border-radius * 2;
 }
 
-.form_client select {
-  opacity: 0.85;
-}
-
-.texTank {
-    width: 100%;
-    height: 100px;
-    padding: 10px 15px;
-    margin-bottom: 10px;    
-    font-size: 16px;
-    background-color: #e2e8f0;
-    border: 1px solid #6D5E52;
-    box-sizing: border-box;
-    border-radius: $border-radius * 2;
-}
-
- .texTank textarea:hover{
-  background-color: #FF9F1C;
-  opacity: 40%;
-  cursor: pointer;
-}
-
 .takePhoto{
-  grid-area: upPhoto;
-    
+  
+
+  grid-area: 1 / 2;
+  width: 100%;
 }
 
 .takePhoto h2{
-  color: #6D5E52;;
-  text-align: center;
-  height: 35px;
-  box-sizing: border-box;
-  grid-column: 1 / san 3;
-  font-size: 25px;
-  min-width: 250px; 
   
+  color: $color-secondary;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 60px;
+      
 }
 
 .Photo{
+  margin: 20px;
+  justify-items: center;
   display: grid;
-  grid-area: Photo;
+  grid-area: 2 / 2;
   grid-template: 1fr/ 1fr 1fr;
-  margin: auto;
-  column-gap: 50px;
+  column-gap: 100px;
 }
 
-.Photo input{
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  color: $base-fontSizeMedium;
-  border: 1px solid #6D5E52;
-  box-sizing: border-box;
-  text-align: left;
-  background-color: #e2e8f0;
-  border: 1px solid #6D5E52;
-  box-sizing: border-box;
-  border-radius: $border-radius * 2;       
-}
- 
-.foto button{
-  width: 80px;
-  height: 80px;
-  margin: 5px;
-}
-
-.register{
-  grid-area: public;
-}
-
-.register button{
-  border: none;
-  display: inline-block;
-  font-size: 25px;
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  color: $color-white;
-  background-color: $color-brand;
-}
-
-//---------- SELL PUBLICATION PAGE ----------//
-
-.cont_title {
-  min-height: calc(100vh - 100px - 165px);  // 100vh Navbar Footer
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "logo text";
-  gap: 100px;
-  align-items: center;
-  text-align: center;
-  background-color: $color-white;
-}
-  
-.logo {
-  grid-area: logo;
-  justify-self: end;
-  width: 200px;
-  height: 200px;
-}
-
-.title_publication{
-  grid-area: text;
-  justify-self: start;
-  display: block;
-  min-width: 400px;
-  width: 600px;
-  
-  border-top: 2px solid $color-brand;
-  border-bottom: 2px solid $color-brand;
-  color: $color-brand;
-  font-size: $text-titles;
-}
-
-//---------- END SELL PUBLICATION PAGE ----------//
+//---------- END SELL PAGE ----------//
