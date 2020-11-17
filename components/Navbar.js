@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { auth } from "../firebase/firebase.config";
-// import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/components/Navbar.module.scss";
 import Button from "components/Button"
 
 export default function Navbar() {
-  // const [firebaseUser, setFirebaseUser] = useState(false);
   
   const router = useRouter();
   
@@ -60,12 +58,6 @@ export default function Navbar() {
           >
             Vender
           </Button>
-
-          {/* <Link href="/sell">
-            <Button title="Vender" style="Sell">
-              Vender
-            </Button>
-          </Link> */}
         </section>
 
         <section className={styles.nav_icons}>
@@ -77,7 +69,7 @@ export default function Navbar() {
               title="Carrito"
             />
           </Link>
-          
+
           <Link href="/login">
             <img
               className={styles.nav_userImg}

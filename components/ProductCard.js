@@ -25,4 +25,3 @@ export default function ProductCard({id, imgUrl, price, productName}) {
       </div>
     );
 }
-

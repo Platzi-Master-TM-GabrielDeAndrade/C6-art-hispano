@@ -26,7 +26,7 @@ const ProductCart = ( { title, description, price, imgUrl, quantity } ) => {
                         <Button style="OneLessCart">-</Button>
                     </div>
                 </section>
-                <p className={styles.Total}>${price*quantity}</p>
+                <p className={styles.Total}>${price}</p>
             </section>
                 
         </div>
