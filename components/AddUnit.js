@@ -1,7 +1,7 @@
 import Button from "components/Button";
-import Cant from "./cant";
+import Cant from "./Cant";
 import { useDispatch } from "react-redux";
-import { incrementQuantity, decrementQuantity } from "../pages/redux/actions";
+import { incrementQuantity, decrementQuantity } from "../redux/actions";
 
  export default function AddUnit()  {
   //  const quantity = useSelector((state) => state.quantity);

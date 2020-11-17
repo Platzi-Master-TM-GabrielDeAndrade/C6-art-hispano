@@ -1,14 +1,15 @@
 import * as types from "./types";
 
 // INCREMENT QUANTITY BY 1
-export const incrementQuantity = () => { 
+export  function incrementQuantity()  { 
   return {
-    type: types.INCREMENT 
+    type: types.INCREMENT,
   };
-}
+};
 
 // DECREMENT QUANTITY BY 1
-export const decrementQuantity = () => { 
+
+export  function decrementQuantity()  { 
   return {
     type: types.DECREMENT 
   }

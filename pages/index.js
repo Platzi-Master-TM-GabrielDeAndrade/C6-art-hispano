@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
 import { db } from "../firebase/firebase.config";
 import styles from "../styles/pages/Index.module.scss";
 import ProductCard from "../components/ProductCard";

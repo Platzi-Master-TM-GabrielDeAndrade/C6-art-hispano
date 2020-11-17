@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "@styles/globals.scss"
 
 import { Provider } from "react-redux";
-import { generateStore } from "./redux/store";
+import { generateStore } from "../redux/store";
 
 export default function MyApp({ Component, pageProps }) {
   const [firebaseUser, setFirebaseUser] = useState(false);

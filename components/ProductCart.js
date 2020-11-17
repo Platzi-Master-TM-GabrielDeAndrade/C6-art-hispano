@@ -1,7 +1,7 @@
 import styles from "../styles/components/ProductCart.module.scss";
 import Button from "components/Button";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementQuantity, decrementQuantity } from "./actions";
+import { incrementQuantity, decrementQuantity } from "../redux/actions";
 
 
 const ProductCart = ( { title, description, price, imgUrl, quantity } ) => {
