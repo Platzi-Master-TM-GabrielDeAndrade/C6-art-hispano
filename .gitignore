@@ -3,9 +3,13 @@ node_modules
 
 # next.js
 .next
+<<<<<<< HEAD
+.next/
+=======
 next/
 .next/
 
+>>>>>>> 22acb08644ea1a92f479186da6e5acfd3a265c7a
 # production
 out/
 
