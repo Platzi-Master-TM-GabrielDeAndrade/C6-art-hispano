@@ -4,10 +4,12 @@ node_modules
 # next.js
 .next
 .next/
+next
 next/
 
 # production
 out/
+
 
 # firebase
 .firebase

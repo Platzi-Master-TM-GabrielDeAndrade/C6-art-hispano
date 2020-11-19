@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Button from "components/Button";
 import styles from "styles/pages/Admin.module.scss";
-import Input from "components/Input";
+// import Input from "components/Input";
 
 
 
